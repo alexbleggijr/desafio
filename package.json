@@ -28,14 +28,17 @@
     "loader/"
   ],
   "scripts": {
+    "sass:start": "sass src/styles:styles --watch",
+    "sass:build": "sass src/styles:styles --no-source-map",
     "stencil:start": "stencil build --dev --watch",
     "stencil:build": "stencil build",
-    "storybook:start": "storybook dev -p 6006",
-    "storybook:build": "storybook build",
     "stencil:test": "stencil test --spec --e2e",
     "stencil:test:watch": "stencil test --spec --e2e --watchAll",
     "stencil:generate": "stencil generate",
-    "start": "npm-run-all stencil:build --parallel stencil:start storybook:start"
+    "storybook:start": "storybook dev -p 6006",
+    "storybook:build": "storybook build",
+    "styles:clean": "shx rm -rf styles/*",
+    "start": "npm-run-all styles:clean sass:build --parallel sass:start stencil:start storybook:start"
   },
   "license": "MIT",
   "devDependencies": {
@@ -55,6 +58,8 @@
     "lit": "^3.1.4",
     "npm-run-all": "^4.1.5",
     "puppeteer": "^22.13.0",
+    "sass": "^1.77.8",
+    "shx": "^0.3.4",
     "storybook": "^8.2.2"
   }
 }
