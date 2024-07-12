@@ -8,6 +8,8 @@ import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
     interface DsCard {
     }
+    interface DsText {
+    }
 }
 declare global {
     interface HTMLDsCardElement extends Components.DsCard, HTMLStencilElement {
@@ -16,15 +18,25 @@ declare global {
         prototype: HTMLDsCardElement;
         new (): HTMLDsCardElement;
     };
+    interface HTMLDsTextElement extends Components.DsText, HTMLStencilElement {
+    }
+    var HTMLDsTextElement: {
+        prototype: HTMLDsTextElement;
+        new (): HTMLDsTextElement;
+    };
     interface HTMLElementTagNameMap {
         "ds-card": HTMLDsCardElement;
+        "ds-text": HTMLDsTextElement;
     }
 }
 declare namespace LocalJSX {
     interface DsCard {
     }
+    interface DsText {
+    }
     interface IntrinsicElements {
         "ds-card": DsCard;
+        "ds-text": DsText;
     }
 }
 export { LocalJSX as JSX };
@@ -32,6 +44,7 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "ds-card": LocalJSX.DsCard & JSXBase.HTMLAttributes<HTMLDsCardElement>;
+            "ds-text": LocalJSX.DsText & JSXBase.HTMLAttributes<HTMLDsTextElement>;
         }
     }
 }
