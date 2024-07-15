@@ -1,0 +1,26 @@
+@use 'sass:color';
+
+@mixin color-default($hsl, $name, $repetitions: 1) {
+  $max-repetitions: 5;
+  $actual-repetitions: if($repetitions > $max-repetitions, $max-repetitions, $repetitions);
+
+    $hue: color.hue($hsl);
+    $saturation: color.saturation($hsl);
+    $lightness: color.lightness($hsl);
+    $tones: 10%;
+  @for $i from 1 through $actual-repetitions {
+    @if $tones < 40% {
+      $tones: $tones + 10%;
+    }
+
+    @else {
+      $tones: $tones + 20%;
+    }
+
+    .ds-color-#{$name}-#{$i} {
+      background-color: hsl($hue, $saturation, $tones);
+    }
+  }
+}
+
+@include color-default(hsl(188, 80%, 20%), brand, 6);
