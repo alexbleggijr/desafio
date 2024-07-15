@@ -1,0 +1,11 @@
+@mixin generate-colors($nameColor, $hue, $saturation, $variations) {
+  :root {
+    @for $i from 1 through $variations {
+      $lightness: $i * 10;
+
+      $hsl: hsl($hue, $saturation * 1%, $lightness * 1%);
+
+      --ds-color-#{$nameColor}-#{$i}: #{$hsl};
+    }
+  }
+}

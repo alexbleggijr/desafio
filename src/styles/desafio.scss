@@ -1,0 +1,15 @@
+/*
+- Identificar padrão de cores
+
+- Criar mixins gerar cores dinamicamente
+
+- Criar mixins para gerar classes dinamicamente usando as cores
+
+- Criar interface para utlizar das classes nos componentes
+
+- Montar stories utilizando constant das cores (argtypes)
+*/
+
+@import './functions/colors';
+@import './mixins/colors';
+@import './variables/colors';
