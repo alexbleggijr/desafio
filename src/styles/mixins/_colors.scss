@@ -1,13 +1,17 @@
-@mixin generate-colors($nameColor, $hue, $saturation, $variations) {
+@mixin generate-colors($nameColor, $hue, $saturation) {
   :root {
-    @for $i from 1 through $variations {
-      $lightness: $i * 10;
+    $lightness-values: (20%, 30%, 40%, 60%, 80%);
+    $index: 1;
 
-      $hsl: hsl($hue, $saturation * 1%, $lightness * 1%);
+    @each $lightness in $lightness-values {
+      $hsl: hsl($hue, $saturation * 1%, $lightness);
 
-      --ds-color-#{$nameColor}-#{$i}: #{$hsl};
+      --ds-color-#{$nameColor}-#{$index}: #{$hsl};
+
+      $index: $index + 1;
     }
   }
 }
 
-// Criar logica para contrast
+
+
