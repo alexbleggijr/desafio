@@ -1,1 +1,1 @@
-{"version":3,"sourceRoot":"","sources":[],"names":[],"mappings":"","file":"desafio.css"}
+{"version":3,"sourceRoot":"","sources":["../src/styles/desafio.scss","../src/styles/mixins/_color.scss"],"names":[],"mappings":"AAGA;ECqBI;EAAA;EAAA;EAAA;EAAA;;AAHA;EACE,kBAFM;;AACR;EACE,kBAFM;;AACR;EACE,kBAFM;;AACR;EACE,kBAFM;;AACR;EACE,kBAFM","file":"desafio.css"}

@@ -1,3 +1,24 @@
-
+:root {
+  --ds-color-brand-1: hsl(188, 80%, 20%);
+  --ds-color-brand-2: hsl(188, 80%, 30%);
+  --ds-color-brand-3: hsl(188, 80%, 40%);
+  --ds-color-brand-4: hsl(188, 80%, 60%);
+  --ds-color-brand-5: hsl(188, 80%, 80%);
+}
+:root .ds-color-brand-1 {
+  background-color: hsl(188, 80%, 20%);
+}
+:root .ds-color-brand-2 {
+  background-color: hsl(188, 80%, 30%);
+}
+:root .ds-color-brand-3 {
+  background-color: hsl(188, 80%, 40%);
+}
+:root .ds-color-brand-4 {
+  background-color: hsl(188, 80%, 60%);
+}
+:root .ds-color-brand-5 {
+  background-color: hsl(188, 80%, 80%);
+}
 
 /*# sourceMappingURL=desafio.css.map */

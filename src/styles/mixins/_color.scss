@@ -4,10 +4,11 @@
   $max-repetitions: 5;
   $actual-repetitions: if($repetitions > $max-repetitions, $max-repetitions, $repetitions);
 
-    $hue: color.hue($hsl);
-    $saturation: color.saturation($hsl);
-    $lightness: color.lightness($hsl);
-    $tones: 10%;
+  $hue: color.hue($hsl);
+  $saturation: color.saturation($hsl);
+  $lightness: color.lightness($hsl);
+  $tones: 10%;
+
   @for $i from 1 through $actual-repetitions {
     @if $tones < 40% {
       $tones: $tones + 10%;
@@ -17,10 +18,10 @@
       $tones: $tones + 20%;
     }
 
+    $color: hsl($hue, $saturation, $tones);
     .ds-color-#{$name}-#{$i} {
-      background-color: hsl($hue, $saturation, $tones);
+      background-color: $color;
     }
+    --ds-color-#{$name}-#{$i}: #{$color};
   }
 }
-
-@include color-default(hsl(188, 80%, 20%), brand, 6);

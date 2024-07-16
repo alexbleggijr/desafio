@@ -1,0 +1,11 @@
+@import "mixins/color";
+$brand: hsl(188, 80%, 20%);
+
+:root {
+  // --ds-color-brand-1: blue;
+  // --ds-color-brand-2: green;
+  // --ds-color-brand-3: red;
+  // --ds-color-brand-4: yellow;
+  @include color-default($brand, brand, 5);
+
+}
