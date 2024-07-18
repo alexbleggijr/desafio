@@ -1,0 +1,145 @@
+@use '../variables/colors.variables';
+@use '../mixins/colors.mixins' as colors-mixin;
+
+:root,
+.ds-dark {
+  @include colors-mixin.generate-custom-properties(colors.$aula-dark, aula, 3);
+  @include colors-mixin.generate-custom-properties(
+    colors.$material-dark,
+    material,
+    3
+  );
+  @include colors-mixin.generate-custom-properties(
+    colors.$questoes-dark,
+    questoes,
+    3
+  );
+  @include colors-mixin.generate-custom-properties(
+    colors.$revalida-dark,
+    revalida,
+    3
+  );
+  @include colors-mixin.generate-custom-properties(
+    colors.$provas-dark,
+    provas,
+    3
+  );
+  @include colors-mixin.generate-custom-properties(
+    colors.$extensivo-dark,
+    extensivo,
+    3
+  );
+  @include colors-mixin.generate-custom-properties(
+    colors.$medmaster-dark,
+    medmaster,
+    3
+  );
+  @include colors-mixin.generate-custom-properties(
+    colors.$cpmed-dark,
+    cpmed,
+    3
+  );
+  @include colors-mixin.generate-custom-properties(
+    colors.$nopapo-dark,
+    nopapo,
+    3
+  );
+  @include colors-mixin.generate-custom-properties(
+    colors.$medeletro-dark,
+    medeletro,
+    3
+  );
+  @include colors-mixin.generate-custom-properties(
+    colors.$cpvent-dark,
+    cpvent,
+    3
+  );
+  @include colors-mixin.generate-custom-properties(
+    colors.$ventilamed-dark,
+    ventilamed,
+    3
+  );
+  @include colors-mixin.generate-custom-properties(
+    colors.$intensivao-dark,
+    intensivao,
+    3
+  );
+}
+
+.ds-light {
+  @include colors-mixin.generate-custom-properties(colors.$aula-light, aula, 3);
+  @include colors-mixin.generate-custom-properties(
+    colors.$material-light,
+    material,
+    3
+  );
+  @include colors-mixin.generate-custom-properties(
+    colors.$questoes-light,
+    questoes,
+    3
+  );
+  @include colors-mixin.generate-custom-properties(
+    colors.$revalida-light,
+    revalida,
+    3
+  );
+  @include colors-mixin.generate-custom-properties(
+    colors.$provas-light,
+    provas,
+    3
+  );
+  @include colors-mixin.generate-custom-properties(
+    colors.$extensivo-light,
+    extensivo,
+    3
+  );
+  @include colors-mixin.generate-custom-properties(
+    colors.$medmaster-light,
+    medmaster,
+    3
+  );
+  @include colors-mixin.generate-custom-properties(
+    colors.$cpmed-light,
+    cpmed,
+    3
+  );
+  @include colors-mixin.generate-custom-properties(
+    colors.$nopapo-light,
+    nopapo,
+    3
+  );
+  @include colors-mixin.generate-custom-properties(
+    colors.$medeletro-light,
+    medeletro,
+    3
+  );
+  @include colors-mixin.generate-custom-properties(
+    colors.$cpvent-light,
+    cpvent,
+    3
+  );
+  @include colors-mixin.generate-custom-properties(
+    colors.$ventilamed-light,
+    ventilamed,
+    3
+  );
+  @include colors-mixin.generate-custom-properties(
+    colors.$intensivao-light,
+    intensivao,
+    3
+  );
+}
+
+@include colors-mixin.generate-classes(colors.$aula, aula);
+@include colors-mixin.generate-classes(colors.$material, material);
+@include colors-mixin.generate-classes(colors.$questoes, questoes);
+@include colors-mixin.generate-classes(colors.$revalida, revalida);
+@include colors-mixin.generate-classes(colors.$provas, provas);
+@include colors-mixin.generate-classes(colors.$extensivo, extensivo);
+@include colors-mixin.generate-classes(colors.$medmaster, medmaster);
+@include colors-mixin.generate-classes(colors.$cpmed, cpmed);
+@include colors-mixin.generate-classes(colors.$nopapo, nopapo);
+@include colors-mixin.generate-classes(colors.$medeletro, medeletro);
+@include colors-mixin.generate-classes(colors.$cpvent, cpvent);
+@include colors-mixin.generate-classes(colors.$ventilamed, ventilamed);
+@include colors-mixin.generate-classes(colors.$intensivao, intensivao);

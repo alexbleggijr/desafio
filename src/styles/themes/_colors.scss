@@ -1,0 +1,66 @@
+@use '../variables/colors.variables';
+@use '../mixins/colors.mixins' as colors-mixin;
+
+:root,
+.ds-dark {
+  @include colors-mixin.generate-custom-properties(
+    colors.$brand-dark,
+    brand,
+    3
+  );
+  @include colors-mixin.generate-custom-properties(
+    colors.$neutral-dark,
+    neutral
+  );
+  @include colors-mixin.generate-custom-properties(
+    colors.$attention-dark,
+    attention
+  );
+  @include colors-mixin.generate-custom-properties(
+    colors.$caution-dark,
+    caution
+  );
+  @include colors-mixin.generate-custom-properties(
+    colors.$warning-dark,
+    warning
+  );
+  @include colors-mixin.generate-custom-properties(
+    colors.$success-dark,
+    success
+  );
+}
+
+.ds-light {
+  @include colors-mixin.generate-custom-properties(
+    colors.$brand-light,
+    brand,
+    3
+  );
+  @include colors-mixin.generate-custom-properties(
+    colors.$neutral-light,
+    neutral
+  );
+  @include colors-mixin.generate-custom-properties(
+    colors.$attention-light,
+    attention
+  );
+  @include colors-mixin.generate-custom-properties(
+    colors.$caution-light,
+    caution
+  );
+  @include colors-mixin.generate-custom-properties(
+    colors.$warning-light,
+    warning
+  );
+  @include colors-mixin.generate-custom-properties(
+    colors.$success-light,
+    success
+  );
+}
+
+@include colors-mixin.generate-classes(colors.$brand, brand);
+@include colors-mixin.generate-classes(colors.$neutral, neutral);
+@include colors-mixin.generate-classes(colors.$attention, attention);
+@include colors-mixin.generate-classes(colors.$caution, caution);
+@include colors-mixin.generate-classes(colors.$warning, warning);
+@include colors-mixin.generate-classes(colors.$success, success);

@@ -1,8 +1,15 @@
-$categories: brand !default;
+@use 'sass:map';
 
-$brand-dark: (
+$categories: brand, neutral, feedback !default;
+
+/// brand maps
+
+$brand-default: (
   hue: 188,
   saturation: 80,
+) !default;
+
+$brand-default-dark: (
   luminosity: (
     1: 20,
     2: 30,
@@ -12,9 +19,7 @@ $brand-dark: (
   ),
 ) !default;
 
-$brand-light: (
-  hue: 188,
-  saturation: 80,
+$brand-default-light: (
   luminosity: (
     1: 80,
     2: 60,
@@ -23,3 +28,184 @@ $brand-light: (
     5: 20,
   ),
 ) !default;
+
+$brand-dark: map.merge($brand-default, $brand-default-dark) !default;
+$brand-light: map.merge($brand-default, $brand-default-light) !default;
+$brand: $brand-dark !default;
+
+/// neutral maps
+
+$neutral-default: (
+  hue: 188,
+  saturation: 10,
+) !default;
+
+$neutral-default-dark: (
+  luminosity: (
+    1: 8,
+    15: 13,
+    2: 18,
+    25: 23,
+    3: 28,
+    35: 33,
+    4: 38,
+    45: 43,
+    5: 48,
+    55: 53,
+    6: 58,
+    65: 63,
+    7: 68,
+    75: 73,
+    8: 78,
+    85: 83,
+    9: 88,
+    95: 93,
+    10: 98,
+  ),
+) !default;
+
+$neutral-default-light: (
+  luminosity: (
+    1: 98,
+    15: 93,
+    2: 88,
+    25: 83,
+    3: 78,
+    35: 73,
+    4: 68,
+    45: 63,
+    5: 58,
+    55: 53,
+    6: 48,
+    65: 43,
+    7: 38,
+    75: 33,
+    8: 28,
+    85: 23,
+    9: 18,
+    95: 13,
+    10: 8,
+  ),
+) !default;
+
+$neutral-dark: map.merge($neutral-default, $neutral-default-dark);
+$neutral-light: map.merge($neutral-default, $neutral-default-light);
+$neutral: $neutral-dark !default;
+
+/// feedback maps
+
+$attention-default: (
+  hue: 44,
+) !default;
+
+$caution-default: (
+  hue: 24,
+) !default;
+
+$warning-default: (
+  hue: 4,
+) !default;
+
+$success-default: (
+  hue: 128,
+) !default;
+
+$feedback-default-dark: (
+  saturation: 80,
+  luminosity: 65,
+) !default;
+
+$feedback-default-light: (
+  saturation: 80,
+  luminosity: 45,
+) !default;
+
+$attention-dark: map.merge($attention-default, $feedback-default-dark);
+$attention-light: map.merge($attention-default, $feedback-default-light);
+$attention: $attention-dark !default;
+
+$caution-dark: map.merge($caution-default, $feedback-default-dark);
+$caution-light: map.merge($caution-default, $feedback-default-light);
+$caution: $caution-dark !default;
+
+$warning-dark: map.merge($warning-default, $feedback-default-dark);
+$warning-light: map.merge($warning-default, $feedback-default-light);
+$warning: $warning-dark !default;
+
+$success-dark: map.merge($success-default, $feedback-default-dark);
+$success-light: map.merge($success-default, $feedback-default-light);
+$success-light: map.set($success-light, luminosity, 35);
+$success: $success-dark !default;
+
+/// theme maps
+
+$aula-default: map.set($brand-default, hue, 168);
+$aula-dark: map.merge($aula-default, $brand-default-dark) !default;
+$aula-light: map.merge($aula-default, $brand-default-light) !default;
+$aula: $aula-dark !default;
+
+$material-default: map.set($brand-default, hue, 24);
+$material-dark: map.merge($material-default, $brand-default-dark) !default;
+$material-light: map.merge($material-default, $brand-default-light) !default;
+$material: $material-dark !default;
+
+$questoes-default: map.set($brand-default, hue, 200);
+$questoes-dark: map.merge($questoes-default, $brand-default-dark) !default;
+$questoes-light: map.merge($questoes-default, $brand-default-light) !default;
+$questoes: $questoes-dark !default;
+
+$revalida-default: map.set($brand-default, hue, 342);
+$revalida-dark: map.merge($revalida-default, $brand-default-dark) !default;
+$revalida-light: map.merge($revalida-default, $brand-default-light) !default;
+$revalida: $revalida-dark !default;
+
+$provas-default: map.set($brand-default, hue, 268);
+$provas-dark: map.merge($provas-default, $brand-default-dark) !default;
+$provas-light: map.merge($provas-default, $brand-default-light) !default;
+$provas: $provas-dark !default;
+
+$extensivo-default: map.set($brand-default, hue, 300);
+$extensivo-dark: map.merge($extensivo-default, $brand-default-dark) !default;
+$extensivo-light: map.merge($extensivo-default, $brand-default-light) !default;
+$extensivo: $extensivo-dark !default;
+
+$medmaster-default: map.set($brand-default, hue, 56);
+$medmaster-dark: map.merge($medmaster-default, $brand-default-dark) !default;
+$medmaster-light: map.merge($medmaster-default, $brand-default-light) !default;
+$medmaster: $medmaster-dark !default;
+
+$cpmed-default: map.set($brand-default, hue, 12);
+$cpmed-dark: map.merge($cpmed-default, $brand-default-dark) !default;
+$cpmed-light: map.merge($cpmed-default, $brand-default-light) !default;
+$cpmed: $cpmed-dark !default;
+
+$nopapo-default: map.set($brand-default, hue, 230);
+$nopapo-dark: map.merge($nopapo-default, $brand-default-dark) !default;
+$nopapo-light: map.merge($nopapo-default, $brand-default-light) !default;
+$nopapo: $nopapo-dark !default;
+
+$medeletro-default: map.set($brand-default, hue, 180);
+$medeletro-dark: map.merge($medeletro-default, $brand-default-dark) !default;
+$medeletro-light: map.merge($medeletro-default, $brand-default-light) !default;
+$medeletro: $medeletro-dark !default;
+
+$cpvent-default: map.set($brand-default, hue, 72);
+$cpvent-dark: map.merge($cpvent-default, $brand-default-dark) !default;
+$cpvent-light: map.merge($cpvent-default, $brand-default-light) !default;
+$cpvent: $cpvent-dark !default;
+
+$ventilamed-default: map.set($brand-default, hue, 29);
+$ventilamed-dark: map.merge($ventilamed-default, $brand-default-dark) !default;
+$ventilamed-light: map.merge(
+  $ventilamed-default,
+  $brand-default-light
+) !default;
+$ventilamed: $ventilamed-dark !default;
+
+$intensivao-default: map.set($brand-default, hue, 344);
+$intensivao-dark: map.merge($intensivao-default, $brand-default-dark) !default;
+$intensivao-light: map.merge(
+  $intensivao-default,
+  $brand-default-light
+) !default;
+$intensivao: $intensivao-dark !default;
