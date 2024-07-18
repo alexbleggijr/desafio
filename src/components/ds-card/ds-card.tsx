@@ -9,7 +9,7 @@ export class DsCard {
   render() {
     return (
       <Host>
-        <slot></slot>
+          <slot name="text" />
       </Host>
     );
   }

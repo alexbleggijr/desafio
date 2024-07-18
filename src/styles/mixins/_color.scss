@@ -19,9 +19,15 @@
     }
 
     $color: hsl($hue, $saturation, $tones);
-    .ds-color-#{$name}-#{$i} {
+
+
+    ::slotted(.ds-color-#{$name}-#{$i}){
       background-color: $color;
+
     }
+    // .ds-color-#{$name}-#{$i} {
+    //   background-color: $color;
+    // }
     --ds-color-#{$name}-#{$i}: #{$color};
   }
 }

@@ -16,8 +16,12 @@ const meta: Meta<any> = {
       control: 'select',
       options: generateColorOptions('brand'),
       description: 'Define a Cor.',
-
     },
+    background: {
+      control: 'select',
+      options: generateColorOptions('brand'),
+      description: 'Define o background.',
+    }
   },
 };
 
@@ -29,8 +33,12 @@ export const Default: Story = {
   render: ({ ...args }) => {
     console.log(args)
     return html`
-    <ds-card color="${args.color}">
-    <ds-text>Lorem, ipsum dolor.</ds-text>
+    <ds-card color="${args.color}" style="--color: var(--${args.color});">
+      <ds-text
+        slot="text"
+      >
+        Aqui vai o card.
+      </ds-text>
     </ds-card>
     `;
   },

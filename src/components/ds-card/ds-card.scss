@@ -1,5 +1,17 @@
-@use "mixins/color";
+@import "../../styles/mixins/color";
+$brand: hsl(188, 80%, 20%);
 
 :host {
-  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  box-shadow: 10px 5px 20px rgba(0, 0, 0, 0.144);
+  border-radius: 10px;
+}
+
+::slotted([slot='text']) {
+  background-color: var(--color);
 }
