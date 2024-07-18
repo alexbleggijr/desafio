@@ -1,0 +1,13 @@
+@use './variables/colors.variables';
+@use './mixins/colors.mixins' as colors-mixin;
+
+:root,
+.ds-dark {
+  @include colors-mixin.generate-custom-properties(colors.$brand-dark, brand);
+}
+
+.ds-light {
+  @include colors-mixin.generate-custom-properties(colors.$brand-light, brand);
+}
+
+@include colors-mixin.generate-classes(brand);

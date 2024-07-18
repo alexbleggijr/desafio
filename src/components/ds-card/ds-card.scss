@@ -1,3 +1,18 @@
+/// css custom properties definitions
 :host {
+  --color: hsl(var(--ds-color-neutral-10));
+  --background: hsl(var(--ds-color-brand));
+}
+
+/// host css rules definitions
+:host {
+  color: var(--color);
+  background-color: var(--background);
   display: block;
+}
+
+/// dynamic colors definitions
+:host([color]) {
+  --background: var(--ds-color-base);
+  --color: var(--ds-color-contrast);
 }

@@ -1,3 +1,15 @@
+/// css custom properties definitions
 :host {
+  --color: var(--ds-color-neutral-10);
+}
+
+/// host css rules definitions
+:host {
+  color: var(--color);
   display: block;
+}
+
+/// dynamic colors definitions
+:host([color]) {
+  --color: var(--ds-color);
 }

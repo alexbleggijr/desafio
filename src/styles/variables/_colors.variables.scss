@@ -1,0 +1,25 @@
+$categories: brand !default;
+
+$brand-dark: (
+  hue: 188,
+  saturation: 80,
+  luminosity: (
+    1: 20,
+    2: 30,
+    3: 40,
+    4: 60,
+    5: 80,
+  ),
+) !default;
+
+$brand-light: (
+  hue: 188,
+  saturation: 80,
+  luminosity: (
+    1: 80,
+    2: 60,
+    3: 40,
+    4: 30,
+    5: 20,
+  ),
+) !default;

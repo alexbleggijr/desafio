@@ -1,0 +1,41 @@
+@use 'sass:map';
+@use 'sass:list';
+@use 'sass:math';
+@use '../variables/colors.variables';
+
+/// @name generate-custom-properties($map, $category, $default-luminosity-key: 3);
+/// @param $map
+/// @param $category
+/// @param $default-luminosity-key
+/// @example
+///
+/// @output
+///
+@mixin generate-custom-properties($map, $category, $default-luminosity-key: 3) {
+  $hue: map.get($map, hue);
+  $saturation: map.get($map, saturation);
+  $luminosity: map.get($map, luminosity);
+  $default-luminosity: map.get($map, luminosity, $default-luminosity-key);
+
+  --ds-color-#{$category}: #{$hue}, #{$saturation * 1%},
+    #{$default-luminosity * 1%};
+
+  @each $luminosity-key, $luminosity-value in $luminosity {
+    --ds-color-#{$category}-#{$luminosity-key}: #{$hue}, #{$saturation * 1%},
+      #{$luminosity-value * 1%};
+  }
+}
+
+/// @name generate-classes($category);
+/// @param $category
+/// @example
+///
+/// @output
+///
+@mixin generate-classes($category) {
+  .ds-color-#{$category},
+  [color='#{$category}'] {
+    --ds-color-base: var(--ds-color-#{$category}) !important;
+    --ds-color-contrast: var(--ds-color-contrast-fixed) !important;
+  }
+}
