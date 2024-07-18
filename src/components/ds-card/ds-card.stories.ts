@@ -18,7 +18,7 @@ type Story = StoryObj<any>;
 export const Default: Story = {
   render: ({ ...args }) => {
     return html`
-      <ds-card color="${args.color}">
+      <ds-card .color="${args.color}">
         <ds-text>Lorem, ipsum dolor.</ds-text>
       </ds-card>
     `;
