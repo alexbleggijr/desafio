@@ -13,6 +13,6 @@
 
 /// dynamic colors definitions
 :host([color]) {
-  --background: var(--ds-color-base);
-  --color: var(--ds-color-contrast);
+  --background: hsl(var(--ds-color-base));
+  --color: hsl(var(--ds-color-contrast));
 }

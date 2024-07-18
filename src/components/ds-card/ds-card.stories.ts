@@ -30,8 +30,24 @@ type Story = StoryObj<any>;
 
 export const Default: Story = {
   render: ({ ...args }) => {
+    setTimeout(() => {
+      const setColor = () => {
+        const accordions = document.querySelectorAll('ds-card');
+
+        accordions.forEach((accordion) => {
+          if (args['color']) {
+            accordion.setAttribute('color', args['color']);
+          }
+        });
+      };
+
+      if (args['color'] || !args['color']) {
+        setColor();
+      }
+    }, 100);
+
     return html`
-      <ds-card .color="${args.color}">
+      <ds-card>
         <ds-text>Lorem, ipsum dolor.</ds-text>
       </ds-card>
     `;
