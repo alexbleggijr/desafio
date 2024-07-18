@@ -32,12 +32,16 @@ export const Default: Story = {
   render: ({ ...args }) => {
     setTimeout(() => {
       const setColor = () => {
-        const accordions = document.querySelectorAll('ds-card');
+        const cards = document.querySelectorAll('ds-card');
 
-        accordions.forEach((accordion) => {
+        cards.forEach((card) => {
           if (args['color']) {
-            accordion.setAttribute('color', args['color']);
+            card.setAttribute('color', args['color']);
+
+            return;
           }
+
+          card.removeAttribute('color');
         });
       };
 
