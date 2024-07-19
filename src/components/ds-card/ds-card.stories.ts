@@ -17,8 +17,28 @@ type Story = StoryObj<any>;
 
 export const Default: Story = {
   render: ({ ...args }) => {
+    setTimeout(() => {
+      const setColor = () => {
+        const cards = document.querySelectorAll('ds-card');
+
+        cards.forEach((card) => {
+          if (args['color']) {
+            card.setAttribute('color', args['color']);
+
+            return;
+          }
+
+          card.removeAttribute('color');
+        });
+      };
+
+      if (args['color'] || !args['color']) {
+        setColor();
+      }
+    }, 100);
+
     return html`
-      <ds-card color="${args.color}">
+      <ds-card>
         <ds-text>Lorem, ipsum dolor.</ds-text>
       </ds-card>
     `;
