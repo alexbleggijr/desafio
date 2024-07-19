@@ -16,4 +16,7 @@
   @include generate-products-colors(cpvent, 72, 80);
   @include generate-products-colors(ventilamed, 29, 80);
   @include generate-products-colors(intensivao, 344, 80);
+  @include generate-feedback-colors(attention, 44);
+  @include generate-feedback-colors(warning, 4);
+  @include generate-feedback-colors(success, 128);
 }
