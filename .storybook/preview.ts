@@ -3,6 +3,8 @@ import type { Preview } from '@storybook/web-components';
 import '../styles/desafio.css';
 import '../www/build/desafio.esm';
 
+import './utils/styles/stories.scss';
+
 const preview: Preview = {
   parameters: {
     staticDirs: ['../www'],

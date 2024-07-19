@@ -1,12 +1,20 @@
 import type {
   DsColorAula,
   DsColorBrand,
+  DsColorCPMed,
+  DsColorCPVent,
+  DsColorExtensivo,
   DsColorFeedback,
+  DsColorIntensivao,
   DsColorMaterial,
+  DsColorMEDEletro,
+  DsColorMedmaster,
   DsColorNeutral,
+  DsColorNoPapo,
   DsColorProvas,
   DsColorQuestoes,
   DsColorRevalida,
+  DsColorVentilaMED,
 } from '@utils/enums/colors.enums';
 
 import type { DsLiteralUnion } from './utils.types';
@@ -23,4 +31,16 @@ export type DsColorsMedsoft =
   | `${DsColorRevalida}`
   | `${DsColorProvas}`;
 
-export type DsColor = DsLiteralUnion<DsColors | DsColorsMedsoft, string>;
+export type DsColorsProdutos =
+  | `${DsColorExtensivo}`
+  | `${DsColorMedmaster}`
+  | `${DsColorCPMed}`
+  | `${DsColorNoPapo}`
+  | `${DsColorMEDEletro}`
+  | `${DsColorCPVent}`
+  | `${DsColorVentilaMED}`
+  | `${DsColorIntensivao}`;
+
+export type DsColor = DsLiteralUnion<
+  DsColors | DsColorsMedsoft | DsColorsProdutos | string
+>;

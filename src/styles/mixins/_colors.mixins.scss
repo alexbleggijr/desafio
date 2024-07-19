@@ -3,10 +3,6 @@
 @use 'sass:math';
 @use '../variables/colors.variables';
 
-@function custom-properties-infix($luminosity-length) {
-  @return if($luminosity-length == 1, '', '-');
-}
-
 /// generates Desafio color CSS custom properties.
 /// @param $category brand | neutral | feedback
 /// @param $default-variation define a cor default se existir
@@ -44,6 +40,8 @@
   $luminosity: map.get($map, luminosity);
   $luminosity-length: list.length($luminosity);
   $contrast-break: math.ceil(math.div($luminosity-length, 2));
+
+  @debug $contrast-fixed-variation;
 
   /// fixed contrast variation
   @if $contrast-fixed-variation != null {

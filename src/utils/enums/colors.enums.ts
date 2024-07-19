@@ -80,3 +80,75 @@ export enum DsColorProvas {
   Provas_04 = 'provas-4',
   Provas_05 = 'provas-5',
 }
+
+export enum DsColorExtensivo {
+  Extensivo = 'extensivo',
+  Extensivo_01 = 'extensivo-1',
+  Extensivo_02 = 'extensivo-2',
+  Extensivo_03 = 'extensivo-3',
+  Extensivo_04 = 'extensivo-4',
+  Extensivo_05 = 'extensivo-5',
+}
+
+export enum DsColorMedmaster {
+  Medmaster = 'medmaster',
+  Medmaster_01 = 'medmaster-1',
+  Medmaster_02 = 'medmaster-2',
+  Medmaster_03 = 'medmaster-3',
+  Medmaster_04 = 'medmaster-4',
+  Medmaster_05 = 'medmaster-5',
+}
+
+export enum DsColorCPMed {
+  CPMed = 'cpmed',
+  CPMed_01 = 'cpmed-1',
+  CPMed_02 = 'cpmed-2',
+  CPMed_03 = 'cpmed-3',
+  CPMed_04 = 'cpmed-4',
+  CPMed_05 = 'cpmed-5',
+}
+
+export enum DsColorNoPapo {
+  NoPapo = 'nopapo',
+  NoPapo_01 = 'nopapo-1',
+  NoPapo_02 = 'nopapo-2',
+  NoPapo_03 = 'nopapo-3',
+  NoPapo_04 = 'nopapo-4',
+  NoPapo_05 = 'nopapo-5',
+}
+
+export enum DsColorMEDEletro {
+  MEDEletro = 'Medeletro',
+  MEDEletro_01 = 'Medeletro-1',
+  MEDEletro_02 = 'Medeletro-2',
+  MEDEletro_03 = 'Medeletro-3',
+  MEDEletro_04 = 'Medeletro-4',
+  MEDEletro_05 = 'Medeletro-5',
+}
+
+export enum DsColorCPVent {
+  CPVent = 'cpvent',
+  CPVent_01 = 'cpvent-1',
+  CPVent_02 = 'cpvent-2',
+  CPVent_03 = 'cpvent-3',
+  CPVent_04 = 'cpvent-4',
+  CPVent_05 = 'cpvent-5',
+}
+
+export enum DsColorVentilaMED {
+  VentilaMED = 'ventilamed',
+  VentilaMED_01 = 'ventilamed-1',
+  VentilaMED_02 = 'ventilamed-2',
+  VentilaMED_03 = 'ventilamed-3',
+  VentilaMED_04 = 'ventilamed-4',
+  VentilaMED_05 = 'ventilamed-5',
+}
+
+export enum DsColorIntensivao {
+  Intensivao = 'intensivao',
+  Intensivao_01 = 'intensivao-1',
+  Intensivao_02 = 'intensivao-2',
+  Intensivao_03 = 'intensivao-3',
+  Intensivao_04 = 'intensivao-4',
+  Intensivao_05 = 'intensivao-5',
+}

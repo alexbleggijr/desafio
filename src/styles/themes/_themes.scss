@@ -130,16 +130,16 @@
   );
 }
 
-@include colors-mixin.generate-classes(colors.$aula, aula);
-@include colors-mixin.generate-classes(colors.$material, material);
-@include colors-mixin.generate-classes(colors.$questoes, questoes);
-@include colors-mixin.generate-classes(colors.$revalida, revalida);
-@include colors-mixin.generate-classes(colors.$provas, provas);
-@include colors-mixin.generate-classes(colors.$extensivo, extensivo);
-@include colors-mixin.generate-classes(colors.$medmaster, medmaster);
-@include colors-mixin.generate-classes(colors.$cpmed, cpmed);
-@include colors-mixin.generate-classes(colors.$nopapo, nopapo);
-@include colors-mixin.generate-classes(colors.$medeletro, medeletro);
-@include colors-mixin.generate-classes(colors.$cpvent, cpvent);
-@include colors-mixin.generate-classes(colors.$ventilamed, ventilamed);
-@include colors-mixin.generate-classes(colors.$intensivao, intensivao);
+@include colors-mixin.generate-classes(colors.$aula, aula, 3);
+@include colors-mixin.generate-classes(colors.$material, material, 3);
+@include colors-mixin.generate-classes(colors.$questoes, questoes, 3);
+@include colors-mixin.generate-classes(colors.$revalida, revalida, 3);
+@include colors-mixin.generate-classes(colors.$provas, provas, 3);
+@include colors-mixin.generate-classes(colors.$extensivo, extensivo, 3);
+@include colors-mixin.generate-classes(colors.$medmaster, medmaster, 3);
+@include colors-mixin.generate-classes(colors.$cpmed, cpmed, 3);
+@include colors-mixin.generate-classes(colors.$nopapo, nopapo, 3);
+@include colors-mixin.generate-classes(colors.$medeletro, medeletro, 3);
+@include colors-mixin.generate-classes(colors.$cpvent, cpvent, 3);
+@include colors-mixin.generate-classes(colors.$ventilamed, ventilamed, 3);
+@include colors-mixin.generate-classes(colors.$intensivao, intensivao, 3);

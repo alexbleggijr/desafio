@@ -3,6 +3,7 @@ import { html } from 'lit';
 import {
   DS_COLORS,
   DS_COLORS_MEDSOFT,
+  DS_COLORS_PRODUTOS,
 } from '@utils/constants/colors.constants';
 
 const meta: Meta<any> = {
@@ -10,16 +11,8 @@ const meta: Meta<any> = {
   argTypes: {
     color: {
       control: { type: 'select' },
-      options: [...DS_COLORS, ...DS_COLORS_MEDSOFT],
+      options: [...DS_COLORS, ...DS_COLORS_MEDSOFT, ...DS_COLORS_PRODUTOS],
       description: `Component's colors.`,
-      table: {
-        defaultValue: {
-          summary: 'undefined',
-        },
-        type: {
-          summary: [...DS_COLORS, ...DS_COLORS_MEDSOFT].join('|'),
-        },
-      },
     },
   },
 };
