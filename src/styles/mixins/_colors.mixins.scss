@@ -3,6 +3,23 @@
 @use 'sass:math';
 @use '../variables/colors.variables';
 
+@function get-dynamic-custom-properties(
+  $category,
+  $hue,
+  $saturation,
+  $luminosity
+) {
+  @return calc(var(--ds-hue, #{$hue}) + var(--ds-hue-factor, 0)),
+    calc(
+      var(--ds-saturation, #{$saturation * 1%}) +
+        var(--ds-saturation-factor, 0%)
+    ),
+    calc(
+      var(--ds-luminosity, #{$luminosity * 1%}) +
+        var(--ds-luminosity-factor, 0%)
+    );
+}
+
 /// generates Desafio color CSS custom properties.
 /// @param $category brand | neutral | feedback
 /// @param $default-variation define a cor default se existir
@@ -22,8 +39,13 @@
   @if $luminosity-length != 1 {
     @each $luminosity-key, $luminosity-value in $luminosity {
       /// @output --ds-color-brand-3: 188, 80%, 40%;
-      --ds-color-#{$category}-#{$luminosity-key}: #{$hue}, #{$saturation * 1%},
-        #{$luminosity-value * 1%};
+      // --ds-color-#{$category}-#{$luminosity-key}: #{$hue}, #{$saturation * 1%}, #{$luminosity-value * 1%};
+      --ds-color-#{$category}-#{$luminosity-key}: #{get-dynamic-custom-properties(
+          $category,
+          $hue,
+          $saturation,
+          $luminosity-value
+        )};
     }
   } @else {
     /// @output --ds-color-attention: 44, 80%, 65%;
@@ -41,20 +63,18 @@
   $luminosity-length: list.length($luminosity);
   $contrast-break: math.ceil(math.div($luminosity-length, 2));
 
-  @debug $contrast-fixed-variation;
-
   /// fixed contrast variation
   @if $contrast-fixed-variation != null {
     /// @output
     /// .ds-color-brand,
     /// [color='brand'] {
-    ///   --ds-color-base: var(--ds-color-brand) !important;
-    ///   --ds-color-contrast: var(--ds-color-contrast-fixed) !important;
+    ///   --ds-color-base: var(--ds-color-brand);
+    ///   --ds-color-contrast: var(--ds-color-contrast-fixed);
     /// }
     .ds-color-#{$category},
     [color='#{$category}'] {
-      --ds-color-base: var(--ds-color-#{$category}) !important;
-      --ds-color-contrast: var(--ds-color-contrast-fixed) !important;
+      --ds-color-base: var(--ds-color-#{$category});
+      --ds-color-contrast: var(--ds-color-contrast-fixed);
     }
   }
 
@@ -64,45 +84,43 @@
     @each $luminosity-key, $luminosity-value in $luminosity {
       .ds-color-#{$category}-#{$luminosity-key},
       [color='#{$category}-#{$luminosity-key}'] {
-        --ds-color-base: var(
-          --ds-color-#{$category}-#{$luminosity-key}
-        ) !important;
+        --ds-color-base: var(--ds-color-#{$category}-#{$luminosity-key});
 
         @if $iteration <= $contrast-break {
           @if $luminosity-key == $contrast-fixed-variation {
             /// @output
             /// .ds-color-brand-#{$contrast-fixed-variation},
             /// [color='brand-#{$contrast-fixed-variation}'] {
-            ///   --ds-color-base: var(--ds-color-brand-#{$contrast-fixed-variation}) !important;
-            ///   --ds-color-contrast: var(--ds-color-contrast-fixed) !important;
+            ///   --ds-color-base: var(--ds-color-brand-#{$contrast-fixed-variation});
+            ///   --ds-color-contrast: var(--ds-color-contrast-fixed);
             /// }
-            --ds-color-contrast: var(--ds-color-contrast-fixed) !important;
+            --ds-color-contrast: var(--ds-color-contrast-fixed);
           } @else {
             /// @output
             /// .ds-color-neutral-5,
             /// [color='neutral-3'] {
-            ///   --ds-color-base: var(--ds-color-neutral-5) !important;
-            ///   --ds-color-contrast: var(--ds-color-neutral-10) !important;
+            ///   --ds-color-base: var(--ds-color-neutral-5);
+            ///   --ds-color-contrast: var(--ds-color-neutral-10);
             /// }
-            --ds-color-contrast: var(--ds-color-neutral-10) !important;
+            --ds-color-contrast: var(--ds-color-neutral-10);
           }
         } @else {
           @if $luminosity-key == $contrast-fixed-variation {
             /// @output
             /// .ds-color-brand-#{$contrast-fixed-variation},
             /// [color='brand-#{$contrast-fixed-variation}'] {
-            ///   --ds-color-base: var(--ds-color-brand-#{$contrast-fixed-variation}) !important;
-            ///   --ds-color-contrast: var(--ds-color-contrast-fixed) !important;
+            ///   --ds-color-base: var(--ds-color-brand-#{$contrast-fixed-variation});
+            ///   --ds-color-contrast: var(--ds-color-contrast-fixed);
             /// }
-            --ds-color-contrast: var(--ds-color-contrast-fixed) !important;
+            --ds-color-contrast: var(--ds-color-contrast-fixed);
           } @else {
             /// @output
             /// .ds-color-neutral-6,
             /// [color='neutral-6'] {
-            ///   --ds-color-base: var(--ds-color-neutral-) !important;
-            ///   --ds-color-contrast: var(--ds-color-neutral-10) !important;
+            ///   --ds-color-base: var(--ds-color-neutral-6);
+            ///   --ds-color-contrast: var(--ds-color-neutral-10);
             /// }
-            --ds-color-contrast: var(--ds-color-neutral-1) !important;
+            --ds-color-contrast: var(--ds-color-neutral-1);
           }
         }
       }
@@ -113,13 +131,13 @@
     /// @output
     /// .ds-color-attention,
     /// [color='attention'] {
-    ///   --ds-color-base: var(--ds-color-attention) !important;
-    ///   --ds-color-contrast: var(--ds-color-neutral-1) !important;
+    ///   --ds-color-base: var(--ds-color-attention);
+    ///   --ds-color-contrast: var(--ds-color-neutral-1);
     /// }
     .ds-color-#{$category},
     [color='#{$category}'] {
-      --ds-color-base: var(--ds-color-#{$category}) !important;
-      --ds-color-contrast: var(--ds-color-neutral-1) !important;
+      --ds-color-base: var(--ds-color-#{$category});
+      --ds-color-contrast: var(--ds-color-neutral-1);
     }
   }
 }

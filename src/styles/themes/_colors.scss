@@ -1,7 +1,7 @@
 @use '../variables/colors.variables';
 @use '../mixins/colors.mixins' as colors-mixin;
 
-:root,
+[ds-color-scheme='dark'],
 .ds-dark {
   --ds-color-contrast-fixed: var(--ds-color-neutral-10);
 
@@ -32,6 +32,7 @@
   );
 }
 
+[ds-color-scheme='light'],
 .ds-light {
   --ds-color-contrast-fixed: var(--ds-color-neutral-1);
 

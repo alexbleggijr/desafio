@@ -8,10 +8,10 @@ interface Config {
 export const colorSystem = () => {
   let config: Config = { scheme: '', cssCustomProperties: '' };
 
-  const colorHueFactor = '--hue-fator';
-  const neutralHueFactor = '--hue-fator';
-  const colorSaturationFactor = '--saturation-fator';
-  const neutralSaturationFactor = '--saturation-fator';
+  const colorHueFactor = '--ds-hue-factor';
+  const neutralHueFactor = '--ds-hue-factor';
+  const colorSaturationFactor = '--ds-saturation-factor';
+  const neutralSaturationFactor = '--ds-saturation-factor';
   const deviceDefaultScheme = `${window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'}`;
   const htmlEl = document.documentElement;
   const snipetEl = document.querySelector('.snipet') as HTMLElement;
@@ -66,16 +66,19 @@ export const colorSystem = () => {
   });
 
   luminosityRangeEl?.addEventListener('input', (event) => {
+    // `--ds-luminosity-factor-1`,
+    // `--ds-luminosity-factor-2`,
+    // `--ds-luminosity-factor-3`,
     htmlEl.style.setProperty(
-      `--luminosity-fator-1`,
+      `--ds-luminosity-factor`,
       `${Number((event.target as HTMLInputElement).value) * -1}%`,
     );
     htmlEl.style.setProperty(
-      `--luminosity-fator-2`,
+      `--ds-luminosity-factor`,
       `${(event.target as HTMLInputElement).value}%`,
     );
     htmlEl.style.setProperty(
-      `--luminosity-fator-3`,
+      `--ds-luminosity-factor`,
       `${(event.target as HTMLInputElement).value}%`,
     );
 
@@ -89,9 +92,9 @@ export const colorSystem = () => {
       `#${scheme}`,
     ) as HTMLInputElement;
 
-    config.scheme = scheme;
+    config.scheme = `${scheme}`;
     radioEl.checked = true;
-    htmlEl.setAttribute('color-scheme', `${scheme}`);
+    htmlEl.setAttribute('ds-color-scheme', `${scheme}`);
     render(setSnipet(config), snipetEl);
   }
 

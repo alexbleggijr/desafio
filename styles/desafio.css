@@ -1,112 +1,65 @@
-:root,
+[ds-color-scheme=dark],
 .ds-dark {
   --ds-color-contrast-fixed: var(--ds-color-neutral-10);
   --ds-color-brand: var(--ds-color-brand-3);
-  --ds-color-brand-1: 188, 80%,
-    20%;
-  --ds-color-brand-2: 188, 80%,
-    30%;
-  --ds-color-brand-3: 188, 80%,
-    40%;
-  --ds-color-brand-4: 188, 80%,
-    60%;
-  --ds-color-brand-5: 188, 80%,
-    80%;
-  --ds-color-neutral-1: 188, 10%,
-    8%;
-  --ds-color-neutral-15: 188, 10%,
-    13%;
-  --ds-color-neutral-2: 188, 10%,
-    18%;
-  --ds-color-neutral-25: 188, 10%,
-    23%;
-  --ds-color-neutral-3: 188, 10%,
-    28%;
-  --ds-color-neutral-35: 188, 10%,
-    33%;
-  --ds-color-neutral-4: 188, 10%,
-    38%;
-  --ds-color-neutral-45: 188, 10%,
-    43%;
-  --ds-color-neutral-5: 188, 10%,
-    48%;
-  --ds-color-neutral-55: 188, 10%,
-    53%;
-  --ds-color-neutral-6: 188, 10%,
-    58%;
-  --ds-color-neutral-65: 188, 10%,
-    63%;
-  --ds-color-neutral-7: 188, 10%,
-    68%;
-  --ds-color-neutral-75: 188, 10%,
-    73%;
-  --ds-color-neutral-8: 188, 10%,
-    78%;
-  --ds-color-neutral-85: 188, 10%,
-    83%;
-  --ds-color-neutral-9: 188, 10%,
-    88%;
-  --ds-color-neutral-95: 188, 10%,
-    93%;
-  --ds-color-neutral-10: 188, 10%,
-    98%;
+  --ds-color-brand-1: calc(var(--ds-hue, 188) + var(--ds-hue-factor, 0)), calc(var(--ds-saturation, 80%) + var(--ds-saturation-factor, 0%)), calc(var(--ds-luminosity, 20%) + var(--ds-luminosity-factor, 0%));
+  --ds-color-brand-2: calc(var(--ds-hue, 188) + var(--ds-hue-factor, 0)), calc(var(--ds-saturation, 80%) + var(--ds-saturation-factor, 0%)), calc(var(--ds-luminosity, 30%) + var(--ds-luminosity-factor, 0%));
+  --ds-color-brand-3: calc(var(--ds-hue, 188) + var(--ds-hue-factor, 0)), calc(var(--ds-saturation, 80%) + var(--ds-saturation-factor, 0%)), calc(var(--ds-luminosity, 40%) + var(--ds-luminosity-factor, 0%));
+  --ds-color-brand-4: calc(var(--ds-hue, 188) + var(--ds-hue-factor, 0)), calc(var(--ds-saturation, 80%) + var(--ds-saturation-factor, 0%)), calc(var(--ds-luminosity, 60%) + var(--ds-luminosity-factor, 0%));
+  --ds-color-brand-5: calc(var(--ds-hue, 188) + var(--ds-hue-factor, 0)), calc(var(--ds-saturation, 80%) + var(--ds-saturation-factor, 0%)), calc(var(--ds-luminosity, 80%) + var(--ds-luminosity-factor, 0%));
+  --ds-color-neutral-1: calc(var(--ds-hue, 188) + var(--ds-hue-factor, 0)), calc(var(--ds-saturation, 10%) + var(--ds-saturation-factor, 0%)), calc(var(--ds-luminosity, 8%) + var(--ds-luminosity-factor, 0%));
+  --ds-color-neutral-15: calc(var(--ds-hue, 188) + var(--ds-hue-factor, 0)), calc(var(--ds-saturation, 10%) + var(--ds-saturation-factor, 0%)), calc(var(--ds-luminosity, 13%) + var(--ds-luminosity-factor, 0%));
+  --ds-color-neutral-2: calc(var(--ds-hue, 188) + var(--ds-hue-factor, 0)), calc(var(--ds-saturation, 10%) + var(--ds-saturation-factor, 0%)), calc(var(--ds-luminosity, 18%) + var(--ds-luminosity-factor, 0%));
+  --ds-color-neutral-25: calc(var(--ds-hue, 188) + var(--ds-hue-factor, 0)), calc(var(--ds-saturation, 10%) + var(--ds-saturation-factor, 0%)), calc(var(--ds-luminosity, 23%) + var(--ds-luminosity-factor, 0%));
+  --ds-color-neutral-3: calc(var(--ds-hue, 188) + var(--ds-hue-factor, 0)), calc(var(--ds-saturation, 10%) + var(--ds-saturation-factor, 0%)), calc(var(--ds-luminosity, 28%) + var(--ds-luminosity-factor, 0%));
+  --ds-color-neutral-35: calc(var(--ds-hue, 188) + var(--ds-hue-factor, 0)), calc(var(--ds-saturation, 10%) + var(--ds-saturation-factor, 0%)), calc(var(--ds-luminosity, 33%) + var(--ds-luminosity-factor, 0%));
+  --ds-color-neutral-4: calc(var(--ds-hue, 188) + var(--ds-hue-factor, 0)), calc(var(--ds-saturation, 10%) + var(--ds-saturation-factor, 0%)), calc(var(--ds-luminosity, 38%) + var(--ds-luminosity-factor, 0%));
+  --ds-color-neutral-45: calc(var(--ds-hue, 188) + var(--ds-hue-factor, 0)), calc(var(--ds-saturation, 10%) + var(--ds-saturation-factor, 0%)), calc(var(--ds-luminosity, 43%) + var(--ds-luminosity-factor, 0%));
+  --ds-color-neutral-5: calc(var(--ds-hue, 188) + var(--ds-hue-factor, 0)), calc(var(--ds-saturation, 10%) + var(--ds-saturation-factor, 0%)), calc(var(--ds-luminosity, 48%) + var(--ds-luminosity-factor, 0%));
+  --ds-color-neutral-55: calc(var(--ds-hue, 188) + var(--ds-hue-factor, 0)), calc(var(--ds-saturation, 10%) + var(--ds-saturation-factor, 0%)), calc(var(--ds-luminosity, 53%) + var(--ds-luminosity-factor, 0%));
+  --ds-color-neutral-6: calc(var(--ds-hue, 188) + var(--ds-hue-factor, 0)), calc(var(--ds-saturation, 10%) + var(--ds-saturation-factor, 0%)), calc(var(--ds-luminosity, 58%) + var(--ds-luminosity-factor, 0%));
+  --ds-color-neutral-65: calc(var(--ds-hue, 188) + var(--ds-hue-factor, 0)), calc(var(--ds-saturation, 10%) + var(--ds-saturation-factor, 0%)), calc(var(--ds-luminosity, 63%) + var(--ds-luminosity-factor, 0%));
+  --ds-color-neutral-7: calc(var(--ds-hue, 188) + var(--ds-hue-factor, 0)), calc(var(--ds-saturation, 10%) + var(--ds-saturation-factor, 0%)), calc(var(--ds-luminosity, 68%) + var(--ds-luminosity-factor, 0%));
+  --ds-color-neutral-75: calc(var(--ds-hue, 188) + var(--ds-hue-factor, 0)), calc(var(--ds-saturation, 10%) + var(--ds-saturation-factor, 0%)), calc(var(--ds-luminosity, 73%) + var(--ds-luminosity-factor, 0%));
+  --ds-color-neutral-8: calc(var(--ds-hue, 188) + var(--ds-hue-factor, 0)), calc(var(--ds-saturation, 10%) + var(--ds-saturation-factor, 0%)), calc(var(--ds-luminosity, 78%) + var(--ds-luminosity-factor, 0%));
+  --ds-color-neutral-85: calc(var(--ds-hue, 188) + var(--ds-hue-factor, 0)), calc(var(--ds-saturation, 10%) + var(--ds-saturation-factor, 0%)), calc(var(--ds-luminosity, 83%) + var(--ds-luminosity-factor, 0%));
+  --ds-color-neutral-9: calc(var(--ds-hue, 188) + var(--ds-hue-factor, 0)), calc(var(--ds-saturation, 10%) + var(--ds-saturation-factor, 0%)), calc(var(--ds-luminosity, 88%) + var(--ds-luminosity-factor, 0%));
+  --ds-color-neutral-95: calc(var(--ds-hue, 188) + var(--ds-hue-factor, 0)), calc(var(--ds-saturation, 10%) + var(--ds-saturation-factor, 0%)), calc(var(--ds-luminosity, 93%) + var(--ds-luminosity-factor, 0%));
+  --ds-color-neutral-10: calc(var(--ds-hue, 188) + var(--ds-hue-factor, 0)), calc(var(--ds-saturation, 10%) + var(--ds-saturation-factor, 0%)), calc(var(--ds-luminosity, 98%) + var(--ds-luminosity-factor, 0%));
   --ds-color-attention: 44, 80%, 65%;
   --ds-color-caution: 24, 80%, 65%;
   --ds-color-warning: 4, 80%, 65%;
   --ds-color-success: 128, 80%, 65%;
 }
 
+[ds-color-scheme=light],
 .ds-light {
   --ds-color-contrast-fixed: var(--ds-color-neutral-1);
   --ds-color-brand: var(--ds-color-brand-3);
-  --ds-color-brand-1: 188, 80%,
-    80%;
-  --ds-color-brand-2: 188, 80%,
-    60%;
-  --ds-color-brand-3: 188, 80%,
-    40%;
-  --ds-color-brand-4: 188, 80%,
-    30%;
-  --ds-color-brand-5: 188, 80%,
-    20%;
-  --ds-color-neutral-1: 188, 10%,
-    98%;
-  --ds-color-neutral-15: 188, 10%,
-    93%;
-  --ds-color-neutral-2: 188, 10%,
-    88%;
-  --ds-color-neutral-25: 188, 10%,
-    83%;
-  --ds-color-neutral-3: 188, 10%,
-    78%;
-  --ds-color-neutral-35: 188, 10%,
-    73%;
-  --ds-color-neutral-4: 188, 10%,
-    68%;
-  --ds-color-neutral-45: 188, 10%,
-    63%;
-  --ds-color-neutral-5: 188, 10%,
-    58%;
-  --ds-color-neutral-55: 188, 10%,
-    53%;
-  --ds-color-neutral-6: 188, 10%,
-    48%;
-  --ds-color-neutral-65: 188, 10%,
-    43%;
-  --ds-color-neutral-7: 188, 10%,
-    38%;
-  --ds-color-neutral-75: 188, 10%,
-    33%;
-  --ds-color-neutral-8: 188, 10%,
-    28%;
-  --ds-color-neutral-85: 188, 10%,
-    23%;
-  --ds-color-neutral-9: 188, 10%,
-    18%;
-  --ds-color-neutral-95: 188, 10%,
-    13%;
-  --ds-color-neutral-10: 188, 10%,
-    8%;
+  --ds-color-brand-1: calc(var(--ds-hue, 188) + var(--ds-hue-factor, 0)), calc(var(--ds-saturation, 80%) + var(--ds-saturation-factor, 0%)), calc(var(--ds-luminosity, 80%) + var(--ds-luminosity-factor, 0%));
+  --ds-color-brand-2: calc(var(--ds-hue, 188) + var(--ds-hue-factor, 0)), calc(var(--ds-saturation, 80%) + var(--ds-saturation-factor, 0%)), calc(var(--ds-luminosity, 60%) + var(--ds-luminosity-factor, 0%));
+  --ds-color-brand-3: calc(var(--ds-hue, 188) + var(--ds-hue-factor, 0)), calc(var(--ds-saturation, 80%) + var(--ds-saturation-factor, 0%)), calc(var(--ds-luminosity, 40%) + var(--ds-luminosity-factor, 0%));
+  --ds-color-brand-4: calc(var(--ds-hue, 188) + var(--ds-hue-factor, 0)), calc(var(--ds-saturation, 80%) + var(--ds-saturation-factor, 0%)), calc(var(--ds-luminosity, 30%) + var(--ds-luminosity-factor, 0%));
+  --ds-color-brand-5: calc(var(--ds-hue, 188) + var(--ds-hue-factor, 0)), calc(var(--ds-saturation, 80%) + var(--ds-saturation-factor, 0%)), calc(var(--ds-luminosity, 20%) + var(--ds-luminosity-factor, 0%));
+  --ds-color-neutral-1: calc(var(--ds-hue, 188) + var(--ds-hue-factor, 0)), calc(var(--ds-saturation, 10%) + var(--ds-saturation-factor, 0%)), calc(var(--ds-luminosity, 98%) + var(--ds-luminosity-factor, 0%));
+  --ds-color-neutral-15: calc(var(--ds-hue, 188) + var(--ds-hue-factor, 0)), calc(var(--ds-saturation, 10%) + var(--ds-saturation-factor, 0%)), calc(var(--ds-luminosity, 93%) + var(--ds-luminosity-factor, 0%));
+  --ds-color-neutral-2: calc(var(--ds-hue, 188) + var(--ds-hue-factor, 0)), calc(var(--ds-saturation, 10%) + var(--ds-saturation-factor, 0%)), calc(var(--ds-luminosity, 88%) + var(--ds-luminosity-factor, 0%));
+  --ds-color-neutral-25: calc(var(--ds-hue, 188) + var(--ds-hue-factor, 0)), calc(var(--ds-saturation, 10%) + var(--ds-saturation-factor, 0%)), calc(var(--ds-luminosity, 83%) + var(--ds-luminosity-factor, 0%));
+  --ds-color-neutral-3: calc(var(--ds-hue, 188) + var(--ds-hue-factor, 0)), calc(var(--ds-saturation, 10%) + var(--ds-saturation-factor, 0%)), calc(var(--ds-luminosity, 78%) + var(--ds-luminosity-factor, 0%));
+  --ds-color-neutral-35: calc(var(--ds-hue, 188) + var(--ds-hue-factor, 0)), calc(var(--ds-saturation, 10%) + var(--ds-saturation-factor, 0%)), calc(var(--ds-luminosity, 73%) + var(--ds-luminosity-factor, 0%));
+  --ds-color-neutral-4: calc(var(--ds-hue, 188) + var(--ds-hue-factor, 0)), calc(var(--ds-saturation, 10%) + var(--ds-saturation-factor, 0%)), calc(var(--ds-luminosity, 68%) + var(--ds-luminosity-factor, 0%));
+  --ds-color-neutral-45: calc(var(--ds-hue, 188) + var(--ds-hue-factor, 0)), calc(var(--ds-saturation, 10%) + var(--ds-saturation-factor, 0%)), calc(var(--ds-luminosity, 63%) + var(--ds-luminosity-factor, 0%));
+  --ds-color-neutral-5: calc(var(--ds-hue, 188) + var(--ds-hue-factor, 0)), calc(var(--ds-saturation, 10%) + var(--ds-saturation-factor, 0%)), calc(var(--ds-luminosity, 58%) + var(--ds-luminosity-factor, 0%));
+  --ds-color-neutral-55: calc(var(--ds-hue, 188) + var(--ds-hue-factor, 0)), calc(var(--ds-saturation, 10%) + var(--ds-saturation-factor, 0%)), calc(var(--ds-luminosity, 53%) + var(--ds-luminosity-factor, 0%));
+  --ds-color-neutral-6: calc(var(--ds-hue, 188) + var(--ds-hue-factor, 0)), calc(var(--ds-saturation, 10%) + var(--ds-saturation-factor, 0%)), calc(var(--ds-luminosity, 48%) + var(--ds-luminosity-factor, 0%));
+  --ds-color-neutral-65: calc(var(--ds-hue, 188) + var(--ds-hue-factor, 0)), calc(var(--ds-saturation, 10%) + var(--ds-saturation-factor, 0%)), calc(var(--ds-luminosity, 43%) + var(--ds-luminosity-factor, 0%));
+  --ds-color-neutral-7: calc(var(--ds-hue, 188) + var(--ds-hue-factor, 0)), calc(var(--ds-saturation, 10%) + var(--ds-saturation-factor, 0%)), calc(var(--ds-luminosity, 38%) + var(--ds-luminosity-factor, 0%));
+  --ds-color-neutral-75: calc(var(--ds-hue, 188) + var(--ds-hue-factor, 0)), calc(var(--ds-saturation, 10%) + var(--ds-saturation-factor, 0%)), calc(var(--ds-luminosity, 33%) + var(--ds-luminosity-factor, 0%));
+  --ds-color-neutral-8: calc(var(--ds-hue, 188) + var(--ds-hue-factor, 0)), calc(var(--ds-saturation, 10%) + var(--ds-saturation-factor, 0%)), calc(var(--ds-luminosity, 28%) + var(--ds-luminosity-factor, 0%));
+  --ds-color-neutral-85: calc(var(--ds-hue, 188) + var(--ds-hue-factor, 0)), calc(var(--ds-saturation, 10%) + var(--ds-saturation-factor, 0%)), calc(var(--ds-luminosity, 23%) + var(--ds-luminosity-factor, 0%));
+  --ds-color-neutral-9: calc(var(--ds-hue, 188) + var(--ds-hue-factor, 0)), calc(var(--ds-saturation, 10%) + var(--ds-saturation-factor, 0%)), calc(var(--ds-luminosity, 18%) + var(--ds-luminosity-factor, 0%));
+  --ds-color-neutral-95: calc(var(--ds-hue, 188) + var(--ds-hue-factor, 0)), calc(var(--ds-saturation, 10%) + var(--ds-saturation-factor, 0%)), calc(var(--ds-luminosity, 13%) + var(--ds-luminosity-factor, 0%));
+  --ds-color-neutral-10: calc(var(--ds-hue, 188) + var(--ds-hue-factor, 0)), calc(var(--ds-saturation, 10%) + var(--ds-saturation-factor, 0%)), calc(var(--ds-luminosity, 8%) + var(--ds-luminosity-factor, 0%));
   --ds-color-attention: 44, 80%, 45%;
   --ds-color-caution: 24, 80%, 45%;
   --ds-color-warning: 4, 80%, 45%;
@@ -115,1117 +68,812 @@
 
 .ds-color-brand,
 [color=brand] {
-  --ds-color-base: var(--ds-color-brand) !important;
-  --ds-color-contrast: var(--ds-color-contrast-fixed) !important;
+  --ds-color-base: var(--ds-color-brand);
+  --ds-color-contrast: var(--ds-color-contrast-fixed);
 }
 
 .ds-color-brand-1,
 [color=brand-1] {
-  --ds-color-base: var(
-    --ds-color-brand-1
-  ) !important;
-  --ds-color-contrast: var(--ds-color-neutral-10) !important;
+  --ds-color-base: var(--ds-color-brand-1);
+  --ds-color-contrast: var(--ds-color-neutral-10);
 }
 
 .ds-color-brand-2,
 [color=brand-2] {
-  --ds-color-base: var(
-    --ds-color-brand-2
-  ) !important;
-  --ds-color-contrast: var(--ds-color-neutral-10) !important;
+  --ds-color-base: var(--ds-color-brand-2);
+  --ds-color-contrast: var(--ds-color-neutral-10);
 }
 
 .ds-color-brand-3,
 [color=brand-3] {
-  --ds-color-base: var(
-    --ds-color-brand-3
-  ) !important;
-  --ds-color-contrast: var(--ds-color-contrast-fixed) !important;
+  --ds-color-base: var(--ds-color-brand-3);
+  --ds-color-contrast: var(--ds-color-contrast-fixed);
 }
 
 .ds-color-brand-4,
 [color=brand-4] {
-  --ds-color-base: var(
-    --ds-color-brand-4
-  ) !important;
-  --ds-color-contrast: var(--ds-color-neutral-1) !important;
+  --ds-color-base: var(--ds-color-brand-4);
+  --ds-color-contrast: var(--ds-color-neutral-1);
 }
 
 .ds-color-brand-5,
 [color=brand-5] {
-  --ds-color-base: var(
-    --ds-color-brand-5
-  ) !important;
-  --ds-color-contrast: var(--ds-color-neutral-1) !important;
+  --ds-color-base: var(--ds-color-brand-5);
+  --ds-color-contrast: var(--ds-color-neutral-1);
 }
 
 .ds-color-neutral-1,
 [color=neutral-1] {
-  --ds-color-base: var(
-    --ds-color-neutral-1
-  ) !important;
-  --ds-color-contrast: var(--ds-color-neutral-10) !important;
+  --ds-color-base: var(--ds-color-neutral-1);
+  --ds-color-contrast: var(--ds-color-neutral-10);
 }
 
 .ds-color-neutral-15,
 [color=neutral-15] {
-  --ds-color-base: var(
-    --ds-color-neutral-15
-  ) !important;
-  --ds-color-contrast: var(--ds-color-neutral-10) !important;
+  --ds-color-base: var(--ds-color-neutral-15);
+  --ds-color-contrast: var(--ds-color-neutral-10);
 }
 
 .ds-color-neutral-2,
 [color=neutral-2] {
-  --ds-color-base: var(
-    --ds-color-neutral-2
-  ) !important;
-  --ds-color-contrast: var(--ds-color-neutral-10) !important;
+  --ds-color-base: var(--ds-color-neutral-2);
+  --ds-color-contrast: var(--ds-color-neutral-10);
 }
 
 .ds-color-neutral-25,
 [color=neutral-25] {
-  --ds-color-base: var(
-    --ds-color-neutral-25
-  ) !important;
-  --ds-color-contrast: var(--ds-color-neutral-10) !important;
+  --ds-color-base: var(--ds-color-neutral-25);
+  --ds-color-contrast: var(--ds-color-neutral-10);
 }
 
 .ds-color-neutral-3,
 [color=neutral-3] {
-  --ds-color-base: var(
-    --ds-color-neutral-3
-  ) !important;
-  --ds-color-contrast: var(--ds-color-neutral-10) !important;
+  --ds-color-base: var(--ds-color-neutral-3);
+  --ds-color-contrast: var(--ds-color-neutral-10);
 }
 
 .ds-color-neutral-35,
 [color=neutral-35] {
-  --ds-color-base: var(
-    --ds-color-neutral-35
-  ) !important;
-  --ds-color-contrast: var(--ds-color-neutral-10) !important;
+  --ds-color-base: var(--ds-color-neutral-35);
+  --ds-color-contrast: var(--ds-color-neutral-10);
 }
 
 .ds-color-neutral-4,
 [color=neutral-4] {
-  --ds-color-base: var(
-    --ds-color-neutral-4
-  ) !important;
-  --ds-color-contrast: var(--ds-color-neutral-10) !important;
+  --ds-color-base: var(--ds-color-neutral-4);
+  --ds-color-contrast: var(--ds-color-neutral-10);
 }
 
 .ds-color-neutral-45,
 [color=neutral-45] {
-  --ds-color-base: var(
-    --ds-color-neutral-45
-  ) !important;
-  --ds-color-contrast: var(--ds-color-neutral-10) !important;
+  --ds-color-base: var(--ds-color-neutral-45);
+  --ds-color-contrast: var(--ds-color-neutral-10);
 }
 
 .ds-color-neutral-5,
 [color=neutral-5] {
-  --ds-color-base: var(
-    --ds-color-neutral-5
-  ) !important;
-  --ds-color-contrast: var(--ds-color-neutral-10) !important;
+  --ds-color-base: var(--ds-color-neutral-5);
+  --ds-color-contrast: var(--ds-color-neutral-10);
 }
 
 .ds-color-neutral-55,
 [color=neutral-55] {
-  --ds-color-base: var(
-    --ds-color-neutral-55
-  ) !important;
-  --ds-color-contrast: var(--ds-color-neutral-10) !important;
+  --ds-color-base: var(--ds-color-neutral-55);
+  --ds-color-contrast: var(--ds-color-neutral-10);
 }
 
 .ds-color-neutral-6,
 [color=neutral-6] {
-  --ds-color-base: var(
-    --ds-color-neutral-6
-  ) !important;
-  --ds-color-contrast: var(--ds-color-neutral-1) !important;
+  --ds-color-base: var(--ds-color-neutral-6);
+  --ds-color-contrast: var(--ds-color-neutral-1);
 }
 
 .ds-color-neutral-65,
 [color=neutral-65] {
-  --ds-color-base: var(
-    --ds-color-neutral-65
-  ) !important;
-  --ds-color-contrast: var(--ds-color-neutral-1) !important;
+  --ds-color-base: var(--ds-color-neutral-65);
+  --ds-color-contrast: var(--ds-color-neutral-1);
 }
 
 .ds-color-neutral-7,
 [color=neutral-7] {
-  --ds-color-base: var(
-    --ds-color-neutral-7
-  ) !important;
-  --ds-color-contrast: var(--ds-color-neutral-1) !important;
+  --ds-color-base: var(--ds-color-neutral-7);
+  --ds-color-contrast: var(--ds-color-neutral-1);
 }
 
 .ds-color-neutral-75,
 [color=neutral-75] {
-  --ds-color-base: var(
-    --ds-color-neutral-75
-  ) !important;
-  --ds-color-contrast: var(--ds-color-neutral-1) !important;
+  --ds-color-base: var(--ds-color-neutral-75);
+  --ds-color-contrast: var(--ds-color-neutral-1);
 }
 
 .ds-color-neutral-8,
 [color=neutral-8] {
-  --ds-color-base: var(
-    --ds-color-neutral-8
-  ) !important;
-  --ds-color-contrast: var(--ds-color-neutral-1) !important;
+  --ds-color-base: var(--ds-color-neutral-8);
+  --ds-color-contrast: var(--ds-color-neutral-1);
 }
 
 .ds-color-neutral-85,
 [color=neutral-85] {
-  --ds-color-base: var(
-    --ds-color-neutral-85
-  ) !important;
-  --ds-color-contrast: var(--ds-color-neutral-1) !important;
+  --ds-color-base: var(--ds-color-neutral-85);
+  --ds-color-contrast: var(--ds-color-neutral-1);
 }
 
 .ds-color-neutral-9,
 [color=neutral-9] {
-  --ds-color-base: var(
-    --ds-color-neutral-9
-  ) !important;
-  --ds-color-contrast: var(--ds-color-neutral-1) !important;
+  --ds-color-base: var(--ds-color-neutral-9);
+  --ds-color-contrast: var(--ds-color-neutral-1);
 }
 
 .ds-color-neutral-95,
 [color=neutral-95] {
-  --ds-color-base: var(
-    --ds-color-neutral-95
-  ) !important;
-  --ds-color-contrast: var(--ds-color-neutral-1) !important;
+  --ds-color-base: var(--ds-color-neutral-95);
+  --ds-color-contrast: var(--ds-color-neutral-1);
 }
 
 .ds-color-neutral-10,
 [color=neutral-10] {
-  --ds-color-base: var(
-    --ds-color-neutral-10
-  ) !important;
-  --ds-color-contrast: var(--ds-color-neutral-1) !important;
+  --ds-color-base: var(--ds-color-neutral-10);
+  --ds-color-contrast: var(--ds-color-neutral-1);
 }
 
 .ds-color-attention,
 [color=attention] {
-  --ds-color-base: var(--ds-color-attention) !important;
-  --ds-color-contrast: var(--ds-color-neutral-1) !important;
+  --ds-color-base: var(--ds-color-attention);
+  --ds-color-contrast: var(--ds-color-neutral-1);
 }
 
 .ds-color-caution,
 [color=caution] {
-  --ds-color-base: var(--ds-color-caution) !important;
-  --ds-color-contrast: var(--ds-color-neutral-1) !important;
+  --ds-color-base: var(--ds-color-caution);
+  --ds-color-contrast: var(--ds-color-neutral-1);
 }
 
 .ds-color-warning,
 [color=warning] {
-  --ds-color-base: var(--ds-color-warning) !important;
-  --ds-color-contrast: var(--ds-color-neutral-1) !important;
+  --ds-color-base: var(--ds-color-warning);
+  --ds-color-contrast: var(--ds-color-neutral-1);
 }
 
 .ds-color-success,
 [color=success] {
-  --ds-color-base: var(--ds-color-success) !important;
-  --ds-color-contrast: var(--ds-color-neutral-1) !important;
+  --ds-color-base: var(--ds-color-success);
+  --ds-color-contrast: var(--ds-color-neutral-1);
 }
 
-:root,
+[ds-color-scheme=dark],
 .ds-dark {
   --ds-color-aula: var(--ds-color-aula-3);
-  --ds-color-aula-1: 168, 80%,
-    20%;
-  --ds-color-aula-2: 168, 80%,
-    30%;
-  --ds-color-aula-3: 168, 80%,
-    40%;
-  --ds-color-aula-4: 168, 80%,
-    60%;
-  --ds-color-aula-5: 168, 80%,
-    80%;
+  --ds-color-aula-1: calc(var(--ds-hue, 168) + var(--ds-hue-factor, 0)), calc(var(--ds-saturation, 80%) + var(--ds-saturation-factor, 0%)), calc(var(--ds-luminosity, 20%) + var(--ds-luminosity-factor, 0%));
+  --ds-color-aula-2: calc(var(--ds-hue, 168) + var(--ds-hue-factor, 0)), calc(var(--ds-saturation, 80%) + var(--ds-saturation-factor, 0%)), calc(var(--ds-luminosity, 30%) + var(--ds-luminosity-factor, 0%));
+  --ds-color-aula-3: calc(var(--ds-hue, 168) + var(--ds-hue-factor, 0)), calc(var(--ds-saturation, 80%) + var(--ds-saturation-factor, 0%)), calc(var(--ds-luminosity, 40%) + var(--ds-luminosity-factor, 0%));
+  --ds-color-aula-4: calc(var(--ds-hue, 168) + var(--ds-hue-factor, 0)), calc(var(--ds-saturation, 80%) + var(--ds-saturation-factor, 0%)), calc(var(--ds-luminosity, 60%) + var(--ds-luminosity-factor, 0%));
+  --ds-color-aula-5: calc(var(--ds-hue, 168) + var(--ds-hue-factor, 0)), calc(var(--ds-saturation, 80%) + var(--ds-saturation-factor, 0%)), calc(var(--ds-luminosity, 80%) + var(--ds-luminosity-factor, 0%));
   --ds-color-material: var(--ds-color-material-3);
-  --ds-color-material-1: 24, 80%,
-    20%;
-  --ds-color-material-2: 24, 80%,
-    30%;
-  --ds-color-material-3: 24, 80%,
-    40%;
-  --ds-color-material-4: 24, 80%,
-    60%;
-  --ds-color-material-5: 24, 80%,
-    80%;
+  --ds-color-material-1: calc(var(--ds-hue, 24) + var(--ds-hue-factor, 0)), calc(var(--ds-saturation, 80%) + var(--ds-saturation-factor, 0%)), calc(var(--ds-luminosity, 20%) + var(--ds-luminosity-factor, 0%));
+  --ds-color-material-2: calc(var(--ds-hue, 24) + var(--ds-hue-factor, 0)), calc(var(--ds-saturation, 80%) + var(--ds-saturation-factor, 0%)), calc(var(--ds-luminosity, 30%) + var(--ds-luminosity-factor, 0%));
+  --ds-color-material-3: calc(var(--ds-hue, 24) + var(--ds-hue-factor, 0)), calc(var(--ds-saturation, 80%) + var(--ds-saturation-factor, 0%)), calc(var(--ds-luminosity, 40%) + var(--ds-luminosity-factor, 0%));
+  --ds-color-material-4: calc(var(--ds-hue, 24) + var(--ds-hue-factor, 0)), calc(var(--ds-saturation, 80%) + var(--ds-saturation-factor, 0%)), calc(var(--ds-luminosity, 60%) + var(--ds-luminosity-factor, 0%));
+  --ds-color-material-5: calc(var(--ds-hue, 24) + var(--ds-hue-factor, 0)), calc(var(--ds-saturation, 80%) + var(--ds-saturation-factor, 0%)), calc(var(--ds-luminosity, 80%) + var(--ds-luminosity-factor, 0%));
   --ds-color-questoes: var(--ds-color-questoes-3);
-  --ds-color-questoes-1: 200, 80%,
-    20%;
-  --ds-color-questoes-2: 200, 80%,
-    30%;
-  --ds-color-questoes-3: 200, 80%,
-    40%;
-  --ds-color-questoes-4: 200, 80%,
-    60%;
-  --ds-color-questoes-5: 200, 80%,
-    80%;
+  --ds-color-questoes-1: calc(var(--ds-hue, 200) + var(--ds-hue-factor, 0)), calc(var(--ds-saturation, 80%) + var(--ds-saturation-factor, 0%)), calc(var(--ds-luminosity, 20%) + var(--ds-luminosity-factor, 0%));
+  --ds-color-questoes-2: calc(var(--ds-hue, 200) + var(--ds-hue-factor, 0)), calc(var(--ds-saturation, 80%) + var(--ds-saturation-factor, 0%)), calc(var(--ds-luminosity, 30%) + var(--ds-luminosity-factor, 0%));
+  --ds-color-questoes-3: calc(var(--ds-hue, 200) + var(--ds-hue-factor, 0)), calc(var(--ds-saturation, 80%) + var(--ds-saturation-factor, 0%)), calc(var(--ds-luminosity, 40%) + var(--ds-luminosity-factor, 0%));
+  --ds-color-questoes-4: calc(var(--ds-hue, 200) + var(--ds-hue-factor, 0)), calc(var(--ds-saturation, 80%) + var(--ds-saturation-factor, 0%)), calc(var(--ds-luminosity, 60%) + var(--ds-luminosity-factor, 0%));
+  --ds-color-questoes-5: calc(var(--ds-hue, 200) + var(--ds-hue-factor, 0)), calc(var(--ds-saturation, 80%) + var(--ds-saturation-factor, 0%)), calc(var(--ds-luminosity, 80%) + var(--ds-luminosity-factor, 0%));
   --ds-color-revalida: var(--ds-color-revalida-3);
-  --ds-color-revalida-1: 342, 80%,
-    20%;
-  --ds-color-revalida-2: 342, 80%,
-    30%;
-  --ds-color-revalida-3: 342, 80%,
-    40%;
-  --ds-color-revalida-4: 342, 80%,
-    60%;
-  --ds-color-revalida-5: 342, 80%,
-    80%;
+  --ds-color-revalida-1: calc(var(--ds-hue, 342) + var(--ds-hue-factor, 0)), calc(var(--ds-saturation, 80%) + var(--ds-saturation-factor, 0%)), calc(var(--ds-luminosity, 20%) + var(--ds-luminosity-factor, 0%));
+  --ds-color-revalida-2: calc(var(--ds-hue, 342) + var(--ds-hue-factor, 0)), calc(var(--ds-saturation, 80%) + var(--ds-saturation-factor, 0%)), calc(var(--ds-luminosity, 30%) + var(--ds-luminosity-factor, 0%));
+  --ds-color-revalida-3: calc(var(--ds-hue, 342) + var(--ds-hue-factor, 0)), calc(var(--ds-saturation, 80%) + var(--ds-saturation-factor, 0%)), calc(var(--ds-luminosity, 40%) + var(--ds-luminosity-factor, 0%));
+  --ds-color-revalida-4: calc(var(--ds-hue, 342) + var(--ds-hue-factor, 0)), calc(var(--ds-saturation, 80%) + var(--ds-saturation-factor, 0%)), calc(var(--ds-luminosity, 60%) + var(--ds-luminosity-factor, 0%));
+  --ds-color-revalida-5: calc(var(--ds-hue, 342) + var(--ds-hue-factor, 0)), calc(var(--ds-saturation, 80%) + var(--ds-saturation-factor, 0%)), calc(var(--ds-luminosity, 80%) + var(--ds-luminosity-factor, 0%));
   --ds-color-provas: var(--ds-color-provas-3);
-  --ds-color-provas-1: 268, 80%,
-    20%;
-  --ds-color-provas-2: 268, 80%,
-    30%;
-  --ds-color-provas-3: 268, 80%,
-    40%;
-  --ds-color-provas-4: 268, 80%,
-    60%;
-  --ds-color-provas-5: 268, 80%,
-    80%;
+  --ds-color-provas-1: calc(var(--ds-hue, 268) + var(--ds-hue-factor, 0)), calc(var(--ds-saturation, 80%) + var(--ds-saturation-factor, 0%)), calc(var(--ds-luminosity, 20%) + var(--ds-luminosity-factor, 0%));
+  --ds-color-provas-2: calc(var(--ds-hue, 268) + var(--ds-hue-factor, 0)), calc(var(--ds-saturation, 80%) + var(--ds-saturation-factor, 0%)), calc(var(--ds-luminosity, 30%) + var(--ds-luminosity-factor, 0%));
+  --ds-color-provas-3: calc(var(--ds-hue, 268) + var(--ds-hue-factor, 0)), calc(var(--ds-saturation, 80%) + var(--ds-saturation-factor, 0%)), calc(var(--ds-luminosity, 40%) + var(--ds-luminosity-factor, 0%));
+  --ds-color-provas-4: calc(var(--ds-hue, 268) + var(--ds-hue-factor, 0)), calc(var(--ds-saturation, 80%) + var(--ds-saturation-factor, 0%)), calc(var(--ds-luminosity, 60%) + var(--ds-luminosity-factor, 0%));
+  --ds-color-provas-5: calc(var(--ds-hue, 268) + var(--ds-hue-factor, 0)), calc(var(--ds-saturation, 80%) + var(--ds-saturation-factor, 0%)), calc(var(--ds-luminosity, 80%) + var(--ds-luminosity-factor, 0%));
   --ds-color-extensivo: var(--ds-color-extensivo-3);
-  --ds-color-extensivo-1: 300, 80%,
-    20%;
-  --ds-color-extensivo-2: 300, 80%,
-    30%;
-  --ds-color-extensivo-3: 300, 80%,
-    40%;
-  --ds-color-extensivo-4: 300, 80%,
-    60%;
-  --ds-color-extensivo-5: 300, 80%,
-    80%;
+  --ds-color-extensivo-1: calc(var(--ds-hue, 300) + var(--ds-hue-factor, 0)), calc(var(--ds-saturation, 80%) + var(--ds-saturation-factor, 0%)), calc(var(--ds-luminosity, 20%) + var(--ds-luminosity-factor, 0%));
+  --ds-color-extensivo-2: calc(var(--ds-hue, 300) + var(--ds-hue-factor, 0)), calc(var(--ds-saturation, 80%) + var(--ds-saturation-factor, 0%)), calc(var(--ds-luminosity, 30%) + var(--ds-luminosity-factor, 0%));
+  --ds-color-extensivo-3: calc(var(--ds-hue, 300) + var(--ds-hue-factor, 0)), calc(var(--ds-saturation, 80%) + var(--ds-saturation-factor, 0%)), calc(var(--ds-luminosity, 40%) + var(--ds-luminosity-factor, 0%));
+  --ds-color-extensivo-4: calc(var(--ds-hue, 300) + var(--ds-hue-factor, 0)), calc(var(--ds-saturation, 80%) + var(--ds-saturation-factor, 0%)), calc(var(--ds-luminosity, 60%) + var(--ds-luminosity-factor, 0%));
+  --ds-color-extensivo-5: calc(var(--ds-hue, 300) + var(--ds-hue-factor, 0)), calc(var(--ds-saturation, 80%) + var(--ds-saturation-factor, 0%)), calc(var(--ds-luminosity, 80%) + var(--ds-luminosity-factor, 0%));
   --ds-color-medmaster: var(--ds-color-medmaster-3);
-  --ds-color-medmaster-1: 56, 80%,
-    20%;
-  --ds-color-medmaster-2: 56, 80%,
-    30%;
-  --ds-color-medmaster-3: 56, 80%,
-    40%;
-  --ds-color-medmaster-4: 56, 80%,
-    60%;
-  --ds-color-medmaster-5: 56, 80%,
-    80%;
+  --ds-color-medmaster-1: calc(var(--ds-hue, 56) + var(--ds-hue-factor, 0)), calc(var(--ds-saturation, 80%) + var(--ds-saturation-factor, 0%)), calc(var(--ds-luminosity, 20%) + var(--ds-luminosity-factor, 0%));
+  --ds-color-medmaster-2: calc(var(--ds-hue, 56) + var(--ds-hue-factor, 0)), calc(var(--ds-saturation, 80%) + var(--ds-saturation-factor, 0%)), calc(var(--ds-luminosity, 30%) + var(--ds-luminosity-factor, 0%));
+  --ds-color-medmaster-3: calc(var(--ds-hue, 56) + var(--ds-hue-factor, 0)), calc(var(--ds-saturation, 80%) + var(--ds-saturation-factor, 0%)), calc(var(--ds-luminosity, 40%) + var(--ds-luminosity-factor, 0%));
+  --ds-color-medmaster-4: calc(var(--ds-hue, 56) + var(--ds-hue-factor, 0)), calc(var(--ds-saturation, 80%) + var(--ds-saturation-factor, 0%)), calc(var(--ds-luminosity, 60%) + var(--ds-luminosity-factor, 0%));
+  --ds-color-medmaster-5: calc(var(--ds-hue, 56) + var(--ds-hue-factor, 0)), calc(var(--ds-saturation, 80%) + var(--ds-saturation-factor, 0%)), calc(var(--ds-luminosity, 80%) + var(--ds-luminosity-factor, 0%));
   --ds-color-cpmed: var(--ds-color-cpmed-3);
-  --ds-color-cpmed-1: 12, 80%,
-    20%;
-  --ds-color-cpmed-2: 12, 80%,
-    30%;
-  --ds-color-cpmed-3: 12, 80%,
-    40%;
-  --ds-color-cpmed-4: 12, 80%,
-    60%;
-  --ds-color-cpmed-5: 12, 80%,
-    80%;
+  --ds-color-cpmed-1: calc(var(--ds-hue, 12) + var(--ds-hue-factor, 0)), calc(var(--ds-saturation, 80%) + var(--ds-saturation-factor, 0%)), calc(var(--ds-luminosity, 20%) + var(--ds-luminosity-factor, 0%));
+  --ds-color-cpmed-2: calc(var(--ds-hue, 12) + var(--ds-hue-factor, 0)), calc(var(--ds-saturation, 80%) + var(--ds-saturation-factor, 0%)), calc(var(--ds-luminosity, 30%) + var(--ds-luminosity-factor, 0%));
+  --ds-color-cpmed-3: calc(var(--ds-hue, 12) + var(--ds-hue-factor, 0)), calc(var(--ds-saturation, 80%) + var(--ds-saturation-factor, 0%)), calc(var(--ds-luminosity, 40%) + var(--ds-luminosity-factor, 0%));
+  --ds-color-cpmed-4: calc(var(--ds-hue, 12) + var(--ds-hue-factor, 0)), calc(var(--ds-saturation, 80%) + var(--ds-saturation-factor, 0%)), calc(var(--ds-luminosity, 60%) + var(--ds-luminosity-factor, 0%));
+  --ds-color-cpmed-5: calc(var(--ds-hue, 12) + var(--ds-hue-factor, 0)), calc(var(--ds-saturation, 80%) + var(--ds-saturation-factor, 0%)), calc(var(--ds-luminosity, 80%) + var(--ds-luminosity-factor, 0%));
   --ds-color-nopapo: var(--ds-color-nopapo-3);
-  --ds-color-nopapo-1: 230, 80%,
-    20%;
-  --ds-color-nopapo-2: 230, 80%,
-    30%;
-  --ds-color-nopapo-3: 230, 80%,
-    40%;
-  --ds-color-nopapo-4: 230, 80%,
-    60%;
-  --ds-color-nopapo-5: 230, 80%,
-    80%;
+  --ds-color-nopapo-1: calc(var(--ds-hue, 230) + var(--ds-hue-factor, 0)), calc(var(--ds-saturation, 80%) + var(--ds-saturation-factor, 0%)), calc(var(--ds-luminosity, 20%) + var(--ds-luminosity-factor, 0%));
+  --ds-color-nopapo-2: calc(var(--ds-hue, 230) + var(--ds-hue-factor, 0)), calc(var(--ds-saturation, 80%) + var(--ds-saturation-factor, 0%)), calc(var(--ds-luminosity, 30%) + var(--ds-luminosity-factor, 0%));
+  --ds-color-nopapo-3: calc(var(--ds-hue, 230) + var(--ds-hue-factor, 0)), calc(var(--ds-saturation, 80%) + var(--ds-saturation-factor, 0%)), calc(var(--ds-luminosity, 40%) + var(--ds-luminosity-factor, 0%));
+  --ds-color-nopapo-4: calc(var(--ds-hue, 230) + var(--ds-hue-factor, 0)), calc(var(--ds-saturation, 80%) + var(--ds-saturation-factor, 0%)), calc(var(--ds-luminosity, 60%) + var(--ds-luminosity-factor, 0%));
+  --ds-color-nopapo-5: calc(var(--ds-hue, 230) + var(--ds-hue-factor, 0)), calc(var(--ds-saturation, 80%) + var(--ds-saturation-factor, 0%)), calc(var(--ds-luminosity, 80%) + var(--ds-luminosity-factor, 0%));
   --ds-color-medeletro: var(--ds-color-medeletro-3);
-  --ds-color-medeletro-1: 180, 80%,
-    20%;
-  --ds-color-medeletro-2: 180, 80%,
-    30%;
-  --ds-color-medeletro-3: 180, 80%,
-    40%;
-  --ds-color-medeletro-4: 180, 80%,
-    60%;
-  --ds-color-medeletro-5: 180, 80%,
-    80%;
+  --ds-color-medeletro-1: calc(var(--ds-hue, 180) + var(--ds-hue-factor, 0)), calc(var(--ds-saturation, 80%) + var(--ds-saturation-factor, 0%)), calc(var(--ds-luminosity, 20%) + var(--ds-luminosity-factor, 0%));
+  --ds-color-medeletro-2: calc(var(--ds-hue, 180) + var(--ds-hue-factor, 0)), calc(var(--ds-saturation, 80%) + var(--ds-saturation-factor, 0%)), calc(var(--ds-luminosity, 30%) + var(--ds-luminosity-factor, 0%));
+  --ds-color-medeletro-3: calc(var(--ds-hue, 180) + var(--ds-hue-factor, 0)), calc(var(--ds-saturation, 80%) + var(--ds-saturation-factor, 0%)), calc(var(--ds-luminosity, 40%) + var(--ds-luminosity-factor, 0%));
+  --ds-color-medeletro-4: calc(var(--ds-hue, 180) + var(--ds-hue-factor, 0)), calc(var(--ds-saturation, 80%) + var(--ds-saturation-factor, 0%)), calc(var(--ds-luminosity, 60%) + var(--ds-luminosity-factor, 0%));
+  --ds-color-medeletro-5: calc(var(--ds-hue, 180) + var(--ds-hue-factor, 0)), calc(var(--ds-saturation, 80%) + var(--ds-saturation-factor, 0%)), calc(var(--ds-luminosity, 80%) + var(--ds-luminosity-factor, 0%));
   --ds-color-cpvent: var(--ds-color-cpvent-3);
-  --ds-color-cpvent-1: 72, 80%,
-    20%;
-  --ds-color-cpvent-2: 72, 80%,
-    30%;
-  --ds-color-cpvent-3: 72, 80%,
-    40%;
-  --ds-color-cpvent-4: 72, 80%,
-    60%;
-  --ds-color-cpvent-5: 72, 80%,
-    80%;
+  --ds-color-cpvent-1: calc(var(--ds-hue, 72) + var(--ds-hue-factor, 0)), calc(var(--ds-saturation, 80%) + var(--ds-saturation-factor, 0%)), calc(var(--ds-luminosity, 20%) + var(--ds-luminosity-factor, 0%));
+  --ds-color-cpvent-2: calc(var(--ds-hue, 72) + var(--ds-hue-factor, 0)), calc(var(--ds-saturation, 80%) + var(--ds-saturation-factor, 0%)), calc(var(--ds-luminosity, 30%) + var(--ds-luminosity-factor, 0%));
+  --ds-color-cpvent-3: calc(var(--ds-hue, 72) + var(--ds-hue-factor, 0)), calc(var(--ds-saturation, 80%) + var(--ds-saturation-factor, 0%)), calc(var(--ds-luminosity, 40%) + var(--ds-luminosity-factor, 0%));
+  --ds-color-cpvent-4: calc(var(--ds-hue, 72) + var(--ds-hue-factor, 0)), calc(var(--ds-saturation, 80%) + var(--ds-saturation-factor, 0%)), calc(var(--ds-luminosity, 60%) + var(--ds-luminosity-factor, 0%));
+  --ds-color-cpvent-5: calc(var(--ds-hue, 72) + var(--ds-hue-factor, 0)), calc(var(--ds-saturation, 80%) + var(--ds-saturation-factor, 0%)), calc(var(--ds-luminosity, 80%) + var(--ds-luminosity-factor, 0%));
   --ds-color-ventilamed: var(--ds-color-ventilamed-3);
-  --ds-color-ventilamed-1: 29, 80%,
-    20%;
-  --ds-color-ventilamed-2: 29, 80%,
-    30%;
-  --ds-color-ventilamed-3: 29, 80%,
-    40%;
-  --ds-color-ventilamed-4: 29, 80%,
-    60%;
-  --ds-color-ventilamed-5: 29, 80%,
-    80%;
+  --ds-color-ventilamed-1: calc(var(--ds-hue, 29) + var(--ds-hue-factor, 0)), calc(var(--ds-saturation, 80%) + var(--ds-saturation-factor, 0%)), calc(var(--ds-luminosity, 20%) + var(--ds-luminosity-factor, 0%));
+  --ds-color-ventilamed-2: calc(var(--ds-hue, 29) + var(--ds-hue-factor, 0)), calc(var(--ds-saturation, 80%) + var(--ds-saturation-factor, 0%)), calc(var(--ds-luminosity, 30%) + var(--ds-luminosity-factor, 0%));
+  --ds-color-ventilamed-3: calc(var(--ds-hue, 29) + var(--ds-hue-factor, 0)), calc(var(--ds-saturation, 80%) + var(--ds-saturation-factor, 0%)), calc(var(--ds-luminosity, 40%) + var(--ds-luminosity-factor, 0%));
+  --ds-color-ventilamed-4: calc(var(--ds-hue, 29) + var(--ds-hue-factor, 0)), calc(var(--ds-saturation, 80%) + var(--ds-saturation-factor, 0%)), calc(var(--ds-luminosity, 60%) + var(--ds-luminosity-factor, 0%));
+  --ds-color-ventilamed-5: calc(var(--ds-hue, 29) + var(--ds-hue-factor, 0)), calc(var(--ds-saturation, 80%) + var(--ds-saturation-factor, 0%)), calc(var(--ds-luminosity, 80%) + var(--ds-luminosity-factor, 0%));
   --ds-color-intensivao: var(--ds-color-intensivao-3);
-  --ds-color-intensivao-1: 344, 80%,
-    20%;
-  --ds-color-intensivao-2: 344, 80%,
-    30%;
-  --ds-color-intensivao-3: 344, 80%,
-    40%;
-  --ds-color-intensivao-4: 344, 80%,
-    60%;
-  --ds-color-intensivao-5: 344, 80%,
-    80%;
+  --ds-color-intensivao-1: calc(var(--ds-hue, 344) + var(--ds-hue-factor, 0)), calc(var(--ds-saturation, 80%) + var(--ds-saturation-factor, 0%)), calc(var(--ds-luminosity, 20%) + var(--ds-luminosity-factor, 0%));
+  --ds-color-intensivao-2: calc(var(--ds-hue, 344) + var(--ds-hue-factor, 0)), calc(var(--ds-saturation, 80%) + var(--ds-saturation-factor, 0%)), calc(var(--ds-luminosity, 30%) + var(--ds-luminosity-factor, 0%));
+  --ds-color-intensivao-3: calc(var(--ds-hue, 344) + var(--ds-hue-factor, 0)), calc(var(--ds-saturation, 80%) + var(--ds-saturation-factor, 0%)), calc(var(--ds-luminosity, 40%) + var(--ds-luminosity-factor, 0%));
+  --ds-color-intensivao-4: calc(var(--ds-hue, 344) + var(--ds-hue-factor, 0)), calc(var(--ds-saturation, 80%) + var(--ds-saturation-factor, 0%)), calc(var(--ds-luminosity, 60%) + var(--ds-luminosity-factor, 0%));
+  --ds-color-intensivao-5: calc(var(--ds-hue, 344) + var(--ds-hue-factor, 0)), calc(var(--ds-saturation, 80%) + var(--ds-saturation-factor, 0%)), calc(var(--ds-luminosity, 80%) + var(--ds-luminosity-factor, 0%));
 }
 
+[ds-color-scheme=light],
 .ds-light {
   --ds-color-aula: var(--ds-color-aula-3);
-  --ds-color-aula-1: 168, 80%,
-    80%;
-  --ds-color-aula-2: 168, 80%,
-    60%;
-  --ds-color-aula-3: 168, 80%,
-    40%;
-  --ds-color-aula-4: 168, 80%,
-    30%;
-  --ds-color-aula-5: 168, 80%,
-    20%;
+  --ds-color-aula-1: calc(var(--ds-hue, 168) + var(--ds-hue-factor, 0)), calc(var(--ds-saturation, 80%) + var(--ds-saturation-factor, 0%)), calc(var(--ds-luminosity, 80%) + var(--ds-luminosity-factor, 0%));
+  --ds-color-aula-2: calc(var(--ds-hue, 168) + var(--ds-hue-factor, 0)), calc(var(--ds-saturation, 80%) + var(--ds-saturation-factor, 0%)), calc(var(--ds-luminosity, 60%) + var(--ds-luminosity-factor, 0%));
+  --ds-color-aula-3: calc(var(--ds-hue, 168) + var(--ds-hue-factor, 0)), calc(var(--ds-saturation, 80%) + var(--ds-saturation-factor, 0%)), calc(var(--ds-luminosity, 40%) + var(--ds-luminosity-factor, 0%));
+  --ds-color-aula-4: calc(var(--ds-hue, 168) + var(--ds-hue-factor, 0)), calc(var(--ds-saturation, 80%) + var(--ds-saturation-factor, 0%)), calc(var(--ds-luminosity, 30%) + var(--ds-luminosity-factor, 0%));
+  --ds-color-aula-5: calc(var(--ds-hue, 168) + var(--ds-hue-factor, 0)), calc(var(--ds-saturation, 80%) + var(--ds-saturation-factor, 0%)), calc(var(--ds-luminosity, 20%) + var(--ds-luminosity-factor, 0%));
   --ds-color-material: var(--ds-color-material-3);
-  --ds-color-material-1: 24, 80%,
-    80%;
-  --ds-color-material-2: 24, 80%,
-    60%;
-  --ds-color-material-3: 24, 80%,
-    40%;
-  --ds-color-material-4: 24, 80%,
-    30%;
-  --ds-color-material-5: 24, 80%,
-    20%;
+  --ds-color-material-1: calc(var(--ds-hue, 24) + var(--ds-hue-factor, 0)), calc(var(--ds-saturation, 80%) + var(--ds-saturation-factor, 0%)), calc(var(--ds-luminosity, 80%) + var(--ds-luminosity-factor, 0%));
+  --ds-color-material-2: calc(var(--ds-hue, 24) + var(--ds-hue-factor, 0)), calc(var(--ds-saturation, 80%) + var(--ds-saturation-factor, 0%)), calc(var(--ds-luminosity, 60%) + var(--ds-luminosity-factor, 0%));
+  --ds-color-material-3: calc(var(--ds-hue, 24) + var(--ds-hue-factor, 0)), calc(var(--ds-saturation, 80%) + var(--ds-saturation-factor, 0%)), calc(var(--ds-luminosity, 40%) + var(--ds-luminosity-factor, 0%));
+  --ds-color-material-4: calc(var(--ds-hue, 24) + var(--ds-hue-factor, 0)), calc(var(--ds-saturation, 80%) + var(--ds-saturation-factor, 0%)), calc(var(--ds-luminosity, 30%) + var(--ds-luminosity-factor, 0%));
+  --ds-color-material-5: calc(var(--ds-hue, 24) + var(--ds-hue-factor, 0)), calc(var(--ds-saturation, 80%) + var(--ds-saturation-factor, 0%)), calc(var(--ds-luminosity, 20%) + var(--ds-luminosity-factor, 0%));
   --ds-color-questoes: var(--ds-color-questoes-3);
-  --ds-color-questoes-1: 200, 80%,
-    80%;
-  --ds-color-questoes-2: 200, 80%,
-    60%;
-  --ds-color-questoes-3: 200, 80%,
-    40%;
-  --ds-color-questoes-4: 200, 80%,
-    30%;
-  --ds-color-questoes-5: 200, 80%,
-    20%;
+  --ds-color-questoes-1: calc(var(--ds-hue, 200) + var(--ds-hue-factor, 0)), calc(var(--ds-saturation, 80%) + var(--ds-saturation-factor, 0%)), calc(var(--ds-luminosity, 80%) + var(--ds-luminosity-factor, 0%));
+  --ds-color-questoes-2: calc(var(--ds-hue, 200) + var(--ds-hue-factor, 0)), calc(var(--ds-saturation, 80%) + var(--ds-saturation-factor, 0%)), calc(var(--ds-luminosity, 60%) + var(--ds-luminosity-factor, 0%));
+  --ds-color-questoes-3: calc(var(--ds-hue, 200) + var(--ds-hue-factor, 0)), calc(var(--ds-saturation, 80%) + var(--ds-saturation-factor, 0%)), calc(var(--ds-luminosity, 40%) + var(--ds-luminosity-factor, 0%));
+  --ds-color-questoes-4: calc(var(--ds-hue, 200) + var(--ds-hue-factor, 0)), calc(var(--ds-saturation, 80%) + var(--ds-saturation-factor, 0%)), calc(var(--ds-luminosity, 30%) + var(--ds-luminosity-factor, 0%));
+  --ds-color-questoes-5: calc(var(--ds-hue, 200) + var(--ds-hue-factor, 0)), calc(var(--ds-saturation, 80%) + var(--ds-saturation-factor, 0%)), calc(var(--ds-luminosity, 20%) + var(--ds-luminosity-factor, 0%));
   --ds-color-revalida: var(--ds-color-revalida-3);
-  --ds-color-revalida-1: 342, 80%,
-    80%;
-  --ds-color-revalida-2: 342, 80%,
-    60%;
-  --ds-color-revalida-3: 342, 80%,
-    40%;
-  --ds-color-revalida-4: 342, 80%,
-    30%;
-  --ds-color-revalida-5: 342, 80%,
-    20%;
+  --ds-color-revalida-1: calc(var(--ds-hue, 342) + var(--ds-hue-factor, 0)), calc(var(--ds-saturation, 80%) + var(--ds-saturation-factor, 0%)), calc(var(--ds-luminosity, 80%) + var(--ds-luminosity-factor, 0%));
+  --ds-color-revalida-2: calc(var(--ds-hue, 342) + var(--ds-hue-factor, 0)), calc(var(--ds-saturation, 80%) + var(--ds-saturation-factor, 0%)), calc(var(--ds-luminosity, 60%) + var(--ds-luminosity-factor, 0%));
+  --ds-color-revalida-3: calc(var(--ds-hue, 342) + var(--ds-hue-factor, 0)), calc(var(--ds-saturation, 80%) + var(--ds-saturation-factor, 0%)), calc(var(--ds-luminosity, 40%) + var(--ds-luminosity-factor, 0%));
+  --ds-color-revalida-4: calc(var(--ds-hue, 342) + var(--ds-hue-factor, 0)), calc(var(--ds-saturation, 80%) + var(--ds-saturation-factor, 0%)), calc(var(--ds-luminosity, 30%) + var(--ds-luminosity-factor, 0%));
+  --ds-color-revalida-5: calc(var(--ds-hue, 342) + var(--ds-hue-factor, 0)), calc(var(--ds-saturation, 80%) + var(--ds-saturation-factor, 0%)), calc(var(--ds-luminosity, 20%) + var(--ds-luminosity-factor, 0%));
   --ds-color-provas: var(--ds-color-provas-3);
-  --ds-color-provas-1: 268, 80%,
-    80%;
-  --ds-color-provas-2: 268, 80%,
-    60%;
-  --ds-color-provas-3: 268, 80%,
-    40%;
-  --ds-color-provas-4: 268, 80%,
-    30%;
-  --ds-color-provas-5: 268, 80%,
-    20%;
+  --ds-color-provas-1: calc(var(--ds-hue, 268) + var(--ds-hue-factor, 0)), calc(var(--ds-saturation, 80%) + var(--ds-saturation-factor, 0%)), calc(var(--ds-luminosity, 80%) + var(--ds-luminosity-factor, 0%));
+  --ds-color-provas-2: calc(var(--ds-hue, 268) + var(--ds-hue-factor, 0)), calc(var(--ds-saturation, 80%) + var(--ds-saturation-factor, 0%)), calc(var(--ds-luminosity, 60%) + var(--ds-luminosity-factor, 0%));
+  --ds-color-provas-3: calc(var(--ds-hue, 268) + var(--ds-hue-factor, 0)), calc(var(--ds-saturation, 80%) + var(--ds-saturation-factor, 0%)), calc(var(--ds-luminosity, 40%) + var(--ds-luminosity-factor, 0%));
+  --ds-color-provas-4: calc(var(--ds-hue, 268) + var(--ds-hue-factor, 0)), calc(var(--ds-saturation, 80%) + var(--ds-saturation-factor, 0%)), calc(var(--ds-luminosity, 30%) + var(--ds-luminosity-factor, 0%));
+  --ds-color-provas-5: calc(var(--ds-hue, 268) + var(--ds-hue-factor, 0)), calc(var(--ds-saturation, 80%) + var(--ds-saturation-factor, 0%)), calc(var(--ds-luminosity, 20%) + var(--ds-luminosity-factor, 0%));
   --ds-color-extensivo: var(--ds-color-extensivo-3);
-  --ds-color-extensivo-1: 300, 80%,
-    80%;
-  --ds-color-extensivo-2: 300, 80%,
-    60%;
-  --ds-color-extensivo-3: 300, 80%,
-    40%;
-  --ds-color-extensivo-4: 300, 80%,
-    30%;
-  --ds-color-extensivo-5: 300, 80%,
-    20%;
+  --ds-color-extensivo-1: calc(var(--ds-hue, 300) + var(--ds-hue-factor, 0)), calc(var(--ds-saturation, 80%) + var(--ds-saturation-factor, 0%)), calc(var(--ds-luminosity, 80%) + var(--ds-luminosity-factor, 0%));
+  --ds-color-extensivo-2: calc(var(--ds-hue, 300) + var(--ds-hue-factor, 0)), calc(var(--ds-saturation, 80%) + var(--ds-saturation-factor, 0%)), calc(var(--ds-luminosity, 60%) + var(--ds-luminosity-factor, 0%));
+  --ds-color-extensivo-3: calc(var(--ds-hue, 300) + var(--ds-hue-factor, 0)), calc(var(--ds-saturation, 80%) + var(--ds-saturation-factor, 0%)), calc(var(--ds-luminosity, 40%) + var(--ds-luminosity-factor, 0%));
+  --ds-color-extensivo-4: calc(var(--ds-hue, 300) + var(--ds-hue-factor, 0)), calc(var(--ds-saturation, 80%) + var(--ds-saturation-factor, 0%)), calc(var(--ds-luminosity, 30%) + var(--ds-luminosity-factor, 0%));
+  --ds-color-extensivo-5: calc(var(--ds-hue, 300) + var(--ds-hue-factor, 0)), calc(var(--ds-saturation, 80%) + var(--ds-saturation-factor, 0%)), calc(var(--ds-luminosity, 20%) + var(--ds-luminosity-factor, 0%));
   --ds-color-medmaster: var(--ds-color-medmaster-3);
-  --ds-color-medmaster-1: 56, 80%,
-    80%;
-  --ds-color-medmaster-2: 56, 80%,
-    60%;
-  --ds-color-medmaster-3: 56, 80%,
-    40%;
-  --ds-color-medmaster-4: 56, 80%,
-    30%;
-  --ds-color-medmaster-5: 56, 80%,
-    20%;
+  --ds-color-medmaster-1: calc(var(--ds-hue, 56) + var(--ds-hue-factor, 0)), calc(var(--ds-saturation, 80%) + var(--ds-saturation-factor, 0%)), calc(var(--ds-luminosity, 80%) + var(--ds-luminosity-factor, 0%));
+  --ds-color-medmaster-2: calc(var(--ds-hue, 56) + var(--ds-hue-factor, 0)), calc(var(--ds-saturation, 80%) + var(--ds-saturation-factor, 0%)), calc(var(--ds-luminosity, 60%) + var(--ds-luminosity-factor, 0%));
+  --ds-color-medmaster-3: calc(var(--ds-hue, 56) + var(--ds-hue-factor, 0)), calc(var(--ds-saturation, 80%) + var(--ds-saturation-factor, 0%)), calc(var(--ds-luminosity, 40%) + var(--ds-luminosity-factor, 0%));
+  --ds-color-medmaster-4: calc(var(--ds-hue, 56) + var(--ds-hue-factor, 0)), calc(var(--ds-saturation, 80%) + var(--ds-saturation-factor, 0%)), calc(var(--ds-luminosity, 30%) + var(--ds-luminosity-factor, 0%));
+  --ds-color-medmaster-5: calc(var(--ds-hue, 56) + var(--ds-hue-factor, 0)), calc(var(--ds-saturation, 80%) + var(--ds-saturation-factor, 0%)), calc(var(--ds-luminosity, 20%) + var(--ds-luminosity-factor, 0%));
   --ds-color-cpmed: var(--ds-color-cpmed-3);
-  --ds-color-cpmed-1: 12, 80%,
-    80%;
-  --ds-color-cpmed-2: 12, 80%,
-    60%;
-  --ds-color-cpmed-3: 12, 80%,
-    40%;
-  --ds-color-cpmed-4: 12, 80%,
-    30%;
-  --ds-color-cpmed-5: 12, 80%,
-    20%;
+  --ds-color-cpmed-1: calc(var(--ds-hue, 12) + var(--ds-hue-factor, 0)), calc(var(--ds-saturation, 80%) + var(--ds-saturation-factor, 0%)), calc(var(--ds-luminosity, 80%) + var(--ds-luminosity-factor, 0%));
+  --ds-color-cpmed-2: calc(var(--ds-hue, 12) + var(--ds-hue-factor, 0)), calc(var(--ds-saturation, 80%) + var(--ds-saturation-factor, 0%)), calc(var(--ds-luminosity, 60%) + var(--ds-luminosity-factor, 0%));
+  --ds-color-cpmed-3: calc(var(--ds-hue, 12) + var(--ds-hue-factor, 0)), calc(var(--ds-saturation, 80%) + var(--ds-saturation-factor, 0%)), calc(var(--ds-luminosity, 40%) + var(--ds-luminosity-factor, 0%));
+  --ds-color-cpmed-4: calc(var(--ds-hue, 12) + var(--ds-hue-factor, 0)), calc(var(--ds-saturation, 80%) + var(--ds-saturation-factor, 0%)), calc(var(--ds-luminosity, 30%) + var(--ds-luminosity-factor, 0%));
+  --ds-color-cpmed-5: calc(var(--ds-hue, 12) + var(--ds-hue-factor, 0)), calc(var(--ds-saturation, 80%) + var(--ds-saturation-factor, 0%)), calc(var(--ds-luminosity, 20%) + var(--ds-luminosity-factor, 0%));
   --ds-color-nopapo: var(--ds-color-nopapo-3);
-  --ds-color-nopapo-1: 230, 80%,
-    80%;
-  --ds-color-nopapo-2: 230, 80%,
-    60%;
-  --ds-color-nopapo-3: 230, 80%,
-    40%;
-  --ds-color-nopapo-4: 230, 80%,
-    30%;
-  --ds-color-nopapo-5: 230, 80%,
-    20%;
+  --ds-color-nopapo-1: calc(var(--ds-hue, 230) + var(--ds-hue-factor, 0)), calc(var(--ds-saturation, 80%) + var(--ds-saturation-factor, 0%)), calc(var(--ds-luminosity, 80%) + var(--ds-luminosity-factor, 0%));
+  --ds-color-nopapo-2: calc(var(--ds-hue, 230) + var(--ds-hue-factor, 0)), calc(var(--ds-saturation, 80%) + var(--ds-saturation-factor, 0%)), calc(var(--ds-luminosity, 60%) + var(--ds-luminosity-factor, 0%));
+  --ds-color-nopapo-3: calc(var(--ds-hue, 230) + var(--ds-hue-factor, 0)), calc(var(--ds-saturation, 80%) + var(--ds-saturation-factor, 0%)), calc(var(--ds-luminosity, 40%) + var(--ds-luminosity-factor, 0%));
+  --ds-color-nopapo-4: calc(var(--ds-hue, 230) + var(--ds-hue-factor, 0)), calc(var(--ds-saturation, 80%) + var(--ds-saturation-factor, 0%)), calc(var(--ds-luminosity, 30%) + var(--ds-luminosity-factor, 0%));
+  --ds-color-nopapo-5: calc(var(--ds-hue, 230) + var(--ds-hue-factor, 0)), calc(var(--ds-saturation, 80%) + var(--ds-saturation-factor, 0%)), calc(var(--ds-luminosity, 20%) + var(--ds-luminosity-factor, 0%));
   --ds-color-medeletro: var(--ds-color-medeletro-3);
-  --ds-color-medeletro-1: 180, 80%,
-    80%;
-  --ds-color-medeletro-2: 180, 80%,
-    60%;
-  --ds-color-medeletro-3: 180, 80%,
-    40%;
-  --ds-color-medeletro-4: 180, 80%,
-    30%;
-  --ds-color-medeletro-5: 180, 80%,
-    20%;
+  --ds-color-medeletro-1: calc(var(--ds-hue, 180) + var(--ds-hue-factor, 0)), calc(var(--ds-saturation, 80%) + var(--ds-saturation-factor, 0%)), calc(var(--ds-luminosity, 80%) + var(--ds-luminosity-factor, 0%));
+  --ds-color-medeletro-2: calc(var(--ds-hue, 180) + var(--ds-hue-factor, 0)), calc(var(--ds-saturation, 80%) + var(--ds-saturation-factor, 0%)), calc(var(--ds-luminosity, 60%) + var(--ds-luminosity-factor, 0%));
+  --ds-color-medeletro-3: calc(var(--ds-hue, 180) + var(--ds-hue-factor, 0)), calc(var(--ds-saturation, 80%) + var(--ds-saturation-factor, 0%)), calc(var(--ds-luminosity, 40%) + var(--ds-luminosity-factor, 0%));
+  --ds-color-medeletro-4: calc(var(--ds-hue, 180) + var(--ds-hue-factor, 0)), calc(var(--ds-saturation, 80%) + var(--ds-saturation-factor, 0%)), calc(var(--ds-luminosity, 30%) + var(--ds-luminosity-factor, 0%));
+  --ds-color-medeletro-5: calc(var(--ds-hue, 180) + var(--ds-hue-factor, 0)), calc(var(--ds-saturation, 80%) + var(--ds-saturation-factor, 0%)), calc(var(--ds-luminosity, 20%) + var(--ds-luminosity-factor, 0%));
   --ds-color-cpvent: var(--ds-color-cpvent-3);
-  --ds-color-cpvent-1: 72, 80%,
-    80%;
-  --ds-color-cpvent-2: 72, 80%,
-    60%;
-  --ds-color-cpvent-3: 72, 80%,
-    40%;
-  --ds-color-cpvent-4: 72, 80%,
-    30%;
-  --ds-color-cpvent-5: 72, 80%,
-    20%;
+  --ds-color-cpvent-1: calc(var(--ds-hue, 72) + var(--ds-hue-factor, 0)), calc(var(--ds-saturation, 80%) + var(--ds-saturation-factor, 0%)), calc(var(--ds-luminosity, 80%) + var(--ds-luminosity-factor, 0%));
+  --ds-color-cpvent-2: calc(var(--ds-hue, 72) + var(--ds-hue-factor, 0)), calc(var(--ds-saturation, 80%) + var(--ds-saturation-factor, 0%)), calc(var(--ds-luminosity, 60%) + var(--ds-luminosity-factor, 0%));
+  --ds-color-cpvent-3: calc(var(--ds-hue, 72) + var(--ds-hue-factor, 0)), calc(var(--ds-saturation, 80%) + var(--ds-saturation-factor, 0%)), calc(var(--ds-luminosity, 40%) + var(--ds-luminosity-factor, 0%));
+  --ds-color-cpvent-4: calc(var(--ds-hue, 72) + var(--ds-hue-factor, 0)), calc(var(--ds-saturation, 80%) + var(--ds-saturation-factor, 0%)), calc(var(--ds-luminosity, 30%) + var(--ds-luminosity-factor, 0%));
+  --ds-color-cpvent-5: calc(var(--ds-hue, 72) + var(--ds-hue-factor, 0)), calc(var(--ds-saturation, 80%) + var(--ds-saturation-factor, 0%)), calc(var(--ds-luminosity, 20%) + var(--ds-luminosity-factor, 0%));
   --ds-color-ventilamed: var(--ds-color-ventilamed-3);
-  --ds-color-ventilamed-1: 29, 80%,
-    80%;
-  --ds-color-ventilamed-2: 29, 80%,
-    60%;
-  --ds-color-ventilamed-3: 29, 80%,
-    40%;
-  --ds-color-ventilamed-4: 29, 80%,
-    30%;
-  --ds-color-ventilamed-5: 29, 80%,
-    20%;
+  --ds-color-ventilamed-1: calc(var(--ds-hue, 29) + var(--ds-hue-factor, 0)), calc(var(--ds-saturation, 80%) + var(--ds-saturation-factor, 0%)), calc(var(--ds-luminosity, 80%) + var(--ds-luminosity-factor, 0%));
+  --ds-color-ventilamed-2: calc(var(--ds-hue, 29) + var(--ds-hue-factor, 0)), calc(var(--ds-saturation, 80%) + var(--ds-saturation-factor, 0%)), calc(var(--ds-luminosity, 60%) + var(--ds-luminosity-factor, 0%));
+  --ds-color-ventilamed-3: calc(var(--ds-hue, 29) + var(--ds-hue-factor, 0)), calc(var(--ds-saturation, 80%) + var(--ds-saturation-factor, 0%)), calc(var(--ds-luminosity, 40%) + var(--ds-luminosity-factor, 0%));
+  --ds-color-ventilamed-4: calc(var(--ds-hue, 29) + var(--ds-hue-factor, 0)), calc(var(--ds-saturation, 80%) + var(--ds-saturation-factor, 0%)), calc(var(--ds-luminosity, 30%) + var(--ds-luminosity-factor, 0%));
+  --ds-color-ventilamed-5: calc(var(--ds-hue, 29) + var(--ds-hue-factor, 0)), calc(var(--ds-saturation, 80%) + var(--ds-saturation-factor, 0%)), calc(var(--ds-luminosity, 20%) + var(--ds-luminosity-factor, 0%));
   --ds-color-intensivao: var(--ds-color-intensivao-3);
-  --ds-color-intensivao-1: 344, 80%,
-    80%;
-  --ds-color-intensivao-2: 344, 80%,
-    60%;
-  --ds-color-intensivao-3: 344, 80%,
-    40%;
-  --ds-color-intensivao-4: 344, 80%,
-    30%;
-  --ds-color-intensivao-5: 344, 80%,
-    20%;
+  --ds-color-intensivao-1: calc(var(--ds-hue, 344) + var(--ds-hue-factor, 0)), calc(var(--ds-saturation, 80%) + var(--ds-saturation-factor, 0%)), calc(var(--ds-luminosity, 80%) + var(--ds-luminosity-factor, 0%));
+  --ds-color-intensivao-2: calc(var(--ds-hue, 344) + var(--ds-hue-factor, 0)), calc(var(--ds-saturation, 80%) + var(--ds-saturation-factor, 0%)), calc(var(--ds-luminosity, 60%) + var(--ds-luminosity-factor, 0%));
+  --ds-color-intensivao-3: calc(var(--ds-hue, 344) + var(--ds-hue-factor, 0)), calc(var(--ds-saturation, 80%) + var(--ds-saturation-factor, 0%)), calc(var(--ds-luminosity, 40%) + var(--ds-luminosity-factor, 0%));
+  --ds-color-intensivao-4: calc(var(--ds-hue, 344) + var(--ds-hue-factor, 0)), calc(var(--ds-saturation, 80%) + var(--ds-saturation-factor, 0%)), calc(var(--ds-luminosity, 30%) + var(--ds-luminosity-factor, 0%));
+  --ds-color-intensivao-5: calc(var(--ds-hue, 344) + var(--ds-hue-factor, 0)), calc(var(--ds-saturation, 80%) + var(--ds-saturation-factor, 0%)), calc(var(--ds-luminosity, 20%) + var(--ds-luminosity-factor, 0%));
 }
 
 .ds-color-aula,
 [color=aula] {
-  --ds-color-base: var(--ds-color-aula) !important;
-  --ds-color-contrast: var(--ds-color-contrast-fixed) !important;
+  --ds-color-base: var(--ds-color-aula);
+  --ds-color-contrast: var(--ds-color-contrast-fixed);
 }
 
 .ds-color-aula-1,
 [color=aula-1] {
-  --ds-color-base: var(
-    --ds-color-aula-1
-  ) !important;
-  --ds-color-contrast: var(--ds-color-neutral-10) !important;
+  --ds-color-base: var(--ds-color-aula-1);
+  --ds-color-contrast: var(--ds-color-neutral-10);
 }
 
 .ds-color-aula-2,
 [color=aula-2] {
-  --ds-color-base: var(
-    --ds-color-aula-2
-  ) !important;
-  --ds-color-contrast: var(--ds-color-neutral-10) !important;
+  --ds-color-base: var(--ds-color-aula-2);
+  --ds-color-contrast: var(--ds-color-neutral-10);
 }
 
 .ds-color-aula-3,
 [color=aula-3] {
-  --ds-color-base: var(
-    --ds-color-aula-3
-  ) !important;
-  --ds-color-contrast: var(--ds-color-contrast-fixed) !important;
+  --ds-color-base: var(--ds-color-aula-3);
+  --ds-color-contrast: var(--ds-color-contrast-fixed);
 }
 
 .ds-color-aula-4,
 [color=aula-4] {
-  --ds-color-base: var(
-    --ds-color-aula-4
-  ) !important;
-  --ds-color-contrast: var(--ds-color-neutral-1) !important;
+  --ds-color-base: var(--ds-color-aula-4);
+  --ds-color-contrast: var(--ds-color-neutral-1);
 }
 
 .ds-color-aula-5,
 [color=aula-5] {
-  --ds-color-base: var(
-    --ds-color-aula-5
-  ) !important;
-  --ds-color-contrast: var(--ds-color-neutral-1) !important;
+  --ds-color-base: var(--ds-color-aula-5);
+  --ds-color-contrast: var(--ds-color-neutral-1);
 }
 
 .ds-color-material,
 [color=material] {
-  --ds-color-base: var(--ds-color-material) !important;
-  --ds-color-contrast: var(--ds-color-contrast-fixed) !important;
+  --ds-color-base: var(--ds-color-material);
+  --ds-color-contrast: var(--ds-color-contrast-fixed);
 }
 
 .ds-color-material-1,
 [color=material-1] {
-  --ds-color-base: var(
-    --ds-color-material-1
-  ) !important;
-  --ds-color-contrast: var(--ds-color-neutral-10) !important;
+  --ds-color-base: var(--ds-color-material-1);
+  --ds-color-contrast: var(--ds-color-neutral-10);
 }
 
 .ds-color-material-2,
 [color=material-2] {
-  --ds-color-base: var(
-    --ds-color-material-2
-  ) !important;
-  --ds-color-contrast: var(--ds-color-neutral-10) !important;
+  --ds-color-base: var(--ds-color-material-2);
+  --ds-color-contrast: var(--ds-color-neutral-10);
 }
 
 .ds-color-material-3,
 [color=material-3] {
-  --ds-color-base: var(
-    --ds-color-material-3
-  ) !important;
-  --ds-color-contrast: var(--ds-color-contrast-fixed) !important;
+  --ds-color-base: var(--ds-color-material-3);
+  --ds-color-contrast: var(--ds-color-contrast-fixed);
 }
 
 .ds-color-material-4,
 [color=material-4] {
-  --ds-color-base: var(
-    --ds-color-material-4
-  ) !important;
-  --ds-color-contrast: var(--ds-color-neutral-1) !important;
+  --ds-color-base: var(--ds-color-material-4);
+  --ds-color-contrast: var(--ds-color-neutral-1);
 }
 
 .ds-color-material-5,
 [color=material-5] {
-  --ds-color-base: var(
-    --ds-color-material-5
-  ) !important;
-  --ds-color-contrast: var(--ds-color-neutral-1) !important;
+  --ds-color-base: var(--ds-color-material-5);
+  --ds-color-contrast: var(--ds-color-neutral-1);
 }
 
 .ds-color-questoes,
 [color=questoes] {
-  --ds-color-base: var(--ds-color-questoes) !important;
-  --ds-color-contrast: var(--ds-color-contrast-fixed) !important;
+  --ds-color-base: var(--ds-color-questoes);
+  --ds-color-contrast: var(--ds-color-contrast-fixed);
 }
 
 .ds-color-questoes-1,
 [color=questoes-1] {
-  --ds-color-base: var(
-    --ds-color-questoes-1
-  ) !important;
-  --ds-color-contrast: var(--ds-color-neutral-10) !important;
+  --ds-color-base: var(--ds-color-questoes-1);
+  --ds-color-contrast: var(--ds-color-neutral-10);
 }
 
 .ds-color-questoes-2,
 [color=questoes-2] {
-  --ds-color-base: var(
-    --ds-color-questoes-2
-  ) !important;
-  --ds-color-contrast: var(--ds-color-neutral-10) !important;
+  --ds-color-base: var(--ds-color-questoes-2);
+  --ds-color-contrast: var(--ds-color-neutral-10);
 }
 
 .ds-color-questoes-3,
 [color=questoes-3] {
-  --ds-color-base: var(
-    --ds-color-questoes-3
-  ) !important;
-  --ds-color-contrast: var(--ds-color-contrast-fixed) !important;
+  --ds-color-base: var(--ds-color-questoes-3);
+  --ds-color-contrast: var(--ds-color-contrast-fixed);
 }
 
 .ds-color-questoes-4,
 [color=questoes-4] {
-  --ds-color-base: var(
-    --ds-color-questoes-4
-  ) !important;
-  --ds-color-contrast: var(--ds-color-neutral-1) !important;
+  --ds-color-base: var(--ds-color-questoes-4);
+  --ds-color-contrast: var(--ds-color-neutral-1);
 }
 
 .ds-color-questoes-5,
 [color=questoes-5] {
-  --ds-color-base: var(
-    --ds-color-questoes-5
-  ) !important;
-  --ds-color-contrast: var(--ds-color-neutral-1) !important;
+  --ds-color-base: var(--ds-color-questoes-5);
+  --ds-color-contrast: var(--ds-color-neutral-1);
 }
 
 .ds-color-revalida,
 [color=revalida] {
-  --ds-color-base: var(--ds-color-revalida) !important;
-  --ds-color-contrast: var(--ds-color-contrast-fixed) !important;
+  --ds-color-base: var(--ds-color-revalida);
+  --ds-color-contrast: var(--ds-color-contrast-fixed);
 }
 
 .ds-color-revalida-1,
 [color=revalida-1] {
-  --ds-color-base: var(
-    --ds-color-revalida-1
-  ) !important;
-  --ds-color-contrast: var(--ds-color-neutral-10) !important;
+  --ds-color-base: var(--ds-color-revalida-1);
+  --ds-color-contrast: var(--ds-color-neutral-10);
 }
 
 .ds-color-revalida-2,
 [color=revalida-2] {
-  --ds-color-base: var(
-    --ds-color-revalida-2
-  ) !important;
-  --ds-color-contrast: var(--ds-color-neutral-10) !important;
+  --ds-color-base: var(--ds-color-revalida-2);
+  --ds-color-contrast: var(--ds-color-neutral-10);
 }
 
 .ds-color-revalida-3,
 [color=revalida-3] {
-  --ds-color-base: var(
-    --ds-color-revalida-3
-  ) !important;
-  --ds-color-contrast: var(--ds-color-contrast-fixed) !important;
+  --ds-color-base: var(--ds-color-revalida-3);
+  --ds-color-contrast: var(--ds-color-contrast-fixed);
 }
 
 .ds-color-revalida-4,
 [color=revalida-4] {
-  --ds-color-base: var(
-    --ds-color-revalida-4
-  ) !important;
-  --ds-color-contrast: var(--ds-color-neutral-1) !important;
+  --ds-color-base: var(--ds-color-revalida-4);
+  --ds-color-contrast: var(--ds-color-neutral-1);
 }
 
 .ds-color-revalida-5,
 [color=revalida-5] {
-  --ds-color-base: var(
-    --ds-color-revalida-5
-  ) !important;
-  --ds-color-contrast: var(--ds-color-neutral-1) !important;
+  --ds-color-base: var(--ds-color-revalida-5);
+  --ds-color-contrast: var(--ds-color-neutral-1);
 }
 
 .ds-color-provas,
 [color=provas] {
-  --ds-color-base: var(--ds-color-provas) !important;
-  --ds-color-contrast: var(--ds-color-contrast-fixed) !important;
+  --ds-color-base: var(--ds-color-provas);
+  --ds-color-contrast: var(--ds-color-contrast-fixed);
 }
 
 .ds-color-provas-1,
 [color=provas-1] {
-  --ds-color-base: var(
-    --ds-color-provas-1
-  ) !important;
-  --ds-color-contrast: var(--ds-color-neutral-10) !important;
+  --ds-color-base: var(--ds-color-provas-1);
+  --ds-color-contrast: var(--ds-color-neutral-10);
 }
 
 .ds-color-provas-2,
 [color=provas-2] {
-  --ds-color-base: var(
-    --ds-color-provas-2
-  ) !important;
-  --ds-color-contrast: var(--ds-color-neutral-10) !important;
+  --ds-color-base: var(--ds-color-provas-2);
+  --ds-color-contrast: var(--ds-color-neutral-10);
 }
 
 .ds-color-provas-3,
 [color=provas-3] {
-  --ds-color-base: var(
-    --ds-color-provas-3
-  ) !important;
-  --ds-color-contrast: var(--ds-color-contrast-fixed) !important;
+  --ds-color-base: var(--ds-color-provas-3);
+  --ds-color-contrast: var(--ds-color-contrast-fixed);
 }
 
 .ds-color-provas-4,
 [color=provas-4] {
-  --ds-color-base: var(
-    --ds-color-provas-4
-  ) !important;
-  --ds-color-contrast: var(--ds-color-neutral-1) !important;
+  --ds-color-base: var(--ds-color-provas-4);
+  --ds-color-contrast: var(--ds-color-neutral-1);
 }
 
 .ds-color-provas-5,
 [color=provas-5] {
-  --ds-color-base: var(
-    --ds-color-provas-5
-  ) !important;
-  --ds-color-contrast: var(--ds-color-neutral-1) !important;
+  --ds-color-base: var(--ds-color-provas-5);
+  --ds-color-contrast: var(--ds-color-neutral-1);
 }
 
 .ds-color-extensivo,
 [color=extensivo] {
-  --ds-color-base: var(--ds-color-extensivo) !important;
-  --ds-color-contrast: var(--ds-color-contrast-fixed) !important;
+  --ds-color-base: var(--ds-color-extensivo);
+  --ds-color-contrast: var(--ds-color-contrast-fixed);
 }
 
 .ds-color-extensivo-1,
 [color=extensivo-1] {
-  --ds-color-base: var(
-    --ds-color-extensivo-1
-  ) !important;
-  --ds-color-contrast: var(--ds-color-neutral-10) !important;
+  --ds-color-base: var(--ds-color-extensivo-1);
+  --ds-color-contrast: var(--ds-color-neutral-10);
 }
 
 .ds-color-extensivo-2,
 [color=extensivo-2] {
-  --ds-color-base: var(
-    --ds-color-extensivo-2
-  ) !important;
-  --ds-color-contrast: var(--ds-color-neutral-10) !important;
+  --ds-color-base: var(--ds-color-extensivo-2);
+  --ds-color-contrast: var(--ds-color-neutral-10);
 }
 
 .ds-color-extensivo-3,
 [color=extensivo-3] {
-  --ds-color-base: var(
-    --ds-color-extensivo-3
-  ) !important;
-  --ds-color-contrast: var(--ds-color-contrast-fixed) !important;
+  --ds-color-base: var(--ds-color-extensivo-3);
+  --ds-color-contrast: var(--ds-color-contrast-fixed);
 }
 
 .ds-color-extensivo-4,
 [color=extensivo-4] {
-  --ds-color-base: var(
-    --ds-color-extensivo-4
-  ) !important;
-  --ds-color-contrast: var(--ds-color-neutral-1) !important;
+  --ds-color-base: var(--ds-color-extensivo-4);
+  --ds-color-contrast: var(--ds-color-neutral-1);
 }
 
 .ds-color-extensivo-5,
 [color=extensivo-5] {
-  --ds-color-base: var(
-    --ds-color-extensivo-5
-  ) !important;
-  --ds-color-contrast: var(--ds-color-neutral-1) !important;
+  --ds-color-base: var(--ds-color-extensivo-5);
+  --ds-color-contrast: var(--ds-color-neutral-1);
 }
 
 .ds-color-medmaster,
 [color=medmaster] {
-  --ds-color-base: var(--ds-color-medmaster) !important;
-  --ds-color-contrast: var(--ds-color-contrast-fixed) !important;
+  --ds-color-base: var(--ds-color-medmaster);
+  --ds-color-contrast: var(--ds-color-contrast-fixed);
 }
 
 .ds-color-medmaster-1,
 [color=medmaster-1] {
-  --ds-color-base: var(
-    --ds-color-medmaster-1
-  ) !important;
-  --ds-color-contrast: var(--ds-color-neutral-10) !important;
+  --ds-color-base: var(--ds-color-medmaster-1);
+  --ds-color-contrast: var(--ds-color-neutral-10);
 }
 
 .ds-color-medmaster-2,
 [color=medmaster-2] {
-  --ds-color-base: var(
-    --ds-color-medmaster-2
-  ) !important;
-  --ds-color-contrast: var(--ds-color-neutral-10) !important;
+  --ds-color-base: var(--ds-color-medmaster-2);
+  --ds-color-contrast: var(--ds-color-neutral-10);
 }
 
 .ds-color-medmaster-3,
 [color=medmaster-3] {
-  --ds-color-base: var(
-    --ds-color-medmaster-3
-  ) !important;
-  --ds-color-contrast: var(--ds-color-contrast-fixed) !important;
+  --ds-color-base: var(--ds-color-medmaster-3);
+  --ds-color-contrast: var(--ds-color-contrast-fixed);
 }
 
 .ds-color-medmaster-4,
 [color=medmaster-4] {
-  --ds-color-base: var(
-    --ds-color-medmaster-4
-  ) !important;
-  --ds-color-contrast: var(--ds-color-neutral-1) !important;
+  --ds-color-base: var(--ds-color-medmaster-4);
+  --ds-color-contrast: var(--ds-color-neutral-1);
 }
 
 .ds-color-medmaster-5,
 [color=medmaster-5] {
-  --ds-color-base: var(
-    --ds-color-medmaster-5
-  ) !important;
-  --ds-color-contrast: var(--ds-color-neutral-1) !important;
+  --ds-color-base: var(--ds-color-medmaster-5);
+  --ds-color-contrast: var(--ds-color-neutral-1);
 }
 
 .ds-color-cpmed,
 [color=cpmed] {
-  --ds-color-base: var(--ds-color-cpmed) !important;
-  --ds-color-contrast: var(--ds-color-contrast-fixed) !important;
+  --ds-color-base: var(--ds-color-cpmed);
+  --ds-color-contrast: var(--ds-color-contrast-fixed);
 }
 
 .ds-color-cpmed-1,
 [color=cpmed-1] {
-  --ds-color-base: var(
-    --ds-color-cpmed-1
-  ) !important;
-  --ds-color-contrast: var(--ds-color-neutral-10) !important;
+  --ds-color-base: var(--ds-color-cpmed-1);
+  --ds-color-contrast: var(--ds-color-neutral-10);
 }
 
 .ds-color-cpmed-2,
 [color=cpmed-2] {
-  --ds-color-base: var(
-    --ds-color-cpmed-2
-  ) !important;
-  --ds-color-contrast: var(--ds-color-neutral-10) !important;
+  --ds-color-base: var(--ds-color-cpmed-2);
+  --ds-color-contrast: var(--ds-color-neutral-10);
 }
 
 .ds-color-cpmed-3,
 [color=cpmed-3] {
-  --ds-color-base: var(
-    --ds-color-cpmed-3
-  ) !important;
-  --ds-color-contrast: var(--ds-color-contrast-fixed) !important;
+  --ds-color-base: var(--ds-color-cpmed-3);
+  --ds-color-contrast: var(--ds-color-contrast-fixed);
 }
 
 .ds-color-cpmed-4,
 [color=cpmed-4] {
-  --ds-color-base: var(
-    --ds-color-cpmed-4
-  ) !important;
-  --ds-color-contrast: var(--ds-color-neutral-1) !important;
+  --ds-color-base: var(--ds-color-cpmed-4);
+  --ds-color-contrast: var(--ds-color-neutral-1);
 }
 
 .ds-color-cpmed-5,
 [color=cpmed-5] {
-  --ds-color-base: var(
-    --ds-color-cpmed-5
-  ) !important;
-  --ds-color-contrast: var(--ds-color-neutral-1) !important;
+  --ds-color-base: var(--ds-color-cpmed-5);
+  --ds-color-contrast: var(--ds-color-neutral-1);
 }
 
 .ds-color-nopapo,
 [color=nopapo] {
-  --ds-color-base: var(--ds-color-nopapo) !important;
-  --ds-color-contrast: var(--ds-color-contrast-fixed) !important;
+  --ds-color-base: var(--ds-color-nopapo);
+  --ds-color-contrast: var(--ds-color-contrast-fixed);
 }
 
 .ds-color-nopapo-1,
 [color=nopapo-1] {
-  --ds-color-base: var(
-    --ds-color-nopapo-1
-  ) !important;
-  --ds-color-contrast: var(--ds-color-neutral-10) !important;
+  --ds-color-base: var(--ds-color-nopapo-1);
+  --ds-color-contrast: var(--ds-color-neutral-10);
 }
 
 .ds-color-nopapo-2,
 [color=nopapo-2] {
-  --ds-color-base: var(
-    --ds-color-nopapo-2
-  ) !important;
-  --ds-color-contrast: var(--ds-color-neutral-10) !important;
+  --ds-color-base: var(--ds-color-nopapo-2);
+  --ds-color-contrast: var(--ds-color-neutral-10);
 }
 
 .ds-color-nopapo-3,
 [color=nopapo-3] {
-  --ds-color-base: var(
-    --ds-color-nopapo-3
-  ) !important;
-  --ds-color-contrast: var(--ds-color-contrast-fixed) !important;
+  --ds-color-base: var(--ds-color-nopapo-3);
+  --ds-color-contrast: var(--ds-color-contrast-fixed);
 }
 
 .ds-color-nopapo-4,
 [color=nopapo-4] {
-  --ds-color-base: var(
-    --ds-color-nopapo-4
-  ) !important;
-  --ds-color-contrast: var(--ds-color-neutral-1) !important;
+  --ds-color-base: var(--ds-color-nopapo-4);
+  --ds-color-contrast: var(--ds-color-neutral-1);
 }
 
 .ds-color-nopapo-5,
 [color=nopapo-5] {
-  --ds-color-base: var(
-    --ds-color-nopapo-5
-  ) !important;
-  --ds-color-contrast: var(--ds-color-neutral-1) !important;
+  --ds-color-base: var(--ds-color-nopapo-5);
+  --ds-color-contrast: var(--ds-color-neutral-1);
 }
 
 .ds-color-medeletro,
 [color=medeletro] {
-  --ds-color-base: var(--ds-color-medeletro) !important;
-  --ds-color-contrast: var(--ds-color-contrast-fixed) !important;
+  --ds-color-base: var(--ds-color-medeletro);
+  --ds-color-contrast: var(--ds-color-contrast-fixed);
 }
 
 .ds-color-medeletro-1,
 [color=medeletro-1] {
-  --ds-color-base: var(
-    --ds-color-medeletro-1
-  ) !important;
-  --ds-color-contrast: var(--ds-color-neutral-10) !important;
+  --ds-color-base: var(--ds-color-medeletro-1);
+  --ds-color-contrast: var(--ds-color-neutral-10);
 }
 
 .ds-color-medeletro-2,
 [color=medeletro-2] {
-  --ds-color-base: var(
-    --ds-color-medeletro-2
-  ) !important;
-  --ds-color-contrast: var(--ds-color-neutral-10) !important;
+  --ds-color-base: var(--ds-color-medeletro-2);
+  --ds-color-contrast: var(--ds-color-neutral-10);
 }
 
 .ds-color-medeletro-3,
 [color=medeletro-3] {
-  --ds-color-base: var(
-    --ds-color-medeletro-3
-  ) !important;
-  --ds-color-contrast: var(--ds-color-contrast-fixed) !important;
+  --ds-color-base: var(--ds-color-medeletro-3);
+  --ds-color-contrast: var(--ds-color-contrast-fixed);
 }
 
 .ds-color-medeletro-4,
 [color=medeletro-4] {
-  --ds-color-base: var(
-    --ds-color-medeletro-4
-  ) !important;
-  --ds-color-contrast: var(--ds-color-neutral-1) !important;
+  --ds-color-base: var(--ds-color-medeletro-4);
+  --ds-color-contrast: var(--ds-color-neutral-1);
 }
 
 .ds-color-medeletro-5,
 [color=medeletro-5] {
-  --ds-color-base: var(
-    --ds-color-medeletro-5
-  ) !important;
-  --ds-color-contrast: var(--ds-color-neutral-1) !important;
+  --ds-color-base: var(--ds-color-medeletro-5);
+  --ds-color-contrast: var(--ds-color-neutral-1);
 }
 
 .ds-color-cpvent,
 [color=cpvent] {
-  --ds-color-base: var(--ds-color-cpvent) !important;
-  --ds-color-contrast: var(--ds-color-contrast-fixed) !important;
+  --ds-color-base: var(--ds-color-cpvent);
+  --ds-color-contrast: var(--ds-color-contrast-fixed);
 }
 
 .ds-color-cpvent-1,
 [color=cpvent-1] {
-  --ds-color-base: var(
-    --ds-color-cpvent-1
-  ) !important;
-  --ds-color-contrast: var(--ds-color-neutral-10) !important;
+  --ds-color-base: var(--ds-color-cpvent-1);
+  --ds-color-contrast: var(--ds-color-neutral-10);
 }
 
 .ds-color-cpvent-2,
 [color=cpvent-2] {
-  --ds-color-base: var(
-    --ds-color-cpvent-2
-  ) !important;
-  --ds-color-contrast: var(--ds-color-neutral-10) !important;
+  --ds-color-base: var(--ds-color-cpvent-2);
+  --ds-color-contrast: var(--ds-color-neutral-10);
 }
 
 .ds-color-cpvent-3,
 [color=cpvent-3] {
-  --ds-color-base: var(
-    --ds-color-cpvent-3
-  ) !important;
-  --ds-color-contrast: var(--ds-color-contrast-fixed) !important;
+  --ds-color-base: var(--ds-color-cpvent-3);
+  --ds-color-contrast: var(--ds-color-contrast-fixed);
 }
 
 .ds-color-cpvent-4,
 [color=cpvent-4] {
-  --ds-color-base: var(
-    --ds-color-cpvent-4
-  ) !important;
-  --ds-color-contrast: var(--ds-color-neutral-1) !important;
+  --ds-color-base: var(--ds-color-cpvent-4);
+  --ds-color-contrast: var(--ds-color-neutral-1);
 }
 
 .ds-color-cpvent-5,
 [color=cpvent-5] {
-  --ds-color-base: var(
-    --ds-color-cpvent-5
-  ) !important;
-  --ds-color-contrast: var(--ds-color-neutral-1) !important;
+  --ds-color-base: var(--ds-color-cpvent-5);
+  --ds-color-contrast: var(--ds-color-neutral-1);
 }
 
 .ds-color-ventilamed,
 [color=ventilamed] {
-  --ds-color-base: var(--ds-color-ventilamed) !important;
-  --ds-color-contrast: var(--ds-color-contrast-fixed) !important;
+  --ds-color-base: var(--ds-color-ventilamed);
+  --ds-color-contrast: var(--ds-color-contrast-fixed);
 }
 
 .ds-color-ventilamed-1,
 [color=ventilamed-1] {
-  --ds-color-base: var(
-    --ds-color-ventilamed-1
-  ) !important;
-  --ds-color-contrast: var(--ds-color-neutral-10) !important;
+  --ds-color-base: var(--ds-color-ventilamed-1);
+  --ds-color-contrast: var(--ds-color-neutral-10);
 }
 
 .ds-color-ventilamed-2,
 [color=ventilamed-2] {
-  --ds-color-base: var(
-    --ds-color-ventilamed-2
-  ) !important;
-  --ds-color-contrast: var(--ds-color-neutral-10) !important;
+  --ds-color-base: var(--ds-color-ventilamed-2);
+  --ds-color-contrast: var(--ds-color-neutral-10);
 }
 
 .ds-color-ventilamed-3,
 [color=ventilamed-3] {
-  --ds-color-base: var(
-    --ds-color-ventilamed-3
-  ) !important;
-  --ds-color-contrast: var(--ds-color-contrast-fixed) !important;
+  --ds-color-base: var(--ds-color-ventilamed-3);
+  --ds-color-contrast: var(--ds-color-contrast-fixed);
 }
 
 .ds-color-ventilamed-4,
 [color=ventilamed-4] {
-  --ds-color-base: var(
-    --ds-color-ventilamed-4
-  ) !important;
-  --ds-color-contrast: var(--ds-color-neutral-1) !important;
+  --ds-color-base: var(--ds-color-ventilamed-4);
+  --ds-color-contrast: var(--ds-color-neutral-1);
 }
 
 .ds-color-ventilamed-5,
 [color=ventilamed-5] {
-  --ds-color-base: var(
-    --ds-color-ventilamed-5
-  ) !important;
-  --ds-color-contrast: var(--ds-color-neutral-1) !important;
+  --ds-color-base: var(--ds-color-ventilamed-5);
+  --ds-color-contrast: var(--ds-color-neutral-1);
 }
 
 .ds-color-intensivao,
 [color=intensivao] {
-  --ds-color-base: var(--ds-color-intensivao) !important;
-  --ds-color-contrast: var(--ds-color-contrast-fixed) !important;
+  --ds-color-base: var(--ds-color-intensivao);
+  --ds-color-contrast: var(--ds-color-contrast-fixed);
 }
 
 .ds-color-intensivao-1,
 [color=intensivao-1] {
-  --ds-color-base: var(
-    --ds-color-intensivao-1
-  ) !important;
-  --ds-color-contrast: var(--ds-color-neutral-10) !important;
+  --ds-color-base: var(--ds-color-intensivao-1);
+  --ds-color-contrast: var(--ds-color-neutral-10);
 }
 
 .ds-color-intensivao-2,
 [color=intensivao-2] {
-  --ds-color-base: var(
-    --ds-color-intensivao-2
-  ) !important;
-  --ds-color-contrast: var(--ds-color-neutral-10) !important;
+  --ds-color-base: var(--ds-color-intensivao-2);
+  --ds-color-contrast: var(--ds-color-neutral-10);
 }
 
 .ds-color-intensivao-3,
 [color=intensivao-3] {
-  --ds-color-base: var(
-    --ds-color-intensivao-3
-  ) !important;
-  --ds-color-contrast: var(--ds-color-contrast-fixed) !important;
+  --ds-color-base: var(--ds-color-intensivao-3);
+  --ds-color-contrast: var(--ds-color-contrast-fixed);
 }
 
 .ds-color-intensivao-4,
 [color=intensivao-4] {
-  --ds-color-base: var(
-    --ds-color-intensivao-4
-  ) !important;
-  --ds-color-contrast: var(--ds-color-neutral-1) !important;
+  --ds-color-base: var(--ds-color-intensivao-4);
+  --ds-color-contrast: var(--ds-color-neutral-1);
 }
 
 .ds-color-intensivao-5,
 [color=intensivao-5] {
-  --ds-color-base: var(
-    --ds-color-intensivao-5
-  ) !important;
-  --ds-color-contrast: var(--ds-color-neutral-1) !important;
+  --ds-color-base: var(--ds-color-intensivao-5);
+  --ds-color-contrast: var(--ds-color-neutral-1);
 }
 
 body {
   background-color: hsl(var(--ds-color-neutral-1));
 }
+
+/*# sourceMappingURL=desafio.css.map */

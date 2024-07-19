@@ -1,7 +1,7 @@
 @use '../variables/colors.variables';
 @use '../mixins/colors.mixins' as colors-mixin;
 
-:root,
+[ds-color-scheme='dark'],
 .ds-dark {
   @include colors-mixin.generate-custom-properties(colors.$aula-dark, aula, 3);
   @include colors-mixin.generate-custom-properties(
@@ -66,6 +66,7 @@
   );
 }
 
+[ds-color-scheme='light'],
 .ds-light {
   @include colors-mixin.generate-custom-properties(colors.$aula-light, aula, 3);
   @include colors-mixin.generate-custom-properties(
