@@ -10,11 +10,5 @@
 - Montar stories utilizando constant das cores (argtypes)
 */
 
-@import './functions/colors';
-@import './mixins/colors';
-@import './variables/colors';
+@import './ds-colors';
 
-
-:root {
-  // inserir meu include de mixin de color aqui
-}

@@ -1,8 +1,9 @@
-@import '../variables/colors';
-// @use '../variables/colors';
+@use '../variables/colors';
 
-@mixin generate-colors($name-color, $hue, $saturation) {
-    $lightness-values: (20%, 30%, 40%, 60%, 80%);
+@mixin generate-products-colors($name-color, $hue, $saturation, $variation: dark) {
+    // map-get = Retorna o valor da chave selecionada. Ex: se nao include nao passar variação, por default
+    // a variação será dark e com isso ele seleciona os valores da chave dark dentro de $default-lightness-variations
+    $lightness-values: map-get($default-lightness-variations, $variation);
     $index: 1;
 
     @each $lightness in $lightness-values {
@@ -14,10 +15,24 @@
     }
 }
 
-// resolver problema do root (como remover a necessidade da utilização do :root dentro do mixin)
-// criar mapa com variações - OK
+@mixin generate-feedback-colors($name-color, $hue, $variation: dark) {
+  $saturation: 80%;
+  $lightness-dark: 65%;
+  $lightness-light: 45%;
+
+  @if( $variation == dark ) {
+    $hsl: hsl($hue, $saturation, $lightness-dark);
+
+    --ds-color-#{$name-color}: #{$hsl};
+
+  } @else {
+    $hsl: hsl($hue, $saturation, $lightness-light);
+
+    --ds-color-#{$name-color}: #{$hsl};
+  }
+}
+
 // criar cores lights de forma que sejam aplicadas nas mesmas custom properties do dark
-// Resolver problema de criar classes no root (ao usar mais de um include o mixin cria um :root pra cada pack de custom properties)
 // Pesquisar se utilizo @import ou @use para chamar meu mapa de lightness
 
 
