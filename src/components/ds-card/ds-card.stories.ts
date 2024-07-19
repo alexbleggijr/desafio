@@ -33,9 +33,10 @@ export const Default: Story = {
   render: ({ ...args }) => {
     console.log(args)
     return html`
-    <ds-card color="${args.color}" style="--color: var(--${args.color});">
+    <ds-card slot="card" color="${args.color}">
       <ds-text
         slot="text"
+        style="--color: var(--${args.color});"
       >
         Aqui vai o card.
       </ds-text>

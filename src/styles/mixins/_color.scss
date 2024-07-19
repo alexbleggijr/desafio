@@ -6,7 +6,7 @@
 
   $hue: color.hue($hsl);
   $saturation: color.saturation($hsl);
-  $lightness: color.lightness($hsl);
+  // $lightness: color.lightness($hsl);
   $tones: 10%;
 
   @for $i from 1 through $actual-repetitions {
@@ -20,14 +20,6 @@
 
     $color: hsl($hue, $saturation, $tones);
 
-
-    ::slotted(.ds-color-#{$name}-#{$i}){
-      background-color: $color;
-
-    }
-    // .ds-color-#{$name}-#{$i} {
-    //   background-color: $color;
-    // }
     --ds-color-#{$name}-#{$i}: #{$color};
   }
 }

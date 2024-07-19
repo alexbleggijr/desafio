@@ -10,18 +10,5 @@
   --ds-color-brand-4: hsl(188, 80%, 60%);
   --ds-color-brand-5: hsl(188, 80%, 80%);
 }
-:root ::slotted(.ds-color-brand-1) {
-  background-color: hsl(188, 80%, 20%);
-}
-:root ::slotted(.ds-color-brand-2) {
-  background-color: hsl(188, 80%, 30%);
-}
-:root ::slotted(.ds-color-brand-3) {
-  background-color: hsl(188, 80%, 40%);
-}
-:root ::slotted(.ds-color-brand-4) {
-  background-color: hsl(188, 80%, 60%);
-}
-:root ::slotted(.ds-color-brand-5) {
-  background-color: hsl(188, 80%, 80%);
-}
+
+/*# sourceMappingURL=desafio.css.map */
