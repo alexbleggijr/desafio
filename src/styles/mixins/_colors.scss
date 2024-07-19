@@ -1,19 +1,17 @@
 @import '../variables/colors';
 // @use '../variables/colors';
 
-@mixin generate-colors($nameColor, $hue, $saturation) {
-  :root {
+@mixin generate-colors($name-color, $hue, $saturation) {
     $lightness-values: (20%, 30%, 40%, 60%, 80%);
     $index: 1;
 
     @each $lightness in $lightness-values {
       $hsl: hsl($hue, $saturation * 1%, $lightness);
 
-      --ds-color-#{$nameColor}-#{$index}: #{$hsl};
+      --ds-color-#{$name-color}-#{$index}: #{$hsl};
 
       $index: $index + 1;
     }
-  }
 }
 
 // resolver problema do root (como remover a necessidade da utilização do :root dentro do mixin)
