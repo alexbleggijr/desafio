@@ -20,115 +20,36 @@
     );
 }
 
-@mixin generate-custom-properties(
-  $map,
-  $category,
-  $contrast-fixed-variation: null
-) {
+/// generates Desafio color CSS custom properties.
+/// @param $category brand | neutral | feedback
+/// @param $default-variation define a cor default se existir
+@mixin generate-custom-properties($map, $category, $default-variation: null) {
   $hue: map.get($map, hue);
   $saturation: map.get($map, saturation);
   $luminosity: map.get($map, luminosity);
   $luminosity-length: list.length($luminosity);
-  $contrast-break: math.ceil(math.div($luminosity-length, 2));
 
-  /// fixed contrast variation
-  @if $contrast-fixed-variation != null {
-    $luminosity-fixed: map.get($luminosity, $contrast-fixed-variation);
-
-    --ds-color-#{$category}: calc(
-        var(--ds-hue, #{$hue}) + var(--ds-hue-factor, 0)
-      ),
-      calc(
-        var(--ds-saturation, #{$saturation * 1%}) +
-          var(--ds-saturation-factor, 0%)
-      ),
-      calc(
-        var(--ds-luminosity, #{$luminosity-fixed * 1%}) +
-          var(--ds-luminosity-factor-fixed, 0%)
-      );
+  /// default color
+  @if $default-variation != null {
+    /// @output --ds-color-brand: var(--ds-color-brand-3);
+    --ds-color-#{$category}: var(--ds-color-#{$category}-#{$default-variation});
   }
 
-  /// color contrast variations
-  $iteration: 1;
-  /// color has more than one variation
+  /// color variations
   @if $luminosity-length != 1 {
     @each $luminosity-key, $luminosity-value in $luminosity {
-      /// lower contrast variations
-      @if $iteration <= $contrast-break {
-        // fixed contrast
-        @if $luminosity-key == $contrast-fixed-variation {
-          --ds-color-#{$category}-#{$luminosity-key}: calc(
-              var(--ds-hue, #{$hue}) + var(--ds-hue-factor, 0)
-            ),
-            calc(
-              var(--ds-saturation, #{$saturation * 1%}) +
-                var(--ds-saturation-factor, 0%)
-            ),
-            calc(
-              var(--ds-luminosity, #{$luminosity-value * 1%}) +
-                var(--ds-luminosity-factor-fixed, 0%)
-            );
-
-          /// lower contrast variations
-        } @else {
-          --ds-color-#{$category}-#{$luminosity-key}: calc(
-              var(--ds-hue, #{$hue}) + var(--ds-hue-factor, 0)
-            ),
-            calc(
-              var(--ds-saturation, #{$saturation * 1%}) +
-                var(--ds-saturation-factor, 0%)
-            ),
-            calc(
-              var(--ds-luminosity, #{$luminosity-value * 1%}) +
-                var(--ds-luminosity-factor-lower, 0%)
-            );
-        }
-        // upper contrast variations
-      } @else {
-        // fixed contrast
-        @if $luminosity-key == $contrast-fixed-variation {
-          --ds-color-#{$category}-#{$luminosity-key}: calc(
-              var(--ds-hue, #{$hue}) + var(--ds-hue-factor, 0)
-            ),
-            calc(
-              var(--ds-saturation, #{$saturation * 1%}) +
-                var(--ds-saturation-factor, 0%)
-            ),
-            calc(
-              var(--ds-luminosity, #{$luminosity-value * 1%}) +
-                var(--ds-luminosity-factor-fixed, 0%)
-            );
-
-          /// upper contrast variations
-        } @else {
-          --ds-color-#{$category}-#{$luminosity-key}: calc(
-              var(--ds-hue, #{$hue}) + var(--ds-hue-factor, 0)
-            ),
-            calc(
-              var(--ds-saturation, #{$saturation * 1%}) +
-                var(--ds-saturation-factor, 0%)
-            ),
-            calc(
-              var(--ds-luminosity, #{$luminosity-value * 1%}) +
-                var(--ds-luminosity-factor-upper, 0%)
-            );
-        }
-      }
-      $iteration: $iteration + 1;
+      /// @output --ds-color-brand-3: 188, 80%, 40%;
+      // --ds-color-#{$category}-#{$luminosity-key}: #{$hue}, #{$saturation * 1%}, #{$luminosity-value * 1%};
+      --ds-color-#{$category}-#{$luminosity-key}: #{get-dynamic-custom-properties(
+          $category,
+          $hue,
+          $saturation,
+          $luminosity-value
+        )};
     }
-    /// color has one variation
   } @else {
-    --ds-color-#{$category}: calc(
-        var(--ds-hue, #{$hue}) + var(--ds-hue-factor, 0)
-      ),
-      calc(
-        var(--ds-saturation, #{$saturation * 1%}) +
-          var(--ds-saturation-factor, 0%)
-      ),
-      calc(
-        var(--ds-luminosity, #{$luminosity * 1%}) +
-          var(--ds-luminosity-factor-dunno, 0%)
-      );
+    /// @output --ds-color-attention: 44, 80%, 65%;
+    --ds-color-#{$category}: #{$hue}, #{$saturation * 1%}, #{$luminosity * 1%};
   }
 }
 
@@ -159,16 +80,13 @@
 
   /// color contrast variations
   $iteration: 1;
-  /// color has more than one variation
   @if $luminosity-length != 1 {
     @each $luminosity-key, $luminosity-value in $luminosity {
       .ds-color-#{$category}-#{$luminosity-key},
       [color='#{$category}-#{$luminosity-key}'] {
         --ds-color-base: var(--ds-color-#{$category}-#{$luminosity-key});
 
-        /// lower contrast variations
         @if $iteration <= $contrast-break {
-          // fixed contrast
           @if $luminosity-key == $contrast-fixed-variation {
             /// @output
             /// .ds-color-brand-#{$contrast-fixed-variation},
@@ -177,7 +95,6 @@
             ///   --ds-color-contrast: var(--ds-color-contrast-fixed);
             /// }
             --ds-color-contrast: var(--ds-color-contrast-fixed);
-            /// lower contrast variations
           } @else {
             /// @output
             /// .ds-color-neutral-5,
@@ -187,9 +104,7 @@
             /// }
             --ds-color-contrast: var(--ds-color-neutral-10);
           }
-          // upper contrast variations
         } @else {
-          // fixed contrast
           @if $luminosity-key == $contrast-fixed-variation {
             /// @output
             /// .ds-color-brand-#{$contrast-fixed-variation},
@@ -198,7 +113,6 @@
             ///   --ds-color-contrast: var(--ds-color-contrast-fixed);
             /// }
             --ds-color-contrast: var(--ds-color-contrast-fixed);
-            /// upper contrast variations
           } @else {
             /// @output
             /// .ds-color-neutral-6,
@@ -210,9 +124,9 @@
           }
         }
       }
+
       $iteration: $iteration + 1;
     }
-    /// color has one variation
   } @else {
     /// @output
     /// .ds-color-attention,

@@ -10,19 +10,15 @@ export default meta;
 
 type Story = StoryObj<any>;
 
-export const Feedback: Story = {
-  render: () => {
-    return html`
-      <style>
-        ds-card {
-          margin-bottom: 8px;
-        }
-      </style>
+const Template = () => {
+  return html`
+    <ds-color-settings></ds-color-settings>
 
-      ${Object.values(DS_COLOR_FEEDBACK).map(
-        (color) =>
-          html`<ds-card color=${color}><ds-text>${color}</ds-text></ds-card>`,
-      )}
-    `;
-  },
+    ${Object.values(DS_COLOR_FEEDBACK).map(
+      (color) =>
+        html`<ds-card color=${color}><ds-text>${color}</ds-text></ds-card>`,
+    )}
+  `;
 };
+
+export const Feedback: Story = Template.bind({});
