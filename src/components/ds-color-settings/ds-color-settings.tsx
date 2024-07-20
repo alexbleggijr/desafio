@@ -7,10 +7,14 @@ const LUMINOSITY_FACTOR_FIXED = '--ds-luminosity-factor-fixed';
 const LUMINOSITY_FACTOR_UPPER = '--ds-luminosity-factor-upper';
 const DEFAULT_SCHEME = 'dark';
 
-export interface Config {
+interface Config {
   scheme: string;
-  cssCustomProperties: string;
+  hue: number;
+  saturation: number;
+  luminosity: number;
 }
+
+type Scheme = 'dark' | 'light';
 
 @Component({
   tag: 'ds-color-settings',
@@ -23,12 +27,17 @@ export class DsColorSettings {
 
   @State() config: Config = {
     scheme: DEFAULT_SCHEME,
-    cssCustomProperties: null,
+    hue: null,
+    saturation: null,
+    luminosity: null,
   };
 
+  /**
+   * lifecycle
+   */
   componentDidRender() {
     this.htmlEl = document.documentElement;
-    const deviceDefaultScheme = `${window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'}`;
+    const deviceDefaultScheme: Scheme = `${window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'}`;
 
     this.toggleScheme(deviceDefaultScheme);
 
@@ -40,19 +49,35 @@ export class DsColorSettings {
       });
   }
 
-  private toggleScheme = (scheme) => {
+  /**
+   * implementation
+   */
+  private toggleScheme = (scheme: Scheme) => {
     this.config.scheme = `${scheme}`;
 
-    const radioEl = this.host.querySelector(
+    const radioEl: HTMLInputElement = this.host.querySelector(
       `#${this.config.scheme}`,
-    ) as HTMLInputElement;
+    );
     radioEl.checked = true;
-
-    this.config.cssCustomProperties = this.htmlEl.getAttribute('style');
 
     this.htmlEl.setAttribute('ds-color-scheme', `${this.config.scheme}`);
 
-    this.handleLuminosityChange(this.config.scheme);
+    this.setLuminosity(this.config.luminosity);
+  };
+
+  private setLuminosity = (luminosity: number) => {
+    this.htmlEl.style.setProperty(
+      `${LUMINOSITY_FACTOR_LOWER}`,
+      `${luminosity * (this.config.scheme === 'dark' ? -1 : 1)}%`,
+    );
+    this.htmlEl.style.setProperty(
+      `${LUMINOSITY_FACTOR_FIXED}`,
+      `${luminosity * 1}%`,
+    );
+    this.htmlEl.style.setProperty(
+      `${LUMINOSITY_FACTOR_UPPER}`,
+      `${luminosity * (this.config.scheme === 'dark' ? 1 : -1)}%`,
+    );
   };
 
   /**
@@ -60,7 +85,6 @@ export class DsColorSettings {
    */
   private handleSchemeChange = (event) => {
     const userSchemePreference = event.target.value;
-
     this.config.scheme = `${userSchemePreference}`;
 
     this.toggleScheme(userSchemePreference);
@@ -68,33 +92,23 @@ export class DsColorSettings {
 
   private handleHueChange = (event) => {
     const hue = event.target.value;
+    this.config.hue = hue;
 
     this.htmlEl.style.setProperty(`${HUE_FACTOR}`, `${hue}`);
   };
 
   private handleSaturationChange = (event) => {
     const saturation = event.target.value;
+    this.config.saturation = saturation;
 
     this.htmlEl.style.setProperty(`${SATURATION_FACTOR}`, `${saturation}%`);
   };
 
-  private handleLuminosityChange = (event, scheme) => {
+  private handleLuminosityChange = (event) => {
     const luminosity = event.target.value;
+    this.config.luminosity = luminosity;
 
-    console.log(scheme);
-
-    this.htmlEl.style.setProperty(
-      `${LUMINOSITY_FACTOR_LOWER}`,
-      `${luminosity * (this.config.scheme === 'dark' ? -1 : 1)}%`,
-    );
-    this.htmlEl.style.setProperty(
-      `${LUMINOSITY_FACTOR_FIXED}`,
-      `${luminosity}%`,
-    );
-    this.htmlEl.style.setProperty(
-      `${LUMINOSITY_FACTOR_UPPER}`,
-      `${luminosity * (this.config.scheme === 'dark' ? 1 : -1)}%`,
-    );
+    this.setLuminosity(this.config.luminosity);
   };
 
   render() {
@@ -103,7 +117,7 @@ export class DsColorSettings {
         <form class="switcher">
           <ul class="switcher__list">
             <li class="switcher__item">
-              <h2>Schemes:</h2>
+              <h2 class="switcher__heading">Schemes:</h2>
             </li>
             <li class="switcher__item">
               <input
@@ -136,11 +150,11 @@ export class DsColorSettings {
 
         <ul class="switcher__list">
           <li class="switcher__item">
-            <h2>Theme Config:</h2>
+            <h2 class="switcher__heading">Theme Config:</h2>
           </li>
           <li class="switcher__item">
             <input
-              class="hue"
+              class="switcher__input"
               id="hue"
               type="range"
               name="hue"
@@ -155,7 +169,7 @@ export class DsColorSettings {
           </li>
           <li class="switcher__item">
             <input
-              class="saturation"
+              class="switcher__input"
               id="saturation"
               type="range"
               name="saturation"
@@ -170,16 +184,14 @@ export class DsColorSettings {
           </li>
           <li class="switcher__item">
             <input
-              class="luminosity"
+              class="switcher__input"
               id="luminosity"
               type="range"
               name="luminosity"
               min="0"
               max="50"
               value="0"
-              onInput={(event) =>
-                this.handleLuminosityChange(event, this.config.scheme)
-              }
+              onInput={(event) => this.handleLuminosityChange(event)}
             />
             <label class="switcher__label" htmlFor="luminosity">
               contrast

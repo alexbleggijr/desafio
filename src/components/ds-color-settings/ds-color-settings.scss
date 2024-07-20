@@ -1,40 +1,10 @@
-.snipet {
-  &__attribute {
-    color: #9bbbdc;
-  }
-
-  &__tag {
-    color: #5db0d7;
-  }
-
-  &__aux {
-    color: #5db0d7;
-  }
-
-  &__value {
-    color: #f29766;
-  }
-}
-
-h2 {
-  color: hsl(var(--ds-color-neutral-10));
-  margin: 0 10px 0 0;
-}
-
-input {
-  margin: 0;
-}
-
-pre {
-  margin: 0 0 10px 0;
-  background: rgba(0, 0, 0, 0.8);
-  padding: 0 10px;
-  border-radius: 5px;
-  overflow: auto;
-}
-
 .switcher {
   margin: 0 0 15px 0;
+
+  &__heading {
+    color: hsl(var(--ds-color-neutral-10));
+    margin: 0 10px 0 0;
+  }
 
   &__list {
     display: flex;
@@ -53,6 +23,10 @@ pre {
 
   &__item:not(:last-child) {
     margin: 0 10px 0 0;
+  }
+
+  &__input {
+    margin: 0;
   }
 
   &__label {
