@@ -3,23 +3,14 @@
 @use 'sass:math';
 @use '../variables/colors.variables';
 
-@function get-dynamic-custom-properties(
-  $category,
-  $hue,
-  $saturation,
-  $luminosity
-) {
-  @return calc(var(--ds-hue, #{$hue}) + var(--ds-hue-factor, 0)),
-    calc(
-      var(--ds-saturation, #{$saturation * 1%}) +
-        var(--ds-saturation-factor, 0%)
-    ),
-    calc(
-      var(--ds-luminosity, #{$luminosity * 1%}) +
-        var(--ds-luminosity-factor, 0%)
-    );
+@function get-dynamic-custom-properties() {
 }
 
+/// generates Desafio CSS cutom properties.
+/// if '$contrast-fixed-variation' is not set, it will divide luminosity variations in two and apply '--ds-luminosity-factor-lower' contrast to the lower variations and '--ds-luminosity-factor-upper' contrast to upper variations.
+/// if '$contrast-fixed-variation' is set, it will apply the '--ds-luminosity-factor-fixed' CSS custom property as contrast to the luminosity variation set in the parameter.
+/// @param $category brand | neutral | feedback | string
+/// @param $contrast-fixed-variation the luminosity variation value so that '--ds-luminosity-factor-fixed' CSS custom property is set as contrast
 @mixin generate-custom-properties(
   $map,
   $category,
@@ -127,7 +118,7 @@
       ),
       calc(
         var(--ds-luminosity, #{$luminosity * 1%}) +
-          var(--ds-luminosity-factor-dunno, 0%)
+          var(--ds-luminosity-factor-todo, 0%)
       );
   }
 }
@@ -135,7 +126,7 @@
 /// generates Desafio color CSS classes.
 /// if '$contrast-fixed-variation' is not set, it will divide luminosity variations in two and apply 'neutral-10' contrast to the lower variations and 'neutral-1' contrast to upper variations.
 /// if '$contrast-fixed-variation' is set, it will apply the '--ds-color-contrast-fixed' CSS custom property as contrast to the luminosity variation set in the parameter.
-/// @param $category brand | neutral | feedback
+/// @param $category brand | neutral | feedback | string
 /// @param $contrast-fixed-variation the luminosity variation value so that '--ds-color-contrast-fixed' CSS custom property is set as contrast
 @mixin generate-classes($map, $category, $contrast-fixed-variation: null) {
   $luminosity: map.get($map, luminosity);
