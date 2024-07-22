@@ -72,7 +72,7 @@ export class DsColorSettings {
     );
     this.htmlEl.style.setProperty(
       `${LUMINOSITY_FACTOR_FIXED}`,
-      `${luminosity * 1}%`,
+      `${luminosity * -1}%`,
     );
     this.htmlEl.style.setProperty(
       `${LUMINOSITY_FACTOR_UPPER}`,
