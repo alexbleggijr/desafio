@@ -3,10 +3,20 @@
 @use 'sass:math';
 @use '../variables/colors.variables';
 
-@function get-dynamic-custom-properties() {
+/// @param $mode fixed | lower | upper
+@function get-dynamic-custom-properties($hue, $saturation, $luminosity, $mode) {
+  @return calc(var(--ds-hue, #{$hue}) + var(--ds-hue-factor, 0)),
+    calc(
+      var(--ds-saturation, #{$saturation * 1%}) +
+        var(--ds-saturation-factor, 0%)
+    ),
+    calc(
+      var(--ds-luminosity, #{$luminosity * 1%}) +
+        var(--ds-luminosity-factor-#{$mode}, 0%)
+    );
 }
 
-/// generates Desafio CSS cutom properties.
+/// generates Desafio CSS csutom properties.
 /// if '$contrast-fixed-variation' is not set, it will divide luminosity variations in two and apply '--ds-luminosity-factor-lower' contrast to the lower variations and '--ds-luminosity-factor-upper' contrast to upper variations.
 /// if '$contrast-fixed-variation' is set, it will apply the '--ds-luminosity-factor-fixed' CSS custom property as contrast to the luminosity variation set in the parameter.
 /// @param $category brand | neutral | feedback | string
@@ -26,17 +36,12 @@
   @if $contrast-fixed-variation != null {
     $luminosity-fixed: map.get($luminosity, $contrast-fixed-variation);
 
-    --ds-color-#{$category}: calc(
-        var(--ds-hue, #{$hue}) + var(--ds-hue-factor, 0)
-      ),
-      calc(
-        var(--ds-saturation, #{$saturation * 1%}) +
-          var(--ds-saturation-factor, 0%)
-      ),
-      calc(
-        var(--ds-luminosity, #{$luminosity-fixed * 1%}) +
-          var(--ds-luminosity-factor-fixed, 0%)
-      );
+    --ds-color-#{$category}: #{get-dynamic-custom-properties(
+        $hue,
+        $saturation,
+        $luminosity-fixed,
+        fixed
+      )};
   }
 
   /// color contrast variations
@@ -48,78 +53,53 @@
       @if $iteration <= $contrast-break {
         // fixed contrast
         @if $luminosity-key == $contrast-fixed-variation {
-          --ds-color-#{$category}-#{$luminosity-key}: calc(
-              var(--ds-hue, #{$hue}) + var(--ds-hue-factor, 0)
-            ),
-            calc(
-              var(--ds-saturation, #{$saturation * 1%}) +
-                var(--ds-saturation-factor, 0%)
-            ),
-            calc(
-              var(--ds-luminosity, #{$luminosity-value * 1%}) +
-                var(--ds-luminosity-factor-fixed, 0%)
-            );
+          --ds-color-#{$category}-#{$luminosity-key}: #{get-dynamic-custom-properties(
+              $hue,
+              $saturation,
+              $luminosity-value,
+              fixed
+            )};
 
           /// lower contrast variations
         } @else {
-          --ds-color-#{$category}-#{$luminosity-key}: calc(
-              var(--ds-hue, #{$hue}) + var(--ds-hue-factor, 0)
-            ),
-            calc(
-              var(--ds-saturation, #{$saturation * 1%}) +
-                var(--ds-saturation-factor, 0%)
-            ),
-            calc(
-              var(--ds-luminosity, #{$luminosity-value * 1%}) +
-                var(--ds-luminosity-factor-lower, 0%)
-            );
+          --ds-color-#{$category}-#{$luminosity-key}: #{get-dynamic-custom-properties(
+              $hue,
+              $saturation,
+              $luminosity-value,
+              lower
+            )};
         }
         // upper contrast variations
       } @else {
         // fixed contrast
         @if $luminosity-key == $contrast-fixed-variation {
-          --ds-color-#{$category}-#{$luminosity-key}: calc(
-              var(--ds-hue, #{$hue}) + var(--ds-hue-factor, 0)
-            ),
-            calc(
-              var(--ds-saturation, #{$saturation * 1%}) +
-                var(--ds-saturation-factor, 0%)
-            ),
-            calc(
-              var(--ds-luminosity, #{$luminosity-value * 1%}) +
-                var(--ds-luminosity-factor-fixed, 0%)
-            );
+          --ds-color-#{$category}-#{$luminosity-key}: #{get-dynamic-custom-properties(
+              $hue,
+              $saturation,
+              $luminosity-value,
+              fixed
+            )};
 
           /// upper contrast variations
         } @else {
-          --ds-color-#{$category}-#{$luminosity-key}: calc(
-              var(--ds-hue, #{$hue}) + var(--ds-hue-factor, 0)
-            ),
-            calc(
-              var(--ds-saturation, #{$saturation * 1%}) +
-                var(--ds-saturation-factor, 0%)
-            ),
-            calc(
-              var(--ds-luminosity, #{$luminosity-value * 1%}) +
-                var(--ds-luminosity-factor-upper, 0%)
-            );
+          --ds-color-#{$category}-#{$luminosity-key}: #{get-dynamic-custom-properties(
+              $hue,
+              $saturation,
+              $luminosity-value,
+              upper
+            )};
         }
       }
       $iteration: $iteration + 1;
     }
     /// color has one variation
   } @else {
-    --ds-color-#{$category}: calc(
-        var(--ds-hue, #{$hue}) + var(--ds-hue-factor, 0)
-      ),
-      calc(
-        var(--ds-saturation, #{$saturation * 1%}) +
-          var(--ds-saturation-factor, 0%)
-      ),
-      calc(
-        var(--ds-luminosity, #{$luminosity * 1%}) +
-          var(--ds-luminosity-factor-todo, 0%)
-      );
+    --ds-color-#{$category}: #{get-dynamic-custom-properties(
+        $hue,
+        $saturation,
+        $luminosity,
+        todo
+      )};
   }
 }
 
