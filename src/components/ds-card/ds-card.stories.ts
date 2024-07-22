@@ -39,6 +39,8 @@ export const Default: Story = {
           if (args['color']) {
             card.setAttribute('color', args['color']);
 
+            card.style.setProperty('--ds-color', `var(--${args['color']})`);
+
             return;
           }
 
