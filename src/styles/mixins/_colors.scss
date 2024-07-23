@@ -1,14 +1,14 @@
 @use '../variables/colors';
 
 @mixin generate-products-colors($name-color, $hue, $saturation, $variation: dark) {
-    // map-get = Retorna o valor da chave selecionada. Ex: se nao include nao passar variação, por default
+    // map-get = Retorna o valor da chave selecionada. Ex: se no include nao passar variação, por default
     // a variação será dark e com isso ele seleciona os valores da "chave" dark dentro de $default-lightness-variations
     // map-get(mapa, chave)
     $lightness-values: map-get($default-lightness-variations, $variation);
     $index: 1;
 
     @each $lightness in $lightness-values {
-      $hsl: hsl($hue, $saturation * 1%, $lightness);
+      $hsl: hsl($hue, $saturation * 1%, $lightness * 1%);
 
       --ds-color-#{$name-color}-#{$index}: #{$hsl};
 
@@ -31,6 +31,14 @@
 
     --ds-color-#{$name-color}: #{$hsl};
   }
+}
+
+@mixin generate-neutral-colors() {
+
+}
+
+@mixin generate-alternative-neutral-colors() {
+
 }
 
 // criar cores lights de forma que sejam aplicadas nas mesmas custom properties do dark
