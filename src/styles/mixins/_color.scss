@@ -1,22 +1,13 @@
 @use 'sass:color';
 
-@mixin color-default($hsl, $name, $repetitions: 1) {
+@mixin color-default($hsl, $name, $lighting) {
   $hue: color.hue($hsl);
   $saturation: color.saturation($hsl);
-  // $lightness: color.lightness($hsl);
   $tones: 10%;
 
-  @for $i from 1 through $repetitions {
-    @if $tones < 40% {
-      $tones: $tones + 10%;
-    }
-
-    @else {
-      $tones: $tones + 20%;
-    }
-
+  @for $i from 1 through length($lighting) {
+    $tones: nth($dark-color, $i);
     $color: hsl($hue, $saturation, $tones);
-
     --ds-color-#{$name}-#{$i}: #{$color};
   }
 }

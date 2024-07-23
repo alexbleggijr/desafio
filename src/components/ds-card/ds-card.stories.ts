@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/web-components';
 import { html } from 'lit';
+import { TP_COLOR_BRAND } from '../constants/color.constants';
 
 function generateColorOptions(name: string) {
   const nameList = [];
@@ -14,7 +15,7 @@ const meta: Meta<any> = {
   argTypes: {
     color: {
       control: 'select',
-      options: generateColorOptions('brand'),
+      options: [...TP_COLOR_BRAND],
       description: 'Define a Cor.',
     },
     background: {
@@ -38,9 +39,6 @@ export const Default: Story = {
         cards.forEach((card) => {
           if (args['color']) {
             card.setAttribute('color', args['color']);
-
-            card.style.setProperty('--ds-color', `var(--${args['color']})`);
-
             return;
           }
 

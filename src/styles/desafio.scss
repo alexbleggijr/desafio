@@ -1,4 +1,6 @@
 @import "mixins/color";
+@import './variables/colors.variables';;
+
 $brand: hsl(188, 80%, 20%);
 
 :root {
@@ -8,5 +10,5 @@ $brand: hsl(188, 80%, 20%);
 	min-height: 100%;
 	padding: 24px;
 
-  @include color-default($brand, brand, 5);
+  @include color-default($brand, brand, $dark-color);
 }

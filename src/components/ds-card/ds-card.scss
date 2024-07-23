@@ -28,33 +28,34 @@
 //   background-color: var(--color);
 // }
 
-@mixin color($color) {
-  @if $color == 'ds-color-brand-1' {
-    --ds-color: var(--ds-color-brand-1);
-  }
-}
-
 :host([color]) {
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  box-shadow: 10px 5px 20px rgba(0, 0, 0, 0.144);
+  border-radius: 10px;
   background-color: var(--ds-color);
-  display: block;
 }
 
-// :host([color='ds-color-brand-1']) {
-//   --ds-color: var(--ds-color-brand-1);
-// }
+:host([color='brand-1']) {
+  --ds-color: var(--ds-color-brand-1);
+}
 
-// :host([color='ds-color-brand-2']) {
-//   --ds-color: var(--ds-color-brand-2);
-// }
+:host([color='brand-2']) {
+  --ds-color: var(--ds-color-brand-2);
+}
 
-// :host([color='ds-color-brand-3']) {
-//   --ds-color: var(--ds-color-brand-3);
-// }
+:host([color='brand-3']) {
+  --ds-color: var(--ds-color-brand-3);
+}
 
-// :host([color='ds-color-brand-4']) {
-//   --ds-color: var(--ds-color-brand-4);
-// }
+:host([color='brand-4']) {
+  --ds-color: var(--ds-color-brand-4);
+}
 
-// :host([color='ds-color-brand-5']) {
-//   --ds-color: var(--ds-color-brand-5);
-// }
+:host([color='brand-5']) {
+  --ds-color: var(--ds-color-brand-5);
+}
