@@ -1,5 +1,8 @@
 @use '../variables/colors';
 
+// Criação de custom-properties
+
+// Brand
 @mixin generate-products-colors($name-color, $hue, $saturation, $variation: dark) {
     // map-get = Retorna o valor da chave selecionada. Ex: se no include nao passar variação, por default
     // a variação será dark e com isso ele seleciona os valores da "chave" dark dentro de $default-lightness-variations
@@ -16,6 +19,7 @@
     }
 }
 
+// Feedback
 @mixin generate-feedback-colors($name-color, $hue, $variation: dark) {
   $saturation: 80%;
   $lightness-dark: 65%;
@@ -33,13 +37,44 @@
   }
 }
 
-@mixin generate-neutral-colors() {
+// Neutrals
+@mixin generate-neutral-colors($variation: dark, $mode: neutral) {
+  @if ($mode == alternative) {
+    $lightness-values: map-get($neutral-alternative-default-lightness-variations, $variation);
+    $hue: 188;
+    $saturation: 10;
+    $index: 1;
 
+    @each $lightness in $lightness-values {
+      $hsl: hsl($hue, $saturation * 1%, $lightness * 1%);
+
+      --ds-color-neutral-#{$index}5: #{$hsl};
+
+      $index: $index + 1;
+    }
+  } @else {
+    $lightness-values: map-get($neutral-default-lightness-variations, $variation);
+    $hue: 188;
+    $saturation: 10;
+    $index: 1;
+
+    @each $lightness in $lightness-values {
+      $hsl: hsl($hue, $saturation * 1%, $lightness * 1%);
+
+      --ds-color-neutral-#{$index}: #{$hsl};
+
+      $index: $index + 1;
+    }
+  }
 }
 
-@mixin generate-alternative-neutral-colors() {
+// !Criação de custom-properties
 
-}
+// Criação de classes css
+
+
+
+// !Criação de classes css
 
 // criar cores lights de forma que sejam aplicadas nas mesmas custom properties do dark
 // Pesquisar se utilizo @import ou @use para chamar meu mapa de lightness
