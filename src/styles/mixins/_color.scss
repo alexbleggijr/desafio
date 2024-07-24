@@ -11,3 +11,7 @@
     --ds-color-#{$name}-#{$i}: #{$color};
   }
 }
+
+@mixin set-color($color) {
+  --ds-color: var(--ds-color-#{$color});
+}

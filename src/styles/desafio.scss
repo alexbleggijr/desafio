@@ -1,7 +1,6 @@
 @import "mixins/color";
-@import './variables/colors.variables';;
-
-$brand: hsl(188, 80%, 20%);
+@import './variables/_colors-palette.variables';
+@import './variables/_colors.variables';
 
 :root {
   display: flex;
@@ -11,4 +10,6 @@ $brand: hsl(188, 80%, 20%);
 	padding: 24px;
 
   @include color-default($brand, brand, $dark-color);
+
+  @include color-default($neutral-color, neutral, $neutral-dark);
 }

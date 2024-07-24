@@ -1,61 +1,35 @@
 @import "../../styles/mixins/color";
 
-// :host([color='ds-color-brand-5']) {
-//   background-color: var(--ds-color-brand-5);
-//   display: block;
-// }
-
-// :host([color]) {
-//   // box-sizing: border-box;
-//   // width: 100%;
-//   // display: flex;
-//   // justify-content: center;
-//   // align-items: center;
-//   // padding: 50px;
-//   // box-shadow: 10px 5px 20px rgba(0, 0, 0, 0.144);
-//   // border-radius: 10px;
-//   background-color: var(--ds-color);
-//   display: block;
-// }
-
-// :host([color]) {
-//   --selected-color: var(--ds-color-brand-1);
-//   background-color: var(--selected-color);
-//   display: block;
-// }
-
-// ::slotted([slot='text']) {
-//   background-color: var(--color);
-// }
-
-:host([color]) {
+:host {
   box-sizing: border-box;
   width: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 50px;
+  padding: 24px;
   box-shadow: 10px 5px 20px rgba(0, 0, 0, 0.144);
   border-radius: 10px;
   background-color: var(--ds-color);
+  color: white;
 }
 
 :host([color='brand-1']) {
-  --ds-color: var(--ds-color-brand-1);
+  @include set-color('brand-1')
 }
 
 :host([color='brand-2']) {
-  --ds-color: var(--ds-color-brand-2);
+  @include set-color('brand-2')
 }
 
 :host([color='brand-3']) {
-  --ds-color: var(--ds-color-brand-3);
+  @include set-color('brand-3')
 }
 
 :host([color='brand-4']) {
-  --ds-color: var(--ds-color-brand-4);
+  @include set-color('brand-4')
 }
 
 :host([color='brand-5']) {
-  --ds-color: var(--ds-color-brand-5);
+  @include set-color('brand-5')
 }

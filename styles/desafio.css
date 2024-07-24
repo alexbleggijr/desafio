@@ -1,14 +1,18 @@
-:root {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 100%;
-  padding: 24px;
-  --ds-color-brand-1: hsl(188, 80%, 20%);
-  --ds-color-brand-2: hsl(188, 80%, 30%);
-  --ds-color-brand-3: hsl(188, 80%, 40%);
-  --ds-color-brand-4: hsl(188, 80%, 60%);
-  --ds-color-brand-5: hsl(188, 80%, 80%);
-}
+/* Error: $n: Invalid index 6 for a list with 5 elements.
+ *   ,
+ * 9 |     $tones: nth($dark-color, $i);
+ *   |             ^^^^^^^^^^^^^^^^^^^^
+ *   '
+ *   src\styles\mixins\_color.scss 9:13  color-default()
+ *   src\styles\desafio.scss 14:3        root stylesheet */
 
-/*# sourceMappingURL=desafio.css.map */
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: $n: Invalid index 6 for a list with 5 elements.\a   \2577 \a 9 \2502      $tones: nth($dark-color, $i);\a   \2502              ^^^^^^^^^^^^^^^^^^^^\a   \2575 \a   src\\styles\\mixins\\_color.scss 9:13  color-default()\a   src\\styles\\desafio.scss 14:3        root stylesheet";
+}
