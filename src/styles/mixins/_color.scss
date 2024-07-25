@@ -6,10 +6,20 @@
   $tones: 10%;
 
   @for $i from 1 through length($lighting) {
-    $tones: nth($dark-color, $i);
+    $tones: nth($lighting, $i);
     $color: hsl($hue, $saturation, $tones);
     --ds-color-#{$name}-#{$i}: #{$color};
   }
+}
+
+@mixin set-value-color($name, $lighting){
+
+  @for $i from 1 through length($lighting) {
+    :host([color=#{$name}-#{$i}]){
+      @include set-color(#{$name}-#{$i})
+    }
+  }
+
 }
 
 @mixin set-color($color) {

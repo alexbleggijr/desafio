@@ -1,28 +1,20 @@
 import type { Meta, StoryObj } from '@storybook/web-components';
 import { html } from 'lit';
-import { TP_COLOR_BRAND } from '../constants/color.constants';
-
-function generateColorOptions(name: string) {
-  const nameList = [];
-  for (let i = 1; i <= 5; i++) {
-    nameList.push(`ds-color-${name}-${i}`);
-  }
-  return nameList;
-}
+import { TP_COLOR_NEUTRAL } from '../constants/color.constants';
 
 const meta: Meta<any> = {
   title: 'Card',
   argTypes: {
-    color: {
+    ColorText: {
       control: 'select',
-      options: [...TP_COLOR_BRAND],
+      options: [...TP_COLOR_NEUTRAL],
       description: 'Define a Cor.',
     },
-    background: {
-      control: 'select',
-      options: generateColorOptions('brand'),
-      description: 'Define o background.',
-    }
+    // background: {
+    //   control: 'select',
+    //   options: generateColorOptions('brand'),
+    //   description: 'Define o background.',
+    // }
   },
 };
 

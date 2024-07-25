@@ -3,13 +3,13 @@
 @import './variables/_colors.variables';
 
 :root {
+  @include color-default($brand, brand, $dark-color);
+  @include color-default($neutral-color, neutral, $neutral-dark);
+
   display: flex;
 	align-items: center;
 	justify-content: center;
 	min-height: 100%;
 	padding: 24px;
 
-  @include color-default($brand, brand, $dark-color);
-
-  @include color-default($neutral-color, neutral, $neutral-dark);
 }
