@@ -1,4 +1,5 @@
-$default-lightness-variations: (
+// Lightness map Custom properties
+$products-lightness-variations: (
   dark: (
     20,
     30,
@@ -15,7 +16,7 @@ $default-lightness-variations: (
   )
 );
 
-$neutral-default-lightness-variations: (
+$neutral-lightness-variations: (
   dark: (
     8,
     18,
@@ -42,7 +43,7 @@ $neutral-default-lightness-variations: (
   )
 );
 
-$neutral-alternative-default-lightness-variations: (
+$neutral-alternative-lightness-variations: (
   dark: (
     13,
     23,
@@ -66,3 +67,29 @@ $neutral-alternative-default-lightness-variations: (
     13,
   )
 );
+// !Lightness map Custom properties
+
+// Class name map
+$products-name-classes: (
+  brand: null,
+  aulas: null,
+  material: null,
+  questoes: null,
+  revalida: null,
+  provas: null,
+  extensivo: null,
+  medmaster: null,
+  cpmed: null,
+  medeletro: null,
+  cpvent: null,
+  ventilamed: null,
+  intensivao: null
+);
+
+$feedback-name-classes: (
+  attention: null,
+  caution: null,
+  warning: null,
+  success: null,
+);
+// !Class name map

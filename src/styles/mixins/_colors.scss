@@ -2,12 +2,12 @@
 
 // Criação de custom-properties
 
-// Brand
+// Products
 @mixin generate-products-colors($name-color, $hue, $saturation, $variation: dark) {
     // map-get = Retorna o valor da chave selecionada. Ex: se no include nao passar variação, por default
     // a variação será dark e com isso ele seleciona os valores da "chave" dark dentro de $default-lightness-variations
     // map-get(mapa, chave)
-    $lightness-values: map-get($default-lightness-variations, $variation);
+    $lightness-values: map-get($products-lightness-variations, $variation);
     $index: 1;
 
     @each $lightness in $lightness-values {
@@ -40,7 +40,7 @@
 // Neutrals
 @mixin generate-neutral-colors($variation: dark, $mode: neutral) {
   @if ($mode == alternative) {
-    $lightness-values: map-get($neutral-alternative-default-lightness-variations, $variation);
+    $lightness-values: map-get($neutral-alternative-lightness-variations, $variation);
     $hue: 188;
     $saturation: 10;
     $index: 1;
@@ -53,7 +53,7 @@
       $index: $index + 1;
     }
   } @else {
-    $lightness-values: map-get($neutral-default-lightness-variations, $variation);
+    $lightness-values: map-get($neutral-lightness-variations, $variation);
     $hue: 188;
     $saturation: 10;
     $index: 1;
@@ -70,14 +70,63 @@
 
 // !Criação de custom-properties
 
+// ========================================================= //
+
 // Criação de classes css
 
+// Products classes
+@mixin generate-products-colors-classes($class-names: []) {
+  // map-keys = itera sobre as chaves do mapa.
+  @each $name in map-keys($class-names) {
+    @for $i from 1 through 5 {
+      .ds-color-#{$name}-#{$i}, [ds-color='#{$name}-#{$i}'] {
+        --ds-color-#{$name}-base: var(--ds-color-#{$name}-#{$i});
+        // if ternario > if(condição, se valor verdadeiro, se valor falso)
+        --ds-color-#{$name}-contrast: if($i <= 3, var(--ds-color-neutral-10), var(--ds-color-neutral-1));
 
+        // examplo com implementação menos elegante.
+        // @if($i <= 3) {
+        //   --ds-color-#{$name}-contrast: var(var(--ds-color-neutral-10))
+        // } @else {
+        //   --ds-color-#{$name}-contrast: var(var(--ds-color-neutral-1))
+        // }
+      }
+    }
+  }
+}
+
+// Feedback classes
+@mixin generate-feedback-colors-classes($class-names: []) {
+  @each $name in map-keys($class-names) {
+    .ds-color-#{$name}, [ds-color='#{$name}'] {
+      --ds-color-#{$name}-base: var(--ds-color-#{$name});
+      --ds-color-#{$name}-contrast: var(--ds-color-neutral-1);
+    }
+  }
+}
+
+// Neutrals classes
+@mixin generate-neutral-colors-classes($class-name, $mode: neutral) {
+  @if ($mode == alternative) {
+    @for $i from 1 through 9 {
+      .ds-color-neutral-#{$i}5, [ds-color='neutral-#{$i}5'] {
+        --ds-color-neutral-#{$i}5-base: var(--ds-color-neutral-#{$i}5);
+        --ds-color-neutral-#{$i}5-contrast: if($i <= 55, var(--ds-color-neutral-10), var(--ds-color-neutral-1));
+      }
+    }
+  } @else {
+    @for $i from 1 through 10 {
+      .ds-color-neutral-#{$i}, [ds-color='neutral-#{$i}'] {
+        --ds-color-neutral-#{$i}-base: var(--ds-color-neutral-#{$i});
+        --ds-color-neutral-#{$i}-contrast: if($i <= 5, var(--ds-color-neutral-10), var(--ds-color-neutral-1));
+      }
+    }
+  }
+}
 
 // !Criação de classes css
 
-// criar cores lights de forma que sejam aplicadas nas mesmas custom properties do dark
-// Pesquisar se utilizo @import ou @use para chamar meu mapa de lightness
+// Pesquisar beneficios do @use ao invés de @import
 
 
 
