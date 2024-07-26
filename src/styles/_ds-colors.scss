@@ -44,7 +44,7 @@
     @include generate-neutral-colors(light, alternative);
 }
 
-@include generate-products-colors-classes($products-name-classes);
+@include generate-products-colors-classes($products-name-classes, 5);
 @include generate-feedback-colors-classes($feedback-name-classes);
 @include generate-neutral-colors-classes(neutral);
 @include generate-neutral-colors-classes(neutral, alternative);
