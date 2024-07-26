@@ -14,11 +14,6 @@
   --ds-color-neutral-8: hsl(188, 10%, 78%);
   --ds-color-neutral-9: hsl(188, 10%, 88%);
   --ds-color-neutral-10: hsl(188, 10%, 98%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 100%;
-  padding: 24px;
 }
 
 /*# sourceMappingURL=desafio.css.map */

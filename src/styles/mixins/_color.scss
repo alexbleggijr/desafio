@@ -1,27 +1,20 @@
 @use 'sass:color';
 
-@mixin color-default($hsl, $name, $lighting) {
+@mixin generate-custom-property($hsl, $name, $lightness) {
   $hue: color.hue($hsl);
   $saturation: color.saturation($hsl);
   $tones: 10%;
 
-  @for $i from 1 through length($lighting) {
-    $tones: nth($lighting, $i);
-    $color: hsl($hue, $saturation, $tones);
+  @for $i from 1 through length($lightness) {
+    $color: hsl($hue, $saturation, nth($lightness, $i));
     --ds-color-#{$name}-#{$i}: #{$color};
   }
 }
 
-@mixin set-value-color($name, $lighting){
-
-  @for $i from 1 through length($lighting) {
+@mixin generate-variable($name, $lightness){
+  @for $i from 1 through length($lightness) {
     :host([color=#{$name}-#{$i}]){
-      @include set-color(#{$name}-#{$i})
+      --ds-color-#{$name}: var(--ds-color-#{$name}-#{$i});
     }
   }
-
-}
-
-@mixin set-color($color) {
-  --ds-color: var(--ds-color-#{$color});
 }

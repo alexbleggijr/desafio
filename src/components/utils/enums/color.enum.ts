@@ -1,4 +1,4 @@
-export enum EColorBrand {
+export enum DsColorBrand {
   Brand_1 = 'brand-1',
   Brand_2 = 'brand-2',
   Brand_3 = 'brand-3',
@@ -6,7 +6,7 @@ export enum EColorBrand {
   Brand_5 = 'brand-5',
 }
 
-export enum EColorNeutral {
+export enum DsColorNeutral {
   Neutral_1 = 'neutral-1',
   Neutral_2 = 'neutral-2',
   Neutral_3 = 'neutral-3',

@@ -1,13 +1,13 @@
 import type { Meta, StoryObj } from '@storybook/web-components';
 import { html } from 'lit';
-import { TP_COLOR_NEUTRAL } from '../constants/color.constants';
+import { DS_COLOR_BRAND } from '../constants/color.constants';
 
 const meta: Meta<any> = {
   title: 'Card',
   argTypes: {
     ColorText: {
       control: 'select',
-      options: [...TP_COLOR_NEUTRAL],
+      options: [...DS_COLOR_BRAND],
       description: 'Define a Cor.',
     },
     // background: {
