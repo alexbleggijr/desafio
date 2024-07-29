@@ -69,27 +69,27 @@ $neutral-alternative-lightness-variations: (
 );
 // !Lightness map Custom properties
 
-// Class name map
+// Class name list
 $products-name-classes: (
-  brand: null,
-  aulas: null,
-  material: null,
-  questoes: null,
-  revalida: null,
-  provas: null,
-  extensivo: null,
-  medmaster: null,
-  cpmed: null,
-  medeletro: null,
-  cpvent: null,
-  ventilamed: null,
-  intensivao: null
+  'brand',
+  'aulas',
+  'material',
+  'questoes',
+  'revalida',
+  'provas',
+  'extensivo',
+  'medmaster',
+  'cpmed',
+  'medeletro',
+  'cpvent',
+  'ventilamed',
+  'intensivao'
 );
 
 $feedback-name-classes: (
-  attention: null,
-  caution: null,
-  warning: null,
-  success: null,
+  'attention',
+  'caution',
+  'warning',
+  'success',
 );
-// !Class name map
+// !Class name list

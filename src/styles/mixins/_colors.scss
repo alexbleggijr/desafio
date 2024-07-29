@@ -3,9 +3,9 @@
 // Criação de custom-properties
 
 // Products
-@mixin generate-products-colors($name-color, $hue, $saturation, $variation: dark, $lightness-variations) {
+@mixin generate-products-colors($name-color, $hue, $saturation, $lightness-variations, $variation: dark) {
     // map-get = Retorna o valor da chave selecionada. Ex: se no include nao passar variação, por default
-    // a variação será dark e com isso ele seleciona os valores da "chave" dark dentro de $default-lightness-variations
+    // a variação será dark e com isso ele seleciona os valores da "chave" dark dentro de $lightness-variations
     // map-get(mapa, chave)
     $lightness-values: map-get($lightness-variations, $variation);
     $index: 1;
@@ -74,30 +74,19 @@
 // Criação de classes css
 
 // Products classes
-@mixin generate-products-colors-classes($class-names: [], $variations) {
+@mixin generate-products-colors-classes($class-names, $variations) {
 
   $middle: ceil(calc($variations / 2)); // Calcula o índice do meio (ceil garante que se for um numero decimal serã arredondado pra cima)
 
-  // map-keys = itera sobre as chaves do mapa.
-  @each $name in map-keys($class-names) {
+  @each $name in $class-names {
     @for $i from 1 through $variations {
       .ds-color-#{$name}-#{$i}, [ds-color='#{$name}-#{$i}'] {
         --ds-color-#{$name}-base: var(--ds-color-#{$name}-#{$i});
         // Se o resto ds divisao for diferente de 0 entao o numero é impar
         @if ($middle % 2 != 0) { // Ímpar
-          // tentar usar ternario aqui
-          @if ($i <= $middle) {
-            --ds-color-#{$name}-contrast: var(--ds-color-neutral-10);
-          } @else {
-            --ds-color-#{$name}-contrast: var(--ds-color-neutral-1);
-          }
+          --ds-color-#{$name}-contrast: #{if($i <= $middle, var(--ds-color-neutral-10), var(--ds-color-neutral-1))};
         } @else { // Par
-          // tentar usar ternario aqui
-          @if ($i <= $middle) {
-            --ds-color-#{$name}-contrast: var(--ds-color-neutral-10);
-          } @else {
-            --ds-color-#{$name}-contrast: var(--ds-color-neutral-1);
-          }
+          --ds-color-#{$name}-contrast: #{if($i <= $middle, var(--ds-color-neutral-10), var(--ds-color-neutral-1))};
         }
       }
     }
@@ -105,8 +94,8 @@
 }
 
 // Feedback classes
-@mixin generate-feedback-colors-classes($class-names: []) {
-  @each $name in map-keys($class-names) {
+@mixin generate-feedback-colors-classes($class-names) {
+  @each $name in $class-names {
     .ds-color-#{$name}, [ds-color='#{$name}'] {
       --ds-color-#{$name}-base: var(--ds-color-#{$name});
       --ds-color-#{$name}-contrast: var(--ds-color-neutral-1);

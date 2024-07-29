@@ -3,45 +3,47 @@
 
 :root {
   // dark
-    @include generate-products-colors(brand, 188, 80);
-    @include generate-products-colors(aulas, 168, 80);
-    @include generate-products-colors(material, 24, 80);
-    @include generate-products-colors(questoes, 200, 80);
-    @include generate-products-colors(revalida, 342, 80);
-    @include generate-products-colors(provas, 268, 80);
-    @include generate-products-colors(extensivo, 300, 80);
-    @include generate-products-colors(medmaster, 56, 80);
-    @include generate-products-colors(cpmed, 12, 80);
-    @include generate-products-colors(medeletro, 180, 80);
-    @include generate-products-colors(cpvent, 72, 80);
-    @include generate-products-colors(ventilamed, 29, 80);
-    @include generate-products-colors(intensivao, 344, 80);
+    @include generate-products-colors(brand, 188, 80, $products-lightness-variations);
+    @include generate-products-colors(aulas, 168, 80, $products-lightness-variations);
+    @include generate-products-colors(material, 24, 80, $products-lightness-variations);
+    @include generate-products-colors(questoes, 200, 80, $products-lightness-variations);
+    @include generate-products-colors(revalida, 342, 80, $products-lightness-variations);
+    @include generate-products-colors(provas, 268, 80, $products-lightness-variations);
+    @include generate-products-colors(extensivo, 300, 80, $products-lightness-variations);
+    @include generate-products-colors(medmaster, 56, 80, $products-lightness-variations);
+    @include generate-products-colors(cpmed, 12, 80, $products-lightness-variations);
+    @include generate-products-colors(medeletro, 180, 80, $products-lightness-variations);
+    @include generate-products-colors(cpvent, 72, 80, $products-lightness-variations);
+    @include generate-products-colors(ventilamed, 29, 80, $products-lightness-variations);
+    @include generate-products-colors(intensivao, 344, 80, $products-lightness-variations);
     @include generate-feedback-colors(attention, 44);
+    @include generate-feedback-colors(caution, 24);
     @include generate-feedback-colors(warning, 4);
     @include generate-feedback-colors(success, 128);
-    @include generate-neutral-colors();
-    @include generate-neutral-colors($mode: alternative);
+    @include generate-neutral-colors(dark, neutral, $neutral-lightness-variations);
+    @include generate-neutral-colors(dark, alternative, $neutral-alternative-lightness-variations);
 }
 
 .ds-light {
-    @include generate-products-colors(brand, 188, 80, light);
-    @include generate-products-colors(aulas, 168, 80, light);
-    @include generate-products-colors(material, 24, 80, light);
-    @include generate-products-colors(questoes, 200, 80, light);
-    @include generate-products-colors(revalida, 342, 80, light);
-    @include generate-products-colors(provas, 268, 80, light);
-    @include generate-products-colors(extensivo, 300, 80, light);
-    @include generate-products-colors(medmaster, 56, 80, light);
-    @include generate-products-colors(cpmed, 12, 80, light);
-    @include generate-products-colors(medeletro, 180, 80, light);
-    @include generate-products-colors(cpvent, 72, 80, light);
-    @include generate-products-colors(ventilamed, 29, 80, light);
-    @include generate-products-colors(intensivao, 344, 80, light);
-    @include generate-feedback-colors(attention, 44, light);
-    @include generate-feedback-colors(warning, 4, light);
-    @include generate-feedback-colors(success, 128, light);
-    @include generate-neutral-colors(light);
-    @include generate-neutral-colors(light, alternative);
+    @include generate-products-colors(brand, 188, 80, $products-lightness-variations, light);
+    @include generate-products-colors(aulas, 168, 80, $products-lightness-variations, light);
+    @include generate-products-colors(material, 24, 80, $products-lightness-variations, light);
+    @include generate-products-colors(questoes, 200, 80, $products-lightness-variations, light);
+    @include generate-products-colors(revalida, 342, 80, $products-lightness-variations, light);
+    @include generate-products-colors(provas, 268, 80, $products-lightness-variations, light);
+    @include generate-products-colors(extensivo, 300, 80, $products-lightness-variations, light);
+    @include generate-products-colors(medmaster, 56, 80, $products-lightness-variations, light);
+    @include generate-products-colors(cpmed, 12, 80, $products-lightness-variations, light);
+    @include generate-products-colors(medeletro, 180, 80, $products-lightness-variations, light);
+    @include generate-products-colors(cpvent, 72, 80, $products-lightness-variations, light);
+    @include generate-products-colors(ventilamed, 29, 80, $products-lightness-variations, light);
+    @include generate-products-colors(intensivao, 344, 80, $products-lightness-variations, light);
+    @include generate-feedback-colors(attention, 44);
+    @include generate-feedback-colors(caution, 24);
+    @include generate-feedback-colors(warning, 4);
+    @include generate-feedback-colors(success, 128);
+    @include generate-neutral-colors(light, neutral, $neutral-lightness-variations);
+    @include generate-neutral-colors(light, alternative, $neutral-alternative-lightness-variations);
 }
 
 @include generate-products-colors-classes($products-name-classes, 5);
