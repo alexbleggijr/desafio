@@ -14,7 +14,8 @@
 @mixin generate-variable($name, $lightness){
   @for $i from 1 through length($lightness) {
     :host([color=#{$name}-#{$i}]){
-      --ds-color-#{$name}: var(--ds-color-#{$name}-#{$i});
+      // --ds-color-#{$name}: var(--ds-color-#{$name}-#{$i});
+      --ds-color-background: var(--ds-color-#{$name}-#{$i});
     }
   }
 }

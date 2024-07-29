@@ -1,6 +1,7 @@
 @import "mixins/color";
 @import './variables/_colors-palette.variables';
 @import './variables/_colors.variables';
+@import './themes/colors';
 
 :root {
   @include generate-custom-property($brand, brand, $dark-color);

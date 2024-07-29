@@ -1,20 +1,16 @@
 import type { Meta, StoryObj } from '@storybook/web-components';
 import { html } from 'lit';
-import { DS_COLOR_BRAND } from '../constants/color.constants';
+import { DS_COLOR_BRAND, DS_COLOR_NEUTRAL } from '../constants/color.constants';
+
 
 const meta: Meta<any> = {
   title: 'Card',
   argTypes: {
-    ColorText: {
-      control: 'select',
-      options: [...DS_COLOR_BRAND],
-      description: 'Define a Cor.',
+    color: {
+      control: { type: 'select' },
+      options: [...DS_COLOR_BRAND, ...DS_COLOR_NEUTRAL],
+      description: `Cor do texto`,
     },
-    // background: {
-    //   control: 'select',
-    //   options: generateColorOptions('brand'),
-    //   description: 'Define o background.',
-    // }
   },
 };
 
@@ -31,6 +27,7 @@ export const Default: Story = {
         cards.forEach((card) => {
           if (args['color']) {
             card.setAttribute('color', args['color']);
+
             return;
           }
 
@@ -51,3 +48,4 @@ export const Default: Story = {
     `;
   },
 };
+
