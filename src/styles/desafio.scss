@@ -1,9 +1,11 @@
 @import "mixins/color";
 @import './variables/_colors-palette.variables';
 @import './variables/_colors.variables';
+@import './variables/color-name.variable';
 @import './themes/colors';
 
 :root {
   @include generate-custom-property($brand, brand, $dark-color);
   @include generate-custom-property($neutral-color, neutral, $neutral-dark);
+  @include generate-custom-property-feedback($feedback-color, $feedback-name, $feedback);
 }

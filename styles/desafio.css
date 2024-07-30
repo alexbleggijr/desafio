@@ -1,9 +1,9 @@
 .ds-light {
-  background-color: white;
+  background-color: var(--ds-color-neutral-10);
 }
 
 .ds-dark {
-  background-color: hsl(188, 10%, 23%);
+  background-color: var(--ds-color-neutral-1);
 }
 
 :root {
@@ -22,6 +22,10 @@
   --ds-color-neutral-8: hsl(188, 10%, 78%);
   --ds-color-neutral-9: hsl(188, 10%, 88%);
   --ds-color-neutral-10: hsl(188, 10%, 98%);
+  --ds-color-attention: hsl(44, 80%, 65%);
+  --ds-color-caution: hsl(24, 80%, 65%);
+  --ds-color-warning: hsl(4, 80%, 65%);
+  --ds-color-success: hsl(128, 80%, 65%);
 }
 
 /*# sourceMappingURL=desafio.css.map */

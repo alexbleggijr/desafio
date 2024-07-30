@@ -18,3 +18,10 @@ export enum DsColorNeutral {
   Neutral_9 = 'neutral-9',
   Neutral_10 = 'neutral-10',
 }
+
+export enum DsColorFeedback {
+  Attention = 'attention',
+  Caution = 'caution',
+  Warning = 'warning',
+  Success = 'success',
+}

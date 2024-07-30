@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/web-components';
 import { html } from 'lit';
-import { DS_COLOR_BRAND, DS_COLOR_NEUTRAL } from '../constants/color.constants';
+import { DS_COLOR_BRAND, DS_COLOR_FEEDBACK, DS_COLOR_NEUTRAL } from '../constants/color.constants';
 
 
 const meta: Meta<any> = {
@@ -8,7 +8,7 @@ const meta: Meta<any> = {
   argTypes: {
     color: {
       control: { type: 'select' },
-      options: [...DS_COLOR_BRAND, ...DS_COLOR_NEUTRAL],
+      options: [...DS_COLOR_BRAND, ...DS_COLOR_NEUTRAL, ...DS_COLOR_FEEDBACK],
       description: `Cor do texto`,
     },
   },

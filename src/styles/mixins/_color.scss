@@ -3,11 +3,20 @@
 @mixin generate-custom-property($hsl, $name, $lightness) {
   $hue: color.hue($hsl);
   $saturation: color.saturation($hsl);
-  $tones: 10%;
 
   @for $i from 1 through length($lightness) {
     $color: hsl($hue, $saturation, nth($lightness, $i));
     --ds-color-#{$name}-#{$i}: #{$color};
+  }
+}
+
+@mixin generate-custom-property-feedback($hsl, $name, $hue) {
+  $lightness: color.lightness($hsl);
+  $saturation: color.saturation($hsl);
+
+  @for $i from 1 through length($hue) {
+    $color: hsl(nth($hue, $i), $saturation, $lightness);
+    --ds-color-#{nth($name, $i)}: #{$color};
   }
 }
 
@@ -19,3 +28,14 @@
     }
   }
 }
+
+@mixin generate-variable-feedback($name, $lightness){
+  @for $i from 1 through length($lightness) {
+    :host([color=#{nth($name, $i)}]){
+      // --ds-color-#{$name}: var(--ds-color-#{$name}-#{$i});
+      --ds-color-background: var(--ds-color-#{nth($name, $i)});
+    }
+  }
+}
+
+
