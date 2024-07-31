@@ -104,17 +104,17 @@
 }
 
 // Neutrals classes
-@mixin generate-neutral-colors-classes($class-name, $mode: neutral) {
+@mixin generate-neutral-colors-classes($class-name, $mode: neutral, $lightness-variations, $variations) {
   @if ($mode == alternative) {
     // iterar sobre os itens do mapa ao inves de usar o for
-    @for $i from 1 through 9 {
+    @for $i from 1 through length(map-get($lightness-variations, $variations)) {
       .ds-color-neutral-#{$i}5, [ds-color='neutral-#{$i}5'] {
         --ds-color-neutral-#{$i}5-base: var(--ds-color-neutral-#{$i}5);
         --ds-color-neutral-#{$i}5-contrast: #{if($i <= 55, var(--ds-color-neutral-10), var(--ds-color-neutral-1))};
       }
     }
   } @else {
-    @for $i from 1 through 10 {
+    @for $i from 1 through length(map-get($lightness-variations, $variations)) {
       .ds-color-neutral-#{$i}, [ds-color='neutral-#{$i}'] {
         --ds-color-neutral-#{$i}-base: var(--ds-color-neutral-#{$i});
         --ds-color-neutral-#{$i}-contrast: #{if($i <= 5, var(--ds-color-neutral-10), var(--ds-color-neutral-1))};
