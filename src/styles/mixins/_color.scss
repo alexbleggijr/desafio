@@ -5,8 +5,10 @@
   $saturation: color.saturation($hsl);
 
   @for $i from 1 through length($lightness) {
+    $index: if($i <= 10, $i, (($i - 10) * 10 + 5));
+
     $color: hsl($hue, $saturation, nth($lightness, $i));
-    --ds-color-#{$name}-#{$i}: #{$color};
+    --ds-color-#{$name}-#{$index}: #{$color};
   }
 }
 
@@ -22,9 +24,13 @@
 
 @mixin generate-variable($name, $lightness){
   @for $i from 1 through length($lightness) {
-    :host([color=#{$name}-#{$i}]){
+    $index: if($i <= 10, $i, (($i - 10) * 10 + 5));
+    $text-color: if($i == 1, var(--ds-color-neutral-10), var(--ds-color-neutral-1));
+
+    :host([color=#{$name}-#{$index}]){
       // --ds-color-#{$name}: var(--ds-color-#{$name}-#{$i});
-      --ds-color-background: var(--ds-color-#{$name}-#{$i});
+      --ds-color-background: var(--ds-color-#{$name}-#{$index});
+      --ds-color-text: #{$text-color};
     }
   }
 }

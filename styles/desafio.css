@@ -22,6 +22,15 @@
   --ds-color-neutral-8: hsl(188, 10%, 78%);
   --ds-color-neutral-9: hsl(188, 10%, 88%);
   --ds-color-neutral-10: hsl(188, 10%, 98%);
+  --ds-color-neutral-15: hsl(188, 10%, 13%);
+  --ds-color-neutral-25: hsl(188, 10%, 23%);
+  --ds-color-neutral-35: hsl(188, 10%, 33%);
+  --ds-color-neutral-45: hsl(188, 10%, 43%);
+  --ds-color-neutral-55: hsl(188, 10%, 53%);
+  --ds-color-neutral-65: hsl(188, 10%, 63%);
+  --ds-color-neutral-75: hsl(188, 10%, 73%);
+  --ds-color-neutral-85: hsl(188, 10%, 83%);
+  --ds-color-neutral-95: hsl(188, 10%, 93%);
   --ds-color-attention: hsl(44, 80%, 65%);
   --ds-color-caution: hsl(24, 80%, 65%);
   --ds-color-warning: hsl(4, 80%, 65%);
