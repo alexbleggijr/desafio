@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/web-components';
 import { html } from 'lit';
 import { DS_COLOR_BRAND, DS_COLOR_FEEDBACK, DS_COLOR_NEUTRAL } from '../constants/color.constants';
+import { DS_TYPE_SIZE } from '../constants/type.constants';
 
 
 const meta: Meta<any> = {
@@ -10,6 +11,11 @@ const meta: Meta<any> = {
       control: { type: 'select' },
       options: [...DS_COLOR_BRAND, ...DS_COLOR_NEUTRAL, ...DS_COLOR_FEEDBACK],
       description: `Cor do texto`,
+    },
+    size: {
+      control: { type: 'select' },
+      options: [...DS_TYPE_SIZE],
+      description: `Tamanho da Fonte`,
     },
   },
 };
@@ -35,8 +41,26 @@ export const Default: Story = {
         });
       };
 
+      const setSize = () => {
+        const texts = document.querySelectorAll('ds-text');
+
+        texts.forEach((text) => {
+          if (args['size']) {
+            text.setAttribute('size', args['size']);
+
+            return;
+          }
+
+          text.removeAttribute('size');
+        });
+      };
+
       if (args['color'] || !args['color']) {
         setColor();
+      }
+
+      if (args['size'] || !args['size']) {
+        setSize();
       }
     }, 100);
 

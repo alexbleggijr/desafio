@@ -2,7 +2,7 @@
 @import "../../styles/variables/colors-palette.variables";
 @import "../../styles/variables/color-name.variable";
 
-@include generate-variable(neutral, $neutral-dark);
+@include generate-variable(neutral, $neutral-dark, true);
 @include generate-variable(brand, $dark-color);
 @include generate-variable-feedback($feedback-name, $feedback);
 

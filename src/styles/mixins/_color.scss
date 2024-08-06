@@ -22,10 +22,20 @@
   }
 }
 
-@mixin generate-variable($name, $lightness){
+@mixin generate-variable($name, $lightness, $alternative: false){
+  :host {
+    --ds-color-background: var(--ds-color-neutral-15);
+    --ds-color-text: var(--ds-color-neutral-10);
+  }
+
   @for $i from 1 through length($lightness) {
     $index: if($i <= 10, $i, (($i - 10) * 10 + 5));
-    $text-color: if($i == 1, var(--ds-color-neutral-10), var(--ds-color-neutral-1));
+    $text-color:
+    if($alternative,
+      if( $index <= 10,
+        if($index < 6, var(--ds-color-neutral-10), var(--ds-color-neutral-1)),
+          if($index < 65, var(--ds-color-neutral-10), var(--ds-color-neutral-1))),
+            if($i <= 3, var(--ds-color-neutral-10), var(--ds-color-neutral-1)));
 
     :host([color=#{$name}-#{$index}]){
       // --ds-color-#{$name}: var(--ds-color-#{$name}-#{$i});
