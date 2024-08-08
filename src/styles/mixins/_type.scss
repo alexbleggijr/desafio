@@ -1,5 +1,9 @@
 @mixin generate-custom-property-type($types) {
-  @for $i from 1 through length($types) {
-    @include generate-variable-type();
+  @each $key, $value in $types {
+    :host([size=#{$key}]) {
+      @each $property, $property-value in $value {
+        --#{$property}: #{$property-value};
+      }
+    }
   }
 }

@@ -1,3 +1,11 @@
+@import "../../styles/mixins/type";
+@import "../../styles/variables/type.variable";
+
+@include generate-custom-property-type($types);
+
 :host {
   display: block;
+  font-size: var(--font-size);
+  font-weight: var(--font-weight);
+  line-height: var(--line-height);
 }
